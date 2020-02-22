@@ -222,7 +222,7 @@
     <script src="./assets/js/core/popper.min.js"></script>
     <script src="./assets/js/bootstrap-material-design.js"></script>
     <!--  Google Maps Plugin  -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjnWWiYM-ct6OYECIJPe5HnsP7MyYqy4w"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=Keyhere"></script>
     <!--  Plugin for Date Time Picker and Full Calendar Plugin  -->
     <script src="./assets/js/plugins/moment.min.js"></script>
     <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
