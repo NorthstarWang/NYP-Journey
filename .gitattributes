@@ -3,5 +3,4 @@
 *.aspx linguist-language=Asp.net
 *.sln linguist-language=C#
 *.js linguist-language=Javascript
-*.html linguist-language=html
 *.CSS linguist-language=CSS
