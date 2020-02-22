@@ -1,6 +1,7 @@
 *.cs linguist-language=C#
 *.Master linguist-language=C#
-*.aspx linguist-language=C#
+*.aspx linguist-language=Asp.net Webform
 *.sln linguist-language=C#
-*.js linguist-language=C#
-*.html linguist-language=C#
+*.js linguist-language=Javascript
+*.html linguist-language=html
+*.CSS linguist-language=CSS
