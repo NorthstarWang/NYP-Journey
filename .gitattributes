@@ -1,3 +1,4 @@
 *.cs linguist-language=C#
 *.Master linguist-language=C#
 *.aspx linguist-language=C#
+*.sln linguist-language=C#
