@@ -82,14 +82,14 @@ NYP Journey summary functions and features are [user identification system](#use
 
 ## Copyright
 
-- [Ownership of copyright](ownership)
+- [Ownership of copyright](#ownership-of-copyright)
 - [Copyright license](#copyright-license)
 - [Data mining](#data-mining)
 - [Permissions](#permissions)
 - [Enforcement of copyright](#enforcement-of-copyright)
 - [Infringing material](#infringing-material)
 
-#### Ownership
+#### Ownership of copyright
 
 I own the copyright in:
 
