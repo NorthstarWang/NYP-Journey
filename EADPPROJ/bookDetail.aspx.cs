@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data;
-using EADPPROJ.App_Code;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Collections;
+using System.Data;
+using System.Web.UI.WebControls;
 
 namespace EADPPROJ
 {
@@ -54,10 +50,10 @@ namespace EADPPROJ
                 int id = Convert.ToInt32(Request.QueryString["id"]);
                 DataSet ds = null;
                 ds = shop.ReturnBookInfo(shop, id);
-                price.InnerText =ds.Tables[0].Rows[0]["Price"].ToString()+" Credits";
+                price.InnerText = ds.Tables[0].Rows[0]["Price"].ToString() + " Credits";
                 description.InnerText = ds.Tables[0].Rows[0]["Description"].ToString();
                 name.InnerText = ds.Tables[0].Rows[0]["Name"].ToString();
-                img.Src = "../assets/img/books/"+ ds.Tables[0].Rows[0]["Image"].ToString();
+                img.Src = "../assets/img/books/" + ds.Tables[0].Rows[0]["Image"].ToString();
             }
             else
             {
@@ -102,7 +98,7 @@ namespace EADPPROJ
                     int count = Convert.ToInt32(ht[Id].ToString());
                     ht[Id] = count + 1;
                     Session["successCart"] = true;
-                    Response.Redirect("./bookDetail.aspx?id="+Request.QueryString["id"].ToString());
+                    Response.Redirect("./bookDetail.aspx?id=" + Request.QueryString["id"].ToString());
                 }
                 else
                 {

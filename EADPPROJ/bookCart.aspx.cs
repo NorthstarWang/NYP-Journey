@@ -1,13 +1,9 @@
-﻿using System;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.HtmlControls;
-using EADPPROJ.App_Code;
 using System.Data;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
 
 namespace EADPPROJ
 {
@@ -27,14 +23,14 @@ namespace EADPPROJ
                 Repeater1.DataSource = ht;
                 Repeater1.DataBind();
                 int credits = 0;
-                foreach(RepeaterItem item in Repeater1.Items)
+                foreach (RepeaterItem item in Repeater1.Items)
                 {
                     Label bookId = (Label)item.FindControl("bookId");
                     int Id = Convert.ToInt32(bookId.Text);
                     DataSet ds = new DataSet();
                     ds = shop.ReturnBookInfo(shop, Id);
                     HtmlImage image = (HtmlImage)item.FindControl("Image");
-                    image.Src = "../assets/img/books/"+ds.Tables[0].Rows[0]["Image"].ToString();
+                    image.Src = "../assets/img/books/" + ds.Tables[0].Rows[0]["Image"].ToString();
                     Label bookName = (Label)item.FindControl("bookName");
                     bookName.Text = ds.Tables[0].Rows[0]["Name"].ToString();
                     Label bookSchool = (Label)item.FindControl("school");
@@ -43,9 +39,9 @@ namespace EADPPROJ
                     bookPrice.Text = ds.Tables[0].Rows[0]["Price"].ToString();
                     Label totalPrice = (Label)item.FindControl("total");
                     Label bookNumber = (Label)item.FindControl("Number");
-                    totalPrice.Text = (Convert.ToInt32(bookNumber.Text)*Convert.ToInt32(bookPrice.Text)).ToString();
+                    totalPrice.Text = (Convert.ToInt32(bookNumber.Text) * Convert.ToInt32(bookPrice.Text)).ToString();
                     credits += Convert.ToInt32(totalPrice.Text);
-                    
+
                 }
                 Label price = (Label)Repeater1.Controls[Repeater1.Controls.Count - 1].Controls[0].FindControl("OverallPrice");
                 price.Text = credits.ToString();
@@ -80,7 +76,7 @@ namespace EADPPROJ
             Label Number = (Label)item.FindControl("Number");
             if (Convert.ToInt32(Number.Text) > 1)
             {
-                int newNum = Convert.ToInt32(Number.Text)-1;
+                int newNum = Convert.ToInt32(Number.Text) - 1;
                 int Id = Convert.ToInt32(bookId.Text);
                 Hashtable ht = (Hashtable)Session["cart"];
                 ht[Id] = newNum;
@@ -91,7 +87,7 @@ namespace EADPPROJ
                 Session["MinimumNo"] = true;
                 Response.Redirect("bookCart.aspx");
             }
-            
+
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“shoppingCart.add_Click(object, EventArgs)”的 XML 注释
@@ -133,7 +129,7 @@ namespace EADPPROJ
             shop.CreateOrder(shop, Session["Account"].ToString(), cost);
             int OrderId = shop.ReturnOrderId(shop);
             ICollection items = ht.Keys;
-            foreach(int id in items)
+            foreach (int id in items)
             {
                 shop.CreateInvoice(shop, OrderId, id, Convert.ToInt32(ht[id]));
             }

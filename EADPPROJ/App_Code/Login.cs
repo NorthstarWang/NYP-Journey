@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data.SqlClient;
 using System.Data;
-using System.Configuration;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace EADPPROJ.App_Code
 {
@@ -61,7 +54,7 @@ namespace EADPPROJ.App_Code
         public DataSet LoginAdmin(Login_Class login)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Login_Class.LoginAdmin(Login_Class)”的 XML 注释
         {
-            return loginDAO.SelectAdminByIdentification(login.Username,login.Password);
+            return loginDAO.SelectAdminByIdentification(login.Username, login.Password);
         }
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Login_Class.LoginTeacher(Login_Class)”的 XML 注释
         public DataSet LoginTeacher(Login_Class login)
@@ -108,7 +101,7 @@ namespace EADPPROJ.App_Code
             return ds.Tables[0].Rows[0]["Username"].ToString();
         }
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Login_Class.addCode(string, string)”的 XML 注释
-        public void addCode(string username,string code)
+        public void addCode(string username, string code)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Login_Class.addCode(string, string)”的 XML 注释
         {
             string invite = getUserFromInviteBy(code);
@@ -116,7 +109,7 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Login_Class.fillInInvitationCode(string, string)”的 XML 注释
-        public string fillInInvitationCode(string code,string username)
+        public string fillInInvitationCode(string code, string username)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Login_Class.fillInInvitationCode(string, string)”的 XML 注释
         {
             DataSet ds = loginDAO.SelectInvitationByCode(code);
@@ -124,7 +117,7 @@ namespace EADPPROJ.App_Code
             {
                 return "Insufficient code";
             }
-            else if(checkUserCodeAvailability(username)==1)
+            else if (checkUserCodeAvailability(username) == 1)
             {
                 addCode(username, code);
                 credit.AddCredit(username, 300);

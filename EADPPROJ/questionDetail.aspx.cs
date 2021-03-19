@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Data;
-using EADPPROJ.App_Code;
+using System.Web.UI.WebControls;
 
 namespace EADPPROJ
 {
@@ -170,16 +166,16 @@ namespace EADPPROJ
                 Session["ErrorAccount"] = "true";
                 Response.Redirect("./index.aspx");
             }
-            
+
         }
-            
+
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“questionDetail.postAnswer_Click(object, EventArgs)”的 XML 注释
         protected void postAnswer_Click(object sender, EventArgs e)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“questionDetail.postAnswer_Click(object, EventArgs)”的 XML 注释
         {
             string answerText = answerContent.Text;
-            question.SaveRichTextAnswer(question, Request.QueryString["id"],answerText,Session["Account"].ToString());
+            question.SaveRichTextAnswer(question, Request.QueryString["id"], answerText, Session["Account"].ToString());
             question.UpdateQuestionLastUpdate(question, Request.QueryString["id"]);
             profile.UpdateProfileAnswerNo(profile, Session["Account"].ToString());
             Session["answerPost"] = "true";
@@ -199,11 +195,11 @@ namespace EADPPROJ
             TextBox replyContent = (TextBox)row.Cells[0].FindControl("replyContent");
             Label Id = (Label)row.Cells[0].FindControl("Id");
             string replyText = replyContent.Text;
-            question.PostReply(question, Session["Account"].ToString(),Convert.ToInt32(Id.Text), replyText);
-            Session["commentPost"]="true";
+            question.PostReply(question, Session["Account"].ToString(), Convert.ToInt32(Id.Text), replyText);
+            Session["commentPost"] = "true";
             notification.CommentPostNotificationToPoster(notification, Session["Account"].ToString(), "./questionDetail.aspx?id=" + Request.QueryString["id"]);
             HiddenField username = (HiddenField)row.Cells[0].FindControl("answerPostUsername");
-            notification.CommentPostNotificationToReceiver(notification,username.Value, "./questionDetail.aspx?id=" + Request.QueryString["id"]);
+            notification.CommentPostNotificationToReceiver(notification, username.Value, "./questionDetail.aspx?id=" + Request.QueryString["id"]);
             Response.Redirect("./questionDetail.aspx?id=" + Request.QueryString["id"]);
         }
 
@@ -224,7 +220,7 @@ namespace EADPPROJ
             notification.SolutionSelectNotificationToQuestion(notification, Session["Account"].ToString(), "./questionDetail.aspx?id=" + Request.QueryString["id"]);
             notification.SolutionSelectNotificationToAnswer(notification, Poster.Text, "./questionDetail.aspx?id=" + Request.QueryString["id"]);
             Response.Redirect("./questionDetail.aspx?id=" + Request.QueryString["id"]);
-            
+
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“questionDetail.upVote_Click(object, EventArgs)”的 XML 注释
@@ -234,16 +230,16 @@ namespace EADPPROJ
             var upVote = (Button)sender;
             GridViewRow row = (GridViewRow)upVote.NamingContainer;
             Label Id = (Label)row.Cells[0].FindControl("Id");
-            if(question.CheckUpvoteAvailability(question, Session["Account"].ToString(), Convert.ToInt32(Id.Text)) == true)
+            if (question.CheckUpvoteAvailability(question, Session["Account"].ToString(), Convert.ToInt32(Id.Text)) == true)
             {
-                question.UpdateUpvote(question, Convert.ToInt32(Id.Text), Session["Account"].ToString(),Convert.ToInt32(Request.QueryString["id"]));
+                question.UpdateUpvote(question, Convert.ToInt32(Id.Text), Session["Account"].ToString(), Convert.ToInt32(Request.QueryString["id"]));
                 Response.Redirect("./questionDetail.aspx?id=" + Request.QueryString["id"]);
             }
             else
             {
                 Session["successUpvote"] = "true"; ;
             }
-            
+
         }
 
 
@@ -251,7 +247,7 @@ namespace EADPPROJ
         protected void Show_Click(object sender, EventArgs e)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“questionDetail.Show_Click(object, EventArgs)”的 XML 注释
         {
-            
+
             var show = (LinkButton)sender;
             GridViewRow row = (GridViewRow)show.NamingContainer;
             GridView AnswerSection = (GridView)row.Cells[0].FindControl("GridView1");
@@ -262,7 +258,7 @@ namespace EADPPROJ
             if (question.CheckAnswerSection(question, answerId) == true)
             {
                 AnswerSection.Visible = true;
-                foreach(GridViewRow replies in AnswerSection.Rows)
+                foreach (GridViewRow replies in AnswerSection.Rows)
                 {
                     Image icon = (Image)replies.Cells[0].FindControl("ReplyUserIcon");
                     HyperLink UserId = (HyperLink)replies.Cells[0].FindControl("ReplyUsername");
@@ -275,7 +271,8 @@ namespace EADPPROJ
                     {
                         icon.ImageUrl = profile.GetStudentIcon(profile, UserId.Text);
                         Name.Text = profile.GetStudentName(profile, UserId.Text);
-                    }else if(UserId.Text.Length == 9)
+                    }
+                    else if (UserId.Text.Length == 9)
                     {
                         icon.ImageUrl = profile.GetTeacherIcon(profile, UserId.Text);
                         Name.Text = profile.GetTeacherName(profile, UserId.Text);
@@ -285,13 +282,13 @@ namespace EADPPROJ
                         icon.ImageUrl = profile.GetAdminIcon(profile, UserId.Text);
                         Name.Text = "Admin";
                     }
-                    if(ReferenceId.Text !="")
+                    if (ReferenceId.Text != "")
                     {
-                        ReplyTo.Text = " Says to " + question.GetReplierUsername(question, Convert.ToInt32(ReferenceId.Text))+" :";
+                        ReplyTo.Text = " Says to " + question.GetReplierUsername(question, Convert.ToInt32(ReferenceId.Text)) + " :";
                     }
                     show.Visible = false;
                 }
-                
+
             }
             else
             {
@@ -309,7 +306,7 @@ namespace EADPPROJ
             Label UserId = (Label)row.Cells[0].FindControl("Id");
             TextBox editor = (TextBox)row.Cells[0].FindControl("Editor1");
             Label Id = (Label)row.Cells[0].FindControl("AnswerId");
-            question.PostReplyInReply(question, Session["Account"].ToString(), Convert.ToInt32(Id.Text),editor.Text, Convert.ToInt32(UserId.Text));
+            question.PostReplyInReply(question, Session["Account"].ToString(), Convert.ToInt32(Id.Text), editor.Text, Convert.ToInt32(UserId.Text));
             Session["replyPost"] = "true";
             notification.ReplyPostNotificationToPoster(notification, Session["Account"].ToString(), "./questionDetail.aspx?id=" + Request.QueryString["id"]);
             notification.ReplyPostNotificationToReceiver(notification, question.GetReplierUsername(question, Convert.ToInt32(UserId.Text)), "./questionDetail.aspx?id=" + Request.QueryString["id"]);

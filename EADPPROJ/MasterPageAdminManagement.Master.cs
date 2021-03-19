@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Web.UI.WebControls;
-using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
@@ -76,28 +72,29 @@ namespace EADPPROJ
             {
                 HiddenField RT = (HiddenField)row.Cells[0].FindControl("RT");
                 Label timeAgo = (Label)row.Cells[0].FindControl("timeAgo");
-                if((DateTime.Now - Convert.ToDateTime(RT.Value)).TotalHours < 1)
+                if ((DateTime.Now - Convert.ToDateTime(RT.Value)).TotalHours < 1)
                 {
                     timeAgo.Text = "Just Now";
-                }else if((DateTime.Now - Convert.ToDateTime(RT.Value)).TotalHours > 1 && (DateTime.Now - Convert.ToDateTime(RT.Value)).TotalHours < 24)
+                }
+                else if ((DateTime.Now - Convert.ToDateTime(RT.Value)).TotalHours > 1 && (DateTime.Now - Convert.ToDateTime(RT.Value)).TotalHours < 24)
                 {
                     timeAgo.Text = Convert.ToInt32((DateTime.Now - Convert.ToDateTime(RT.Value)).TotalHours).ToString() + " Hours Ago";
                 }
                 else
                 {
-                    timeAgo.Text=Convert.ToInt32((DateTime.Now - Convert.ToDateTime(RT.Value)).TotalDays).ToString()+" Days Ago";
+                    timeAgo.Text = Convert.ToInt32((DateTime.Now - Convert.ToDateTime(RT.Value)).TotalDays).ToString() + " Days Ago";
                 }
 
-                if(notification.GetNotificationNewTotalNo(notification, Session["Account"].ToString()) == 0)
+                if (notification.GetNotificationNewTotalNo(notification, Session["Account"].ToString()) == 0)
                 {
                     msgNo.Text = "Currently no new notification";
                 }
                 else
                 {
-                    msgNo.Text = notification.GetNotificationNewTotalNo(notification, Session["Account"].ToString()).ToString()+" New Notifications";
+                    msgNo.Text = notification.GetNotificationNewTotalNo(notification, Session["Account"].ToString()).ToString() + " New Notifications";
                     notificationDot.Visible = true;
                 }
-                
+
             }
         }
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“MasterPageAdminManagement.logout(object, EventArgs)”的 XML 注释

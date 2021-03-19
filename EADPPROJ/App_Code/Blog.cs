@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using EADPPROJ.App_Code;
 using System.Data;
-using System.Data.SqlClient;
 
 namespace EADPPROJ.App_Code
 {
@@ -74,7 +69,7 @@ namespace EADPPROJ.App_Code
         {
             DataSet ds = blogDAO.SelectBlogById(id);
             int no = Convert.ToInt32(ds.Tables[0].Rows[0]["BGDefault"]);
-            if(no == 0)
+            if (no == 0)
             {
                 return false;
             }
@@ -85,7 +80,7 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Blog.AddTip(int, int)”的 XML 注释
-        public void AddTip(int id,int amt)
+        public void AddTip(int id, int amt)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Blog.AddTip(int, int)”的 XML 注释
         {
             amt += GetTip(id);
@@ -111,9 +106,10 @@ namespace EADPPROJ.App_Code
         public bool CheckHighlight(int id)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Blog.CheckHighlight(int)”的 XML 注释
         {
-            
-            
-            if (GetHighlight(id) == 1) {
+
+
+            if (GetHighlight(id) == 1)
+            {
                 blogDAO.UpdateHighlight(id, 0);
                 return false;
             }

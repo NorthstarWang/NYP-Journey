@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Web.UI.WebControls;
-using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
@@ -21,14 +17,14 @@ namespace EADPPROJ
         {
             if (Session["Account"] != null)
             {
-                if (Session["Account"].ToString().Length != 7 && Session["Account"].ToString().Length != 9) 
+                if (Session["Account"].ToString().Length != 7 && Session["Account"].ToString().Length != 9)
                 {
                     managementSide.Visible = true;
                 }
 
 
                 userID.Text = Session["Account"].ToString();
-                creditBalance.Text = credit.GetCreditAmount(Session["Account"].ToString()).ToString()+" Credits";
+                creditBalance.Text = credit.GetCreditAmount(Session["Account"].ToString()).ToString() + " Credits";
                 string iconPath = question.GetHeadIcon(question, Session["Account"].ToString());
                 icon.Src = iconPath;
                 profile.HRef = "./profile.aspx?id=" + Session["Account"].ToString();
@@ -38,22 +34,22 @@ namespace EADPPROJ
             {
                 Response.Redirect("./index.aspx");
             }
-            
+
 #pragma warning disable CS1587 // XML 注释没有放在有效语言元素上
-///Alert Message Show
+            ///Alert Message Show
 #pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
-            if(Session["warningInsufficientCredit"] == "true")
+            if (Session["warningInsufficientCredit"] == "true")
 #pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
 #pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
             {
                 warningInsufficientCredit.Visible = true;
                 Session["warningInsufficientCredit"] = "false";
             }
-            
+
 #pragma warning disable CS1587 // XML 注释没有放在有效语言元素上
-///Success Message Show
+            ///Success Message Show
 #pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
-            if(Session["successPostSuccess"] == "true")
+            if (Session["successPostSuccess"] == "true")
 #pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
 #pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
             {

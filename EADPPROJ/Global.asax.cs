@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Routing;
-using System.Web.Security;
-using System.Web.SessionState;
-using System.Web.Http;
-using EADPPROJ.App_Code;
-using System.Data.SqlClient;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Data;
+using System.Data.SqlClient;
+using System.Web;
+using System.Web.Http;
 
 namespace EADPPROJ
 {
@@ -74,7 +69,7 @@ namespace EADPPROJ
                 };
                 data.RunProc("INSERT INTO tb_ConnectionRecord (IP,LoginTime,LeaveTime,Browser,OS,Username) VALUES(@IP,@LoginTime,@LeaveTime,@Browser,@OS,@Username)", prams);
             }
-            
+
         }
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -20,7 +17,7 @@ namespace EADPPROJ.App_Code
         Database data = new Database();
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“RegistrationDAO.InsertStudent(string, string, string, string, int, string)”的 XML 注释
-        public void InsertStudent(string AdminNo,string Password,string Mail,string Name,int Graduation,string Sex)
+        public void InsertStudent(string AdminNo, string Password, string Mail, string Name, int Graduation, string Sex)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“RegistrationDAO.InsertStudent(string, string, string, string, int, string)”的 XML 注释
         {
             SqlParameter[] prams = {
@@ -38,10 +35,10 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“RegistrationDAO.InsertTeacher(string, string, string, string, DateTime, string)”的 XML 注释
-        public void InsertTeacher(string NRIC, string Password, string Mail, string Name, DateTime DOB,string Sex)
+        public void InsertTeacher(string NRIC, string Password, string Mail, string Name, DateTime DOB, string Sex)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“RegistrationDAO.InsertTeacher(string, string, string, string, DateTime, string)”的 XML 注释
         {
-                SqlParameter[] prams = {
+            SqlParameter[] prams = {
                 data.MakeInParam("@NRIC",  SqlDbType.VarChar, 50,NRIC ),
                 data.MakeInParam("@Password",  SqlDbType.VarChar, 50, Password ),
                 data.MakeInParam("@Mail",  SqlDbType.VarChar, 50, Mail ),
@@ -56,10 +53,10 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“RegistrationDAO.InsertStudentProfile(string, string, string)”的 XML 注释
-        public void InsertStudentProfile(string AdminNo,string Name,string School)
+        public void InsertStudentProfile(string AdminNo, string Name, string School)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“RegistrationDAO.InsertStudentProfile(string, string, string)”的 XML 注释
         {
-               SqlParameter[] prams = {
+            SqlParameter[] prams = {
                 data.MakeInParam("@AdminNo",  SqlDbType.VarChar, 50,AdminNo ),
                 data.MakeInParam("@HeadIcon",  SqlDbType.VarChar, 50, "user-head-icon.jpg" ),
                 data.MakeInParam("@Name",  SqlDbType.VarChar, 50, Name ),
@@ -73,7 +70,7 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“RegistrationDAO.InsertTeacherProfile(string, string)”的 XML 注释
-        public void InsertTeacherProfile(string NRIC,string Name)
+        public void InsertTeacherProfile(string NRIC, string Name)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“RegistrationDAO.InsertTeacherProfile(string, string)”的 XML 注释
         {
             SqlParameter[] prams = {
@@ -89,7 +86,7 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“RegistrationDAO.InsertInvitation(string, string)”的 XML 注释
-        public void InsertInvitation(string username,string EncryptUsername)
+        public void InsertInvitation(string username, string EncryptUsername)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“RegistrationDAO.InsertInvitation(string, string)”的 XML 注释
         {
             SqlParameter[] prams = {

@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 using System.Net;
 using System.Net.Mail;
-using System.Configuration;
-using System.Threading;
-using System.Text;
 
 namespace EADPPROJ.App_Code
 {
@@ -87,7 +80,7 @@ namespace EADPPROJ.App_Code
             return (data.RunProcReturn("SELECT Mail FROM tb_Teacher WHERE (nric = @NRIC)", prams, tbName));
         }
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“ForgetPassword.GetAdminPassword(ForgetPassword, string)”的 XML 注释
-        public DataSet GetAdminPassword(ForgetPassword forgetPassword,string tbName)
+        public DataSet GetAdminPassword(ForgetPassword forgetPassword, string tbName)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“ForgetPassword.GetAdminPassword(ForgetPassword, string)”的 XML 注释
         {
             SqlParameter[] prams = {
@@ -114,7 +107,7 @@ namespace EADPPROJ.App_Code
             return (data.RunProcReturn("SELECT Password FROM tb_Teacher WHERE (nric = @NRIC)", prams, tbName));
         }
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“ForgetPassword.SendMail(ForgetPassword, string, string)”的 XML 注释
-        public void SendMail(ForgetPassword forgetPassword,string receiver,string password)
+        public void SendMail(ForgetPassword forgetPassword, string receiver, string password)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“ForgetPassword.SendMail(ForgetPassword, string, string)”的 XML 注释
         {
             SmtpClient mailClient = new SmtpClient("smtp.office365.com", 587);

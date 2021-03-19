@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace EADPPROJ
 {
@@ -23,8 +19,8 @@ namespace EADPPROJ
             if (Session["NoChoice"] == "true")
 #pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             {
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "", "window.onload = function Show(){$('#SelectModal').modal('show');}", true);
-                    Session["NoChoice"] = null;
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "", "window.onload = function Show(){$('#SelectModal').modal('show');}", true);
+                Session["NoChoice"] = null;
             }
         }
     }

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using EADPPROJ.App_Code;
+﻿using EADPPROJ.App_Code;
+using System;
 
 namespace EADPPROJ
 {
@@ -38,7 +33,7 @@ namespace EADPPROJ
         protected void btnSubmit_Click(object sender, EventArgs e)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“invitationCode.btnSubmit_Click(object, EventArgs)”的 XML 注释
         {
-            Session["code"]=login.fillInInvitationCode(code.Text, Session["Account"].ToString());
+            Session["code"] = login.fillInInvitationCode(code.Text, Session["Account"].ToString());
             notification.invitationCodeNotification(notification, Session["Account"].ToString());
             notification.invitationCodeUseNotification(notification, login.getUserFromCode(code.Text));
             Response.Redirect("invitationCode.aspx");

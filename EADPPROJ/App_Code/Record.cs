@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data;
-using System.Data.SqlClient;
 
 namespace EADPPROJ.App_Code
 {
@@ -43,16 +39,17 @@ namespace EADPPROJ.App_Code
         {
             DataSet ds = recordDAO.SelectCreditRecordByIdDESC(Id);
             int currentMaxId;
-            try {
-                currentMaxId = Convert.ToInt32(ds.Tables[0].Rows[0]["Id"]); 
+            try
+            {
+                currentMaxId = Convert.ToInt32(ds.Tables[0].Rows[0]["Id"]);
             }
             catch (Exception)
             {
                 currentMaxId = 0;
             }
-           
-           return currentMaxId;
-            
+
+            return currentMaxId;
+
         }
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Record.GenerateNewRecordId(Record)”的 XML 注释
         public int GenerateNewRecordId(Record record)
@@ -64,10 +61,10 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Record.CreateNewRecord(Record, string, string, int)”的 XML 注释
-        public void CreateNewRecord(Record record,string username,string act,int creditValue)
+        public void CreateNewRecord(Record record, string username, string act, int creditValue)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Record.CreateNewRecord(Record, string, string, int)”的 XML 注释
         {
-            recordDAO.InsertCreditRecord(GenerateNewRecordId(record),username,act,creditValue,OccurTime);
+            recordDAO.InsertCreditRecord(GenerateNewRecordId(record), username, act, creditValue, OccurTime);
         }
     }
 }

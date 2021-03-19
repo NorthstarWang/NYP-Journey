@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Web.UI.WebControls;
-using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
@@ -24,7 +20,7 @@ namespace EADPPROJ
         {
             if (Session["Account"] != null)
             {
-                
+
                 userID.Text = Session["Account"].ToString();
                 creditBalance.Text = credit.GetCreditAmount(Session["Account"].ToString()).ToString() + " Credits";
                 string iconPath = question.GetHeadIcon(question, Session["Account"].ToString());
@@ -45,7 +41,7 @@ namespace EADPPROJ
                     Session["Price"] = null;
                 }
 
-                if(Session["intWarn"] != null)
+                if (Session["intWarn"] != null)
                 {
                     warningInsufficientCredit.Visible = true;
                     Session["intWarn"] = null;

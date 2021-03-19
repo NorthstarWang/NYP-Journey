@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data;
-using System.Data.SqlClient;
 
 namespace EADPPROJ.App_Code
 {
@@ -28,7 +24,7 @@ namespace EADPPROJ.App_Code
         {
             DataSet ds = creditDAO.SelectCreditFromUser(username);
             return Convert.ToInt32(ds.Tables[0].Rows[0]["Credit"]);
-               
+
         }
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Credit.GetRewardAmount(int)”的 XML 注释
         public int GetRewardAmount(int Id)
@@ -48,7 +44,7 @@ namespace EADPPROJ.App_Code
 #pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
                 int current = GetCreditAmount(username);
                 current -= creditNo;
-                if(current >= 0)
+                if (current >= 0)
                 {
                     creditDAO.UpdateStudentCredit(username, current);
                     record.CreateNewRecord(record, username, "Minus", creditNo);
@@ -59,7 +55,7 @@ namespace EADPPROJ.App_Code
                     return false;
                 }
             }
-            else if(username.Length == 9)
+            else if (username.Length == 9)
             {
                 int current = GetCreditAmount(username);
                 current -= creditNo;
@@ -89,7 +85,7 @@ namespace EADPPROJ.App_Code
                     return false;
                 }
             }
-            
+
         }
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Credit.AddCredit(string, int)”的 XML 注释
         public void AddCredit(string username, int creditNo)
@@ -100,9 +96,9 @@ namespace EADPPROJ.App_Code
                 int current = GetCreditAmount(username);
                 int newcurrent = creditNo + current;
                 creditDAO.UpdateStudentCredit(username, newcurrent);
-                record.CreateNewRecord(record,username,"Add",creditNo);
+                record.CreateNewRecord(record, username, "Add", creditNo);
             }
-            else if(username.Length == 9)
+            else if (username.Length == 9)
             {
                 int current = GetCreditAmount(username);
                 int newcurrent = creditNo + current;
@@ -127,11 +123,13 @@ namespace EADPPROJ.App_Code
             {
                 price = creditAmt * 0.01;
                 return price;
-            }else if (creditAmt < 2000)
+            }
+            else if (creditAmt < 2000)
             {
-                price = creditAmt * 0.01-1;
+                price = creditAmt * 0.01 - 1;
                 return price;
-            }else if (creditAmt < 5000)
+            }
+            else if (creditAmt < 5000)
             {
                 price = creditAmt * 0.01 - 3;
                 return price;

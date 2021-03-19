@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -47,7 +44,7 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“QuestionDAO.InsertQuestion(string, string, string, DateTime, string, string, int)”的 XML 注释
-        public void InsertQuestion(string Title,string Content,string Type, DateTime Posttime,string Username,string State,int CreditReward)
+        public void InsertQuestion(string Title, string Content, string Type, DateTime Posttime, string Username, string State, int CreditReward)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“QuestionDAO.InsertQuestion(string, string, string, DateTime, string, string, int)”的 XML 注释
         {
             SqlParameter[] prams = {
@@ -62,7 +59,7 @@ namespace EADPPROJ.App_Code
             data.MakeInParam("@Review",  SqlDbType.Int, 4, 0),
             };
             data.RunProc("INSERT INTO tb_Question (Title,Content,SchoolType,PostTime,Username,LastUpdate,State,CreditReward,Review) VALUES(@Title,@Content,@Type,@Posttime,@Username,@Latest,@State,@CreditReward,@Review)", prams);
-        
+
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“QuestionDAO.SelectQuestionById(int)”的 XML 注释
@@ -109,7 +106,7 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“QuestionDAO.UpdateStudentProfileQuestionNoByAdminNo(int, string)”的 XML 注释
-        public void UpdateStudentProfileQuestionNoByAdminNo(int Qno,string ID)
+        public void UpdateStudentProfileQuestionNoByAdminNo(int Qno, string ID)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“QuestionDAO.UpdateStudentProfileQuestionNoByAdminNo(int, string)”的 XML 注释
         {
             SqlParameter[] prams = {
@@ -123,22 +120,22 @@ namespace EADPPROJ.App_Code
         public void UpdateTeacherProfileQuestionNoByNRIC(int Qno, string ID)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“QuestionDAO.UpdateTeacherProfileQuestionNoByNRIC(int, string)”的 XML 注释
         {
-                SqlParameter[] prams = {
+            SqlParameter[] prams = {
                 data.MakeInParam("@QuestionNo",  SqlDbType.VarChar, 50, Qno),
                 data.MakeInParam("@NRIC",  SqlDbType.VarChar, 50, ID),
                 };
-                data.RunProc("UPDATE tb_TeacherProfile SET QuestionNo = (@QuestionNo) WHERE (NRIC = @NRIC)", prams);
+            data.RunProc("UPDATE tb_TeacherProfile SET QuestionNo = (@QuestionNo) WHERE (NRIC = @NRIC)", prams);
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“QuestionDAO.UpdateAdminProfileQuestionNoByUsername(int, string)”的 XML 注释
         public void UpdateAdminProfileQuestionNoByUsername(int Qno, string ID)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“QuestionDAO.UpdateAdminProfileQuestionNoByUsername(int, string)”的 XML 注释
         {
-                SqlParameter[] prams = {
+            SqlParameter[] prams = {
                 data.MakeInParam("@QuestionNo",  SqlDbType.VarChar, 50, Qno),
                 data.MakeInParam("@Username",  SqlDbType.VarChar, 50, ID),
                 };
-                data.RunProc("UPDATE tb_AdminProfile SET QuestionNo = (@QuestionNo) WHERE (Username = @Username)", prams);
+            data.RunProc("UPDATE tb_AdminProfile SET QuestionNo = (@QuestionNo) WHERE (Username = @Username)", prams);
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“QuestionDAO.SelectAnswerOrderByIdDESC()”的 XML 注释
@@ -168,7 +165,7 @@ namespace EADPPROJ.App_Code
                 data.MakeInParam("@UpVote",  SqlDbType.Int, 4,0),
                 };
             data.RunProc("INSERT INTO tb_Answer (Content,Username,PostTime,BestSelected,QuestionCode,UpVote) VALUES(@Content,@Username,@PostTime,@BestSelected,@QuestionCode,@UpVote)", prams);
-        
+
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“QuestionDAO.UpdateQuestionLastUpdateById(string)”的 XML 注释
@@ -220,7 +217,7 @@ namespace EADPPROJ.App_Code
                 data.MakeInParam("@QuestionCode",  SqlDbType.Int, 4,QuestionCode),
                 };
             return data.RunProcReturn("SELECT * FROM tb_Answer WHERE (QuestionCode = @QuestionCode) AND BestSelected = 1 ", prams, "tb_Answer");
-          
+
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“QuestionDAO.SelectAnswerById(int)”的 XML 注释
@@ -324,6 +321,6 @@ namespace EADPPROJ.App_Code
             data.RunProc("INSERT INTO tb_AnswerSection (AnswerId,Username,Content,ReferenceId) VALUES(@AnswerId,@Username,@Content,@RId)", prams);
         }
 
-       
+
     }
 }

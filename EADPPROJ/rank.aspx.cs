@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace EADPPROJ
 {
@@ -16,7 +11,7 @@ namespace EADPPROJ
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Rank.Page_Load(object, EventArgs)”的 XML 注释
         {
 
-            if(Session["Select"] != null)
+            if (Session["Select"] != null)
             {
                 requireSelection.Visible = true;
                 Session["Select"] = null;
@@ -32,14 +27,14 @@ namespace EADPPROJ
         protected void check_Click(object sender, EventArgs e)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Rank.check_Click(object, EventArgs)”的 XML 注释
         {
-            if(type.SelectedValue=="0" || type.SelectedValue==null)
+            if (type.SelectedValue == "0" || type.SelectedValue == null)
             {
                 Session["Select"] = true;
                 Response.Redirect("./rank.aspx");
             }
             else
             {
-                Response.Redirect("./rankDetail.aspx?type="+type.SelectedValue);
+                Response.Redirect("./rankDetail.aspx?type=" + type.SelectedValue);
             }
         }
     }

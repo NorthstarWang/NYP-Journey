@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -33,7 +30,7 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“RecordDAO.InsertCreditRecord(int, string, string, int, DateTime)”的 XML 注释
-        public void InsertCreditRecord(int RecordId,string username, string act, int creditValue,DateTime OccurTime)
+        public void InsertCreditRecord(int RecordId, string username, string act, int creditValue, DateTime OccurTime)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“RecordDAO.InsertCreditRecord(int, string, string, int, DateTime)”的 XML 注释
         {
             SqlParameter[] prams = {
@@ -44,7 +41,7 @@ namespace EADPPROJ.App_Code
             data.MakeInParam("@OccurTime",  SqlDbType.DateTime, 14, OccurTime),
             };
             data.RunProc("INSERT INTO tb_CreditRecord (Id,Username,Act,CreditValue,OccurTime) VALUES(@Id,@Username,@Act,@CreditValue,@OccurTime)", prams);
-        
+
         }
     }
 }

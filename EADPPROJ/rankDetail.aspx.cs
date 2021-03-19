@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Web.UI.WebControls;
-using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
@@ -18,39 +14,39 @@ namespace EADPPROJ
         protected void Page_Load(object sender, EventArgs e)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“rankDetail.Page_Load(object, EventArgs)”的 XML 注释
         {
-                if (Request.QueryString["type"] == "Blog")
-                {
-                    userRank.Visible = false;
+            if (Request.QueryString["type"] == "Blog")
+            {
+                userRank.Visible = false;
                 questionRank.Visible = false;
                 foreach (RepeaterItem item in Repeater1.Items)
-                    {
-                        LinkButton profile = (LinkButton)item.FindControl("viewProfile");
-                        LinkButton blog = (LinkButton)item.FindControl("viewBlog");
-                        HiddenField poster = (HiddenField)item.FindControl("posterId");
-                        HiddenField id = (HiddenField)item.FindControl("blogId");
-                        profile.PostBackUrl = "./profile.aspx?id=" + poster.Value;
-                        blog.PostBackUrl = "./blogDetail.aspx?id=" + id.Value;
-                    }
-                    foreach (RepeaterItem item in Repeater2.Items)
-                    {
-                        LinkButton profile = (LinkButton)item.FindControl("viewProfile");
-                        LinkButton blog = (LinkButton)item.FindControl("viewBlog");
-                        HiddenField poster = (HiddenField)item.FindControl("posterId");
-                        HiddenField id = (HiddenField)item.FindControl("blogId");
-                        profile.PostBackUrl = "./profile.aspx?id=" + poster.Value;
-                        blog.PostBackUrl = "./blogDetail.aspx?id=" + id.Value;
-                    }
-                }
-                else if (Request.QueryString["type"] == "User")
                 {
-                    blogRank.Visible = false;
+                    LinkButton profile = (LinkButton)item.FindControl("viewProfile");
+                    LinkButton blog = (LinkButton)item.FindControl("viewBlog");
+                    HiddenField poster = (HiddenField)item.FindControl("posterId");
+                    HiddenField id = (HiddenField)item.FindControl("blogId");
+                    profile.PostBackUrl = "./profile.aspx?id=" + poster.Value;
+                    blog.PostBackUrl = "./blogDetail.aspx?id=" + id.Value;
+                }
+                foreach (RepeaterItem item in Repeater2.Items)
+                {
+                    LinkButton profile = (LinkButton)item.FindControl("viewProfile");
+                    LinkButton blog = (LinkButton)item.FindControl("viewBlog");
+                    HiddenField poster = (HiddenField)item.FindControl("posterId");
+                    HiddenField id = (HiddenField)item.FindControl("blogId");
+                    profile.PostBackUrl = "./profile.aspx?id=" + poster.Value;
+                    blog.PostBackUrl = "./blogDetail.aspx?id=" + id.Value;
+                }
+            }
+            else if (Request.QueryString["type"] == "User")
+            {
+                blogRank.Visible = false;
                 questionRank.Visible = false;
-                    foreach (RepeaterItem item in Repeater3.Items)
-                    {
-                        HiddenField id = (HiddenField)item.FindControl("username");
-                        LinkButton viewProfile = (LinkButton)item.FindControl("viewProfile");
-                        viewProfile.PostBackUrl = "./profile.aspx?id=" + id.Value;
-                    }
+                foreach (RepeaterItem item in Repeater3.Items)
+                {
+                    HiddenField id = (HiddenField)item.FindControl("username");
+                    LinkButton viewProfile = (LinkButton)item.FindControl("viewProfile");
+                    viewProfile.PostBackUrl = "./profile.aspx?id=" + id.Value;
+                }
                 foreach (RepeaterItem item in Repeater4.Items)
                 {
                     HiddenField id = (HiddenField)item.FindControl("username");
@@ -62,7 +58,7 @@ namespace EADPPROJ
                     HiddenField id = (HiddenField)item.FindControl("username");
                     LinkButton viewProfile = (LinkButton)item.FindControl("viewProfile");
                     viewProfile.PostBackUrl = "./profile.aspx?id=" + id.Value;
-                    
+
                 }
                 foreach (RepeaterItem item in Repeater6.Items)
                 {
@@ -101,11 +97,11 @@ namespace EADPPROJ
                 }
             }
             else
-                {
-                    Session["illegal"] = true;
-                    Response.Redirect("./rank.aspx");
-                }
-            
+            {
+                Session["illegal"] = true;
+                Response.Redirect("./rank.aspx");
+            }
+
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“rankDetail.GetName(string)”的 XML 注释

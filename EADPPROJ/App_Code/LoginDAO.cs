@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 
 namespace EADPPROJ.App_Code
 {
@@ -22,7 +18,7 @@ namespace EADPPROJ.App_Code
         Record record = new Record();
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“LoginDAO.SelectAdminByIdentification(string, string)”的 XML 注释
-        public DataSet SelectAdminByIdentification(string username,string password)
+        public DataSet SelectAdminByIdentification(string username, string password)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“LoginDAO.SelectAdminByIdentification(string, string)”的 XML 注释
         {
             SqlParameter[] prams = {

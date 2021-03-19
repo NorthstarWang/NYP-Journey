@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 
 namespace EADPPROJ
@@ -29,14 +25,14 @@ namespace EADPPROJ
 
         // POST api/<controller>
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“MyInfo.Post(string)”的 XML 注释
-        public void Post([FromBody]string value)
+        public void Post([FromBody] string value)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“MyInfo.Post(string)”的 XML 注释
         {
         }
 
         // PUT api/<controller>/5
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“MyInfo.Put(int, string)”的 XML 注释
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody] string value)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“MyInfo.Put(int, string)”的 XML 注释
         {
         }

@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Configuration;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace EADPPROJ.App_Code
 {
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Database”的 XML 注释
-    public class Database:IDisposable
+    public class Database : IDisposable
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Database”的 XML 注释
     {
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Database.Database()”的 XML 注释
@@ -140,5 +137,5 @@ namespace EADPPROJ.App_Code
             return cmd;
         }
     }
-    
+
 }

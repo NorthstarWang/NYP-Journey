@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Web.UI.HtmlControls;
-using EADPPROJ.App_Code;
+using System.Web.UI.WebControls;
 
 namespace EADPPROJ
 {
@@ -28,16 +24,16 @@ namespace EADPPROJ
                 {
 #pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
                     headicon.Src = profile.GetStudentIcon(profile, ID);
-                    Name.Text = profile.GetStudentName(profile,ID);
-                    Identity.Text = "Student of "+ profile.GetStudentSchool(profile,ID);
-                    QuestionNo.Text = profile.GetStudentQuestionNo(profile,ID);
+                    Name.Text = profile.GetStudentName(profile, ID);
+                    Identity.Text = "Student of " + profile.GetStudentSchool(profile, ID);
+                    QuestionNo.Text = profile.GetStudentQuestionNo(profile, ID);
                     AnswersNo.Text = profile.GetStudentAnswersNo(profile, ID);
                     BestAnswerNo.Text = profile.GetStudentBestSolution(profile, ID).ToString();
-                    
-                    
+
+
                 }
 #pragma warning disable CS1587 // XML 注释没有放在有效语言元素上
-                else if(ID.Length == 9)///If Sensei
+                else if (ID.Length == 9)///If Sensei
                 {
 #pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
                     headicon.Src = profile.GetTeacherIcon(profile, ID);
@@ -46,7 +42,7 @@ namespace EADPPROJ
                     QuestionNo.Text = profile.GetTeacherQuestionNo(profile, ID);
                     AnswersNo.Text = profile.GetTeacherAnswersNo(profile, ID);
                     BestAnswerNo.Text = profile.GetTeacherBestSolution(profile, ID).ToString();
-                    
+
 
                 }
 #pragma warning disable CS1587 // XML 注释没有放在有效语言元素上
@@ -59,14 +55,15 @@ namespace EADPPROJ
                     QuestionNo.Text = profile.GetAdminQuestionNo(profile, ID);
                     AnswersNo.Text = profile.GetAdminAnswersNo(profile, ID);
                     BestAnswerNo.Text = profile.GetAdminBestSolution(profile, ID).ToString();
-                    
+
                 }
 
 
-                if(Session["Account"].ToString().Length == 7)
+                if (Session["Account"].ToString().Length == 7)
                 {
                     profileimg.Src = profile.GetStudentIcon(profile, Session["Account"].ToString());
-                }else if(Session["Account"].ToString().Length == 9)
+                }
+                else if (Session["Account"].ToString().Length == 9)
                 {
                     profileimg.Src = profile.GetTeacherIcon(profile, Session["Account"].ToString());
                 }
@@ -84,7 +81,7 @@ namespace EADPPROJ
                         Label content = (Label)GridView1.Rows[i].Cells[0].FindControl("Username");
                         Image icon = (Image)GridView1.Rows[i].Cells[0].FindControl("Icon");
                         icon.ImageUrl = profile.GetIcon(profile, content.Text);
-                        
+
                         Label time = (Label)GridView1.Rows[i].Cells[0].FindControl("postTime");
                         HtmlGenericControl timeAgo = (HtmlGenericControl)GridView1.Rows[i].Cells[0].FindControl("countdown");
                         if ((DateTime.Now - Convert.ToDateTime(time.Text)).TotalHours < 1)
@@ -160,7 +157,7 @@ namespace EADPPROJ
                     FileUpload1.SaveAs(Server.MapPath("") + "./assets/img/faces/" + FileUpload1.FileName);
                     profile.SaveAdminImg(profile, Session["Account"].ToString(), FileUpload1.FileName);
                 }
-                    
+
             }
             Response.Redirect("./profile.aspx?id=" + Request.QueryString["id"]);
         }
@@ -179,14 +176,14 @@ namespace EADPPROJ
             {
 
             }
-            
+
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“profile1.post_Click(object, EventArgs)”的 XML 注释
         protected void post_Click(object sender, EventArgs e)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“profile1.post_Click(object, EventArgs)”的 XML 注释
         {
-            if(blogContent.Text!= "" && blogTitle.Text!= "")
+            if (blogContent.Text != "" && blogTitle.Text != "")
             {
                 if (FileUpload2.HasFile)
                 {
@@ -211,4 +208,4 @@ namespace EADPPROJ
             }
         }
     }
-    }
+}

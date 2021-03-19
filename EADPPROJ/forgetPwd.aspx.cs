@@ -1,13 +1,6 @@
-﻿using System;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Data;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Net;
-using System.Net.Mail;
-using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
@@ -72,7 +65,7 @@ namespace EADPPROJ
                     string name = Convert.ToString(ds.Tables[0].Rows[0]["Mail"]);
                     ds = forgetPassword.GetAdminPassword(forgetPassword, "tb_Admin");
                     string password = Convert.ToString(ds.Tables[0].Rows[0]["Password"]);
-                    forgetPassword.SendMail(forgetPassword,name, password);
+                    forgetPassword.SendMail(forgetPassword, name, password);
                     Response.Write("<script>alert('Please Check Your Email')</script>");
                 }
                 catch (Exception)
@@ -80,7 +73,7 @@ namespace EADPPROJ
                     Response.Write("<script>alert('This account does not exist')</script>");
                 }
             }
-            
+
         }
     }
 }

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Web.UI.HtmlControls;
-using EADPPROJ.App_Code;
+using System.Web.UI.WebControls;
 
 namespace EADPPROJ
 {
@@ -82,7 +78,7 @@ namespace EADPPROJ
                     url.PostBackUrl = "./blogDetail.aspx?id=" + id.Text;
                     if (Convert.ToInt32(Default.Text) == 0)
                     {
-                        BG.Style["background-image"] = "url(../assets/img/BlogBG/" + blog1.GetBGPath( Convert.ToInt32(id.Text)) + ")";
+                        BG.Style["background-image"] = "url(../assets/img/BlogBG/" + blog1.GetBGPath(Convert.ToInt32(id.Text)) + ")";
                     }
                     else
                     {
@@ -136,7 +132,7 @@ namespace EADPPROJ
             LinkButton add = (LinkButton)sender;
             GridViewRow row = (GridViewRow)add.NamingContainer;
             Label BlogId = (Label)row.Cells[0].FindControl("BlogId");
-            if (profile.ValidateFav(profile, Convert.ToInt32(BlogId.Text),Session["Account"].ToString()) == 0)
+            if (profile.ValidateFav(profile, Convert.ToInt32(BlogId.Text), Session["Account"].ToString()) == 0)
             {
                 profile.AddFavorite(profile, Convert.ToInt32(BlogId.Text), Session["Account"].ToString());
                 blog1.AddFavourite(Convert.ToInt32(BlogId.Text));
@@ -148,7 +144,7 @@ namespace EADPPROJ
                 Session["Warn"] = true;
                 Response.Redirect("./blog.aspx");
             }
-            
+
         }
     }
 }

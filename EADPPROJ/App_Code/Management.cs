@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data;
-using System.Data.SqlClient;
 
 
 namespace EADPPROJ.App_Code
@@ -74,7 +70,7 @@ namespace EADPPROJ.App_Code
         public int GetAdminViewOnDay(DateTime dateTime)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Management.GetAdminViewOnDay(DateTime)”的 XML 注释
         {
-            DataSet ds = managementDAO.SelectAdminConnectionRecordByDay(dateTime); 
+            DataSet ds = managementDAO.SelectAdminConnectionRecordByDay(dateTime);
             return ds.Tables[0].Rows.Count;
         }
 
@@ -87,7 +83,7 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Management.EditGraduationYear(int, string)”的 XML 注释
-        public void EditGraduationYear(int graduation,string AdminNo)
+        public void EditGraduationYear(int graduation, string AdminNo)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Management.EditGraduationYear(int, string)”的 XML 注释
         {
             managementDAO.UpdateGraduationByAdminNo(graduation, AdminNo);
@@ -139,9 +135,9 @@ namespace EADPPROJ.App_Code
         public bool CheckSearchTextSubstringIsNumeric(string str)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Management.CheckSearchTextSubstringIsNumeric(string)”的 XML 注释
         {
-           int result;
+            int result;
             bool b = int.TryParse(str, out result);
-           return b;
+            return b;
         }
     }
 }

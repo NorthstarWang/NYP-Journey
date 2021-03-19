@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace EADPPROJ
 {
@@ -39,7 +34,8 @@ namespace EADPPROJ
             if (identityStudent.Checked)
             {
                 Response.Redirect("registerStudent.aspx");
-            }else if (identityTeacher.Checked)
+            }
+            else if (identityTeacher.Checked)
             {
                 Response.Redirect("registerTeacher.aspx");
             }

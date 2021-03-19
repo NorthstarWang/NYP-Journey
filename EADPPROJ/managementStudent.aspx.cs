@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Web.UI.WebControls;
-using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
@@ -22,7 +18,7 @@ namespace EADPPROJ
             {
                 if (search.Text != "")
                 {
-                    if (search.Text.Length == 7 && management.CheckSearchTextSubstringIsNumeric(search.Text.Substring(0,5))==true)
+                    if (search.Text.Length == 7 && management.CheckSearchTextSubstringIsNumeric(search.Text.Substring(0, 5)) == true)
                     {
                         try
                         {
@@ -35,7 +31,7 @@ namespace EADPPROJ
                             GridView1.Visible = false;
                             NoData.Visible = true;
                         }
-                        
+
                     }
                     else if (search.Text.Length > 7)
                     {
@@ -50,7 +46,7 @@ namespace EADPPROJ
                             GridView1.Visible = false;
                             NoData.Visible = true;
                         }
-                        
+
                     }
                     else if (search.Text.Length < 7)
                     {
@@ -80,7 +76,7 @@ namespace EADPPROJ
                             GridView1.Visible = false;
                             NoData.Visible = true;
                         }
-                        
+
                     }
 
                 }
@@ -90,7 +86,7 @@ namespace EADPPROJ
                     PersonalInfo.DataBind();
                     GridView1.DataBind();
                 }
-                
+
             }
         }
 

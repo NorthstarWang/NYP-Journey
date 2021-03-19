@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using EADPPROJ.App_Code;
+﻿using EADPPROJ.App_Code;
+using System;
 
 namespace EADPPROJ
 {
@@ -23,7 +18,8 @@ namespace EADPPROJ
                 {
                     credit.AddCredit(Session["Account"].ToString(), 98);
                     Response.Redirect("./creditTopUp.aspx");
-                }else if (Request.QueryString["item"] == "second")
+                }
+                else if (Request.QueryString["item"] == "second")
                 {
                     credit.AddCredit(Session["Account"].ToString(), 999);
                     Response.Redirect("./creditTopUp.aspx");
@@ -32,7 +28,8 @@ namespace EADPPROJ
                 {
                     credit.AddCredit(Session["Account"].ToString(), 10088);
                     Response.Redirect("./creditTopUp.aspx");
-                }else if(Request.QueryString["item"] == "custom")
+                }
+                else if (Request.QueryString["item"] == "custom")
                 {
                     credit.AddCredit(Session["Account"].ToString(), Convert.ToInt32(Session["CreditAmt"]));
                     Response.Redirect("./creditTopUp.aspx");
@@ -47,7 +44,7 @@ namespace EADPPROJ
         {
             try
             {
-                int cNo = Convert.ToInt32(creditNo.Text); 
+                int cNo = Convert.ToInt32(creditNo.Text);
             }
             catch (Exception)
             {
@@ -55,9 +52,9 @@ namespace EADPPROJ
                 Response.Redirect("./creditTopUp.aspx");
             }
             Session["CreditAmt"] = creditNo.Text;
-                Session["Price"] = credit.CalculateTopUpPrice(Convert.ToInt32(creditNo.Text));
-                Response.Redirect("./creditTopUp.aspx");
-            
+            Session["Price"] = credit.CalculateTopUpPrice(Convert.ToInt32(creditNo.Text));
+            Response.Redirect("./creditTopUp.aspx");
+
         }
     }
 }

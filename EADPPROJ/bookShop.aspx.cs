@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace EADPPROJ
@@ -38,7 +34,8 @@ namespace EADPPROJ
             else
             {
                 Hashtable ht = (Hashtable)Session["cart"];
-                if (ht.Contains(Id)){
+                if (ht.Contains(Id))
+                {
                     int count = Convert.ToInt32(ht[Id].ToString());
                     ht[Id] = count + 1;
                     Session["successCart"] = true;

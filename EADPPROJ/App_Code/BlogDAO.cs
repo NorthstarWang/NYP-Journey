@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 
 namespace EADPPROJ.App_Code
 {
@@ -58,7 +54,7 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“BlogDAO.UpdateHighlight(int, int)”的 XML 注释
-        public void UpdateHighlight(int id,int highlight)
+        public void UpdateHighlight(int id, int highlight)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“BlogDAO.UpdateHighlight(int, int)”的 XML 注释
         {
             SqlParameter[] prams = {

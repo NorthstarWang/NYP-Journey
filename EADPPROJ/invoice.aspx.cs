@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.HtmlControls;
-using EADPPROJ.App_Code;
-using System.Data;
+﻿using EADPPROJ.App_Code;
 using Pechkin;
+using System;
+using System.Data;
 using System.IO;
+using System.Web.UI;
 
 namespace EADPPROJ
 {
@@ -21,17 +16,17 @@ namespace EADPPROJ
         protected void Page_Load(object sender, EventArgs e)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“invoice.Page_Load(object, EventArgs)”的 XML 注释
         {
-                if (Request.QueryString["id"] != null)
-                {
-                    DataSet dsOrder = null;
-                    Label1.Text = Session["Account"].ToString();
-                    int orderId = Convert.ToInt32(Request.QueryString["id"]);
-                    dsOrder = shop.GetOrderInfo(shop, orderId);
-                    PostTime.InnerText = dsOrder.Tables[0].Rows[0]["PostTime"].ToString();
-                    invoiceId.InnerText = dsOrder.Tables[0].Rows[0]["Id"].ToString();
-                    totalPrice.InnerText = dsOrder.Tables[0].Rows[0]["Price"].ToString();
-                    Page.DataBind();
-                }
+            if (Request.QueryString["id"] != null)
+            {
+                DataSet dsOrder = null;
+                Label1.Text = Session["Account"].ToString();
+                int orderId = Convert.ToInt32(Request.QueryString["id"]);
+                dsOrder = shop.GetOrderInfo(shop, orderId);
+                PostTime.InnerText = dsOrder.Tables[0].Rows[0]["PostTime"].ToString();
+                invoiceId.InnerText = dsOrder.Tables[0].Rows[0]["Id"].ToString();
+                totalPrice.InnerText = dsOrder.Tables[0].Rows[0]["Price"].ToString();
+                Page.DataBind();
+            }
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“invoice.loadName(int)”的 XML 注释
@@ -53,10 +48,10 @@ namespace EADPPROJ
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“invoice.loadTotal(int, int)”的 XML 注释
-        protected string loadTotal(int quantity,int price)
+        protected string loadTotal(int quantity, int price)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“invoice.loadTotal(int, int)”的 XML 注释
         {
-            int i = quantity* price;
+            int i = quantity * price;
             return i.ToString();
         }
 
@@ -78,7 +73,7 @@ namespace EADPPROJ
             System.IO.StringWriter htmlStr = new System.IO.StringWriter(html);
             System.Web.UI.HtmlTextWriter htw = new HtmlTextWriter(htmlStr);
             pdfHTML.RenderControl(htw);
-            string htmlinner= html.ToString();
+            string htmlinner = html.ToString();
             byte[] pdf = pechkin.Convert(oc, htmlinner);
             File.WriteAllBytes("C:\\Users\\Wang Yang\\Desktop\\EADPPROJ\\EADPPROJ\\assets\\download\\invoice.pdf", pdf);
             Response.ContentType = "Application/pdf";

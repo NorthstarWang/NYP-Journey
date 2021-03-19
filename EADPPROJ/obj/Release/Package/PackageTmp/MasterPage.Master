@@ -20,16 +20,30 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg " color-on-scroll="50" id="sectionsNav">
+    <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="./index.aspx">Education System</a>
+                <a class="navbar-brand" style="display:none" href="./profile.aspx" id="profileUrl" runat="server">
+                      <div class="logo-image">
+                        <img src="assets/img/user-head-icon.jpg" class="rounded-circle img-fluid" alt="Circle Image" id="profileimg" runat="server">
+                      </div>
+                    <style>
+                        .logo-image {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
+}
+                    </style>
+                    </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     <span class="navbar-toggler-icon"></span>
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
+            <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto"> 
                     <li class="nav-item">
                                         <a href="invitationCode.aspx" class="nav-link">
@@ -69,13 +83,7 @@
                             </a>
                         </div>
                     </li>
-                                    <li class="nav-item" id="user">
-                                        <a href="./profile.aspx" class="profile-photo nav-link" id="profileUrl" runat="server">
-                                            <div class="profile-photo-small">
-                                                <img src="assets/img/user-head-icon.jpg" id="profileimg" alt="Circle Image" class="rounded-circle img-fluid" style="display:none" runat="server">
-                                            </div>
-                                        </a>
-                                    </li>
+                                   
                     <li class="nav-item"  >
                         <a href="./index.aspx" id="logout" class="nav-link" runat="server" style="display:none;" onserverclick="btn_logout_Click">
                                            Log Out
@@ -92,6 +100,7 @@
                                         </a>
                                     </li>
                 </ul>
+                </div>
             </div>
     </nav>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -105,9 +114,6 @@
                                             <h4>Nanyang Polytechnic is a polytechnic located in the precinct of Yio Chu Kang in the town of Ang Mo Kio, Singapore. As an industry-oriented alternative to a broader based junior college education, polytechnic graduates in Singapore are sought after for work or many continue to complete university degrees. In contrast to polytechnics in the United States and UK, polytechnics in Singapore admit majority of its students after secondary school which is after 10 years of formal education. Diplomas in a specialised area of study, for example Biomedical Science, are awarded after completing 3 years of studies.</h4>
                                             <br>
                                             <div class="buttons">
-                                                <a href="#pablo" class="btn btn-danger btn-lg">
-                                                    Read More
-                                                </a>
                                                 <a href="https://twitter.com/nyptweets" class="btn btn-just-icon btn-white btn-link">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>

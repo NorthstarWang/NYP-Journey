@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -63,34 +60,34 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“ProfileDAO.UpdateStudentProfileAnswerNoByAdminNo(int, string)”的 XML 注释
-        public void UpdateStudentProfileAnswerNoByAdminNo(int NewNum,string Username)
+        public void UpdateStudentProfileAnswerNoByAdminNo(int NewNum, string Username)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“ProfileDAO.UpdateStudentProfileAnswerNoByAdminNo(int, string)”的 XML 注释
         {
             SqlParameter[] prams = {
                 data.MakeInParam("@Username",  SqlDbType.VarChar, 50,Username),
                 data.MakeInParam("@AnswersNo",  SqlDbType.Int, 4,NewNum)
                 };
-                data.RunProc("UPDATE tb_StudentProfile SET AnswersNo = (@AnswersNo) WHERE (AdminNo = @Username)", prams);
+            data.RunProc("UPDATE tb_StudentProfile SET AnswersNo = (@AnswersNo) WHERE (AdminNo = @Username)", prams);
         }
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“ProfileDAO.UpdateTeacherProfileAnswerNoByNRIC(int, string)”的 XML 注释
         public void UpdateTeacherProfileAnswerNoByNRIC(int NewNum, string Username)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“ProfileDAO.UpdateTeacherProfileAnswerNoByNRIC(int, string)”的 XML 注释
         {
-        SqlParameter[] prams = {
+            SqlParameter[] prams = {
                 data.MakeInParam("@Username",  SqlDbType.VarChar, 50,Username),
                 data.MakeInParam("@AnswersNo",  SqlDbType.Int, 4,NewNum)
                 };
-                data.RunProc("UPDATE tb_TeacherProfile SET AnswersNo = (@AnswersNo) WHERE (NRIC = @Username)", prams);
+            data.RunProc("UPDATE tb_TeacherProfile SET AnswersNo = (@AnswersNo) WHERE (NRIC = @Username)", prams);
         }
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“ProfileDAO.UpdateAdminProfileAnswerNoByUsername(int, string)”的 XML 注释
         public void UpdateAdminProfileAnswerNoByUsername(int NewNum, string Username)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“ProfileDAO.UpdateAdminProfileAnswerNoByUsername(int, string)”的 XML 注释
-        { 
-        SqlParameter[] prams = {
+        {
+            SqlParameter[] prams = {
                 data.MakeInParam("@Username",  SqlDbType.VarChar, 50,Username),
                 data.MakeInParam("@AnswersNo",  SqlDbType.Int, 4,NewNum)
                 };
-                data.RunProc("UPDATE tb_AdminProfile SET AnswersNo = (@AnswersNo) WHERE (Username = @Username)", prams);
+            data.RunProc("UPDATE tb_AdminProfile SET AnswersNo = (@AnswersNo) WHERE (Username = @Username)", prams);
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“ProfileDAO.InsertComment(string, string, string)”的 XML 注释
@@ -163,7 +160,7 @@ namespace EADPPROJ.App_Code
                 data.MakeInParam("@Username",  SqlDbType.VarChar, 50,username)
                 };
             return data.RunProcReturn("Select * FROM tb_Favourite WHERE (BlogId = @Id) AND (Username=@Username)", prams, "tb_Favourite");
-            
+
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“ProfileDAO.SelectBlogByPoster(string)”的 XML 注释

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using EADPPROJ.App_Code;
+﻿using EADPPROJ.App_Code;
+using System;
 
 namespace EADPPROJ
 {
@@ -120,13 +115,14 @@ namespace EADPPROJ
             try
             {
                 int numeric = int.Parse(tipAmt);
-            }catch(Exception)
+            }
+            catch (Exception)
             {
                 Session["Error"] = true;
                 Response.Redirect("./blogDetail.aspx?id=" + Request.QueryString["id"]);
             }
-            
-            if(credit.GetCreditAmount(Session["Account"].ToString()) > Convert.ToInt32(tipAmt))
+
+            if (credit.GetCreditAmount(Session["Account"].ToString()) > Convert.ToInt32(tipAmt))
             {
                 credit.MinusCredit(Session["Account"].ToString(), Convert.ToInt32(tipAmt));
                 credit.AddCredit(blog.GetUsername(Convert.ToInt32(Request.QueryString["id"])), Convert.ToInt32(tipAmt));
@@ -145,7 +141,7 @@ namespace EADPPROJ
         protected void favorite_Click(object sender, EventArgs e)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“WebForm2.favorite_Click(object, EventArgs)”的 XML 注释
         {
-            if(profile.ValidateFav(profile, Convert.ToInt32(Request.QueryString["id"]), Session["Account"].ToString()) == 0)
+            if (profile.ValidateFav(profile, Convert.ToInt32(Request.QueryString["id"]), Session["Account"].ToString()) == 0)
             {
                 blog.AddFavourite(Convert.ToInt32(Request.QueryString["id"]));
                 profile.AddFavorite(profile, Convert.ToInt32(Request.QueryString["id"]), Session["Account"].ToString());
@@ -157,7 +153,7 @@ namespace EADPPROJ
                 Session["Already"] = true;
                 Response.Redirect("./blogDetail.aspx?id=" + Request.QueryString["id"]);
             }
-            
+
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“WebForm2.highlight_Click(object, EventArgs)”的 XML 注释

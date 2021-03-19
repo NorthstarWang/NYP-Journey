@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 
 namespace EADPPROJ.App_Code
@@ -64,7 +60,7 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“CreditDAO.UpdateStudentCredit(string, int)”的 XML 注释
-        public void UpdateStudentCredit(string username,int credit)
+        public void UpdateStudentCredit(string username, int credit)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“CreditDAO.UpdateStudentCredit(string, int)”的 XML 注释
         {
             SqlParameter[] prams = {

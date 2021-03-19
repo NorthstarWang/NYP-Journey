@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data;
-using System.Data.SqlClient;
 
 namespace EADPPROJ.App_Code
 {
@@ -22,7 +18,7 @@ namespace EADPPROJ.App_Code
         QuestionDAO questionDAO = new QuestionDAO();
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Profile.GetStudentIcon(Profile, string)”的 XML 注释
-        public string GetStudentIcon(Profile profile,string adminNo)
+        public string GetStudentIcon(Profile profile, string adminNo)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Profile.GetStudentIcon(Profile, string)”的 XML 注释
         {
             DataSet ds = questionDAO.SelectStudentProfileByAdminNo(adminNo);
@@ -70,7 +66,7 @@ namespace EADPPROJ.App_Code
             DataSet ds = profileDAO.SelectAnswerByUsernameAndBestSelected(adminNo);
             return ds.Tables[0].Rows.Count;
         }
-       
+
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Profile.GetTeacherIcon(Profile, string)”的 XML 注释
         public string GetTeacherIcon(Profile profile, string NRIC)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Profile.GetTeacherIcon(Profile, string)”的 XML 注释
@@ -80,7 +76,7 @@ namespace EADPPROJ.App_Code
             string url = "../assets/img/faces/" + icon;
             return url;
         }
-        
+
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Profile.GetTeacherName(Profile, string)”的 XML 注释
         public string GetTeacherName(Profile profile, string NRIC)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Profile.GetTeacherName(Profile, string)”的 XML 注释
@@ -90,7 +86,7 @@ namespace EADPPROJ.App_Code
             return name;
         }
 
-        
+
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Profile.GetTeacherQuestionNo(Profile, string)”的 XML 注释
         public string GetTeacherQuestionNo(Profile profile, string NRIC)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Profile.GetTeacherQuestionNo(Profile, string)”的 XML 注释
@@ -138,7 +134,7 @@ namespace EADPPROJ.App_Code
                 string url = "../assets/img/faces/" + icon;
                 return url;
             }
-            else if(Username.Length == 9)
+            else if (Username.Length == 9)
             {
                 ds = questionDAO.SelectTeacherProfileByNRIC(Username);
                 string icon = Convert.ToString(ds.Tables[0].Rows[0]["HeadIcon"]);
@@ -149,10 +145,10 @@ namespace EADPPROJ.App_Code
             {
                 ds = questionDAO.SelectAdminProfileByUsername(Username);
                 string icon = Convert.ToString(ds.Tables[0].Rows[0]["HeadIcon"]);
-            string url = "../assets/img/faces/" + icon;
-            return url;
+                string url = "../assets/img/faces/" + icon;
+                return url;
             }
-            
+
         }
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Profile.GetAdminQuestionNo(Profile, string)”的 XML 注释
         public string GetAdminQuestionNo(Profile profile, string Username)
@@ -182,7 +178,7 @@ namespace EADPPROJ.App_Code
         public bool ValidateImg(Profile profile, string path)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Profile.ValidateImg(Profile, string)”的 XML 注释
         {
-            bool fileIsValid=false;
+            bool fileIsValid = false;
             string[] restrictExtension = { ".gif", ".jpg", ".bmp", ".png" };
             for (int i = 0; i < restrictExtension.Length; i++)
             {
@@ -195,14 +191,14 @@ namespace EADPPROJ.App_Code
                 {
                     fileIsValid = false;
                 }
-                
+
             }
             return fileIsValid;
-            
+
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Profile.SaveStudentImg(Profile, string, string)”的 XML 注释
-        public void SaveStudentImg(Profile profile,string adminNo,string path)
+        public void SaveStudentImg(Profile profile, string adminNo, string path)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Profile.SaveStudentImg(Profile, string, string)”的 XML 注释
         {
             profileDAO.UpdateStudentProfileHeadIconByAdminNo(adminNo, path);
@@ -225,7 +221,7 @@ namespace EADPPROJ.App_Code
         {
             if (Username.Length == 7)
             {
-                int NewNum = Convert.ToInt32(GetStudentAnswersNo(profile, Username))+1;
+                int NewNum = Convert.ToInt32(GetStudentAnswersNo(profile, Username)) + 1;
                 profileDAO.UpdateStudentProfileAnswerNoByAdminNo(NewNum, Username);
             }
             else if (Username.Length == 9)
@@ -248,29 +244,29 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Profile.PostBlog(Profile, string, string, string, bool, string)”的 XML 注释
-        public void PostBlog(Profile profile, string title,string content, string poster,bool imgdefault,string imgpath)
+        public void PostBlog(Profile profile, string title, string content, string poster, bool imgdefault, string imgpath)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Profile.PostBlog(Profile, string, string, string, bool, string)”的 XML 注释
         {
-            if(imgdefault == true)
+            if (imgdefault == true)
             {
                 profileDAO.InsertBlog(title, content, poster);
             }
             else
             {
-                profileDAO.InsertBlog(title, content, poster, imgpath);    
+                profileDAO.InsertBlog(title, content, poster, imgpath);
             }
-            
+
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Profile.AddFavorite(Profile, int, string)”的 XML 注释
-        public void AddFavorite(Profile profile,int id,string username)
+        public void AddFavorite(Profile profile, int id, string username)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Profile.AddFavorite(Profile, int, string)”的 XML 注释
         {
             profileDAO.InsertFavourite(id, username);
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Profile.ValidateFav(Profile, int, string)”的 XML 注释
-        public int ValidateFav(Profile profile,int id,string username)
+        public int ValidateFav(Profile profile, int id, string username)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Profile.ValidateFav(Profile, int, string)”的 XML 注释
         {
             DataSet ds = profileDAO.SelectFavouriteByBlogIdAndUsername(id, username);
@@ -285,7 +281,7 @@ namespace EADPPROJ.App_Code
         }
 
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员“Profile.GetBlogNo(Profile, string)”的 XML 注释
-        public int GetBlogNo(Profile profile,string username)
+        public int GetBlogNo(Profile profile, string username)
 #pragma warning restore CS1591 // 缺少对公共可见类型或成员“Profile.GetBlogNo(Profile, string)”的 XML 注释
         {
             DataSet ds = profileDAO.SelectBlogByPoster(username);

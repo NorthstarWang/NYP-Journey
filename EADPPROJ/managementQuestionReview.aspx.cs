@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using EADPPROJ.App_Code;
+using System;
 using System.Web.UI.WebControls;
-using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
@@ -37,7 +33,7 @@ namespace EADPPROJ
             int Id = Convert.ToInt32(hf.Value);
             string Url = "./questionDetail.aspx?id=" + url.Value.ToString();
             management.ApproveQuestion(Id);
-            notification.QuestionApproveNotification(notification, un.Value.ToString(),Url);
+            notification.QuestionApproveNotification(notification, un.Value.ToString(), Url);
             Session["QuestionApprove"] = "true";
             Response.Redirect("./managementQuestionReview.aspx");
         }
