@@ -40,29 +40,95 @@ NYP Journey summary functions and features are [user identification system](#use
 
   User register and login the account by key in correct credentials with their corresponding Admin Number(For Student)/NRIC(For Teacher). User can find back their password by receiving system’s email.
 
+  - Registration
+
+    - OTP
+
+      The email will be sent to validate user's email.
+
+    - form wizard
+
+      The form will be shown step-by-step to guide the users more friendly.
+
+  - Login
+
+    By using users' own identity numbers, they will be able to sign in to the system.
+
+  - Forgot password
+
+    System will send password to users emails if they forget their passwords.
+
 - ##### User profile
 
   User can customize their own head icon and leave comment under other users’ profile. The profile contains users’ posted blogposts and brief data statistics about what have user done in NYP Journey. User can also add their favorite blogposts to favorite section.
+
+  - Customization
+
+    Modifications in users' own profile icon and information are available.
+
+  - Comment
+
+    Users can leave comment under other users’ profile page.
+
+  - Blog
+
+    User can share their learning experience in Blog system. User can tip the author with credit and can add the blogpost to favorite. Administrator can highlight the blogpost to make it more obvious on blog list page.
 
 - ##### Wallet
 
   User can check their own transaction history about their credits and shop purchase history which generate as Invoice. User can also top up their credit balance using PayPal.
 
+  - PayPal
+
+    If users need credits, they can purchase through PayPal API using real-life currency.
+
+  - Transaction history
+
+    User can view their credit transaction histories in My Wallet. 
+
 - ##### Question forum
 
   User posts question with a credit reward, after being approved by management system, other users can answer the question and one of them will be picked as the best solution and claim the credit reward.
+
+  - Ask Question
+
+    All users can ask question in the forum, the posting of the question will cost credit as a reward to the best solution made. All user can answer the question and the best solution for the question poster will claimed the reward. User can also leave reply under the answer.
+
+  - Manager Review System
+
+    Before the question publishes to the public users, it will be reviewed by administrator, if the question is approved, it can be seen by all users, else, it will be deleted.
 
 - ##### Management tools
 
   In order to manage the massive data more effectively, NYP Journey has a system that can only be accessed by admin account. The system can let the admin check the statistics of the website by data visualization. It is also able to edit all users’ information, posts and check the credit transaction record.
 
+  - User management
+
+    Admin is authorized to delete or modify any users' information.
+
+  - Question management
+
+    Admin can delete any question in the forum.
+
+  - Blog management
+
+    Admin can highlight the blog if the blog has quality content, the blog that has been highlighted will be more obvious for the viewers in the blog list.
+
 - ##### Notification menu
 
   Users check their own action record in NYP Journey and can redirect to the corresponding page.
 
+  - Action notify
+
+    Every action user does, including of creation of question in the forum, posting blog and redeeming any book from the shop.
+
 - ##### Shop
 
   Users redeem the credit for learning resources and the purchase invoice will be saved inside Wallet>Invoice.
+
+  - Book shop
+
+    The books can be redeemed by credit from wallet system.
 
 - ##### Ranking
 
@@ -71,6 +137,10 @@ NYP Journey summary functions and features are [user identification system](#use
 - ##### Invitation system
 
   Users invite their friends who have not yet get into NYP Journey with a invitation code. Both the new user who key in the code and the invitation code owner will be rewarded extra credit.
+
+  - Invitation code
+
+    Every user has their own unique invitation code, once the code has been key in by other new user that has not yet applied invitation code. Both users will be awarded credit that can redeem books in bookshop.
 
 - ##### Reporting pages
 
