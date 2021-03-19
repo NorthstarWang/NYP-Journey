@@ -77,7 +77,7 @@ NYP Journey summary functions and features are [user identification system](#use
   User can feedback in the questionnaire page and can type in if any issue occur in contact page.
 
 ## Database Model
-![Database Model](/database.jpg)
+![Database Model](Database.jpg)
 ## Copyright
 
 - [Ownership of copyright](#ownership-of-copyright)
