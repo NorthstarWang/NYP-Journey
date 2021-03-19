@@ -9,11 +9,15 @@ using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“registerStudent”的 XML 注释
     public partial class registerStudent : System.Web.UI.Page
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“registerStudent”的 XML 注释
     {
         Registration registration = new Registration();
         Notification notification = new Notification();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“registerStudent.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“registerStudent.Page_Load(object, EventArgs)”的 XML 注释
         {
             if (Session["Account"] != null)
             {
@@ -25,7 +29,9 @@ namespace EADPPROJ
             }
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“registerStudent.register_Click(object, EventArgs)”的 XML 注释
         protected void register_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“registerStudent.register_Click(object, EventArgs)”的 XML 注释
         {   int graduationInt = Convert.ToInt32(graduation.Text);
             if (adminNo.Text.Length.ToString()!="7" || Convert.ToInt32(adminNo.Text.Substring(0,2)) <17 || Convert.ToInt32(adminNo.Text.Substring(0, 2)) > 23)
             {

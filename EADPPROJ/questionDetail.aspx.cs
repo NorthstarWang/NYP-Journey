@@ -9,14 +9,18 @@ using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“questionDetail”的 XML 注释
     public partial class questionDetail : System.Web.UI.Page
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“questionDetail”的 XML 注释
     {
         Question question = new Question();
         Profile profile = new Profile();
         Credit credit = new Credit();
         Management management = new Management();
         Notification notification = new Notification();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“questionDetail.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“questionDetail.Page_Load(object, EventArgs)”的 XML 注释
         {
             try
             {
@@ -170,7 +174,9 @@ namespace EADPPROJ
         }
             
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“questionDetail.postAnswer_Click(object, EventArgs)”的 XML 注释
         protected void postAnswer_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“questionDetail.postAnswer_Click(object, EventArgs)”的 XML 注释
         {
             string answerText = answerContent.Text;
             question.SaveRichTextAnswer(question, Request.QueryString["id"],answerText,Session["Account"].ToString());
@@ -184,7 +190,9 @@ namespace EADPPROJ
             Response.Redirect("./questionDetail.aspx?id=" + Request.QueryString["id"]);
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“questionDetail.postReply_Click(object, EventArgs)”的 XML 注释
         protected void postReply_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“questionDetail.postReply_Click(object, EventArgs)”的 XML 注释
         {
             var post = (Button)sender;
             GridViewRow row = (GridViewRow)post.NamingContainer;
@@ -199,7 +207,9 @@ namespace EADPPROJ
             Response.Redirect("./questionDetail.aspx?id=" + Request.QueryString["id"]);
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“questionDetail.SolutionSelect(object, EventArgs)”的 XML 注释
         protected void SolutionSelect(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“questionDetail.SolutionSelect(object, EventArgs)”的 XML 注释
         {
             var solutionSelect = (Button)sender;
             GridViewRow row = (GridViewRow)solutionSelect.NamingContainer;
@@ -217,7 +227,9 @@ namespace EADPPROJ
             
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“questionDetail.upVote_Click(object, EventArgs)”的 XML 注释
         protected void upVote_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“questionDetail.upVote_Click(object, EventArgs)”的 XML 注释
         {
             var upVote = (Button)sender;
             GridViewRow row = (GridViewRow)upVote.NamingContainer;
@@ -235,7 +247,9 @@ namespace EADPPROJ
         }
 
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“questionDetail.Show_Click(object, EventArgs)”的 XML 注释
         protected void Show_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“questionDetail.Show_Click(object, EventArgs)”的 XML 注释
         {
             
             var show = (LinkButton)sender;
@@ -286,7 +300,9 @@ namespace EADPPROJ
             }
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“questionDetail.Reply_Click(object, EventArgs)”的 XML 注释
         protected void Reply_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“questionDetail.Reply_Click(object, EventArgs)”的 XML 注释
         {
             var reply = (Button)sender;
             GridViewRow row = (GridViewRow)reply.NamingContainer;

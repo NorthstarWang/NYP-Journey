@@ -7,9 +7,13 @@ using System.Data.SqlClient;
 
 namespace EADPPROJ.App_Code
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“CreditDAO”的 XML 注释
     public class CreditDAO
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“CreditDAO”的 XML 注释
     {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“CreditDAO.CreditDAO()”的 XML 注释
         public CreditDAO()
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“CreditDAO.CreditDAO()”的 XML 注释
         {
 
         }
@@ -17,7 +21,9 @@ namespace EADPPROJ.App_Code
         Database data = new Database();
         Record record = new Record();
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“CreditDAO.SelectCreditFromUser(string)”的 XML 注释
         public DataSet SelectCreditFromUser(string username)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“CreditDAO.SelectCreditFromUser(string)”的 XML 注释
         {
             DataSet ds = null;
             if (username.Length == 7)
@@ -45,7 +51,9 @@ namespace EADPPROJ.App_Code
                 return ds;
             }
         }
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“CreditDAO.SelectRewardFromQuestionById(int)”的 XML 注释
         public DataSet SelectRewardFromQuestionById(int id)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“CreditDAO.SelectRewardFromQuestionById(int)”的 XML 注释
         {
             DataSet ds = null;
             SqlParameter[] prams = {
@@ -55,7 +63,9 @@ namespace EADPPROJ.App_Code
             return ds;
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“CreditDAO.UpdateStudentCredit(string, int)”的 XML 注释
         public void UpdateStudentCredit(string username,int credit)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“CreditDAO.UpdateStudentCredit(string, int)”的 XML 注释
         {
             SqlParameter[] prams = {
                     data.MakeInParam("@AdminNo",  SqlDbType.VarChar, 50,username),
@@ -64,7 +74,9 @@ namespace EADPPROJ.App_Code
             data.RunProc("UPDATE tb_Student SET Credit = (@Credit) WHERE (AdminNo = @AdminNo)", prams);
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“CreditDAO.UpdateTeacherCredit(string, int)”的 XML 注释
         public void UpdateTeacherCredit(string username, int credit)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“CreditDAO.UpdateTeacherCredit(string, int)”的 XML 注释
         {
             SqlParameter[] prams = {
                     data.MakeInParam("@NRIC",  SqlDbType.VarChar, 50,username),
@@ -72,7 +84,9 @@ namespace EADPPROJ.App_Code
                     };
             data.RunProc("UPDATE tb_Teacher SET Credit = (@Credit) WHERE (NRIC = @NRIC)", prams);
         }
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“CreditDAO.UpdateAdminCredit(string, int)”的 XML 注释
         public void UpdateAdminCredit(string username, int credit)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“CreditDAO.UpdateAdminCredit(string, int)”的 XML 注释
         {
             SqlParameter[] prams = {
                     data.MakeInParam("@Username",  SqlDbType.VarChar, 50,username),
@@ -81,7 +95,9 @@ namespace EADPPROJ.App_Code
             data.RunProc("UPDATE tb_Admin SET Credit = (@Credit) WHERE (Username = @Username)", prams);
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“CreditDAO.SelectCreditRecordByUsername(string)”的 XML 注释
         public DataSet SelectCreditRecordByUsername(string username)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“CreditDAO.SelectCreditRecordByUsername(string)”的 XML 注释
         {
             DataSet ds = null;
             SqlParameter[] prams = {
@@ -90,7 +106,9 @@ namespace EADPPROJ.App_Code
             ds = data.RunProcReturn("SELECT * FROM tb_CreditRecord WHERE (Username = @Username)", prams, "tb_CreditRecord");
             return ds;
         }
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“CreditDAO.SelectCreditRecordByUsernameWhereActIsAdd(string)”的 XML 注释
         public DataSet SelectCreditRecordByUsernameWhereActIsAdd(string username)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“CreditDAO.SelectCreditRecordByUsernameWhereActIsAdd(string)”的 XML 注释
         {
             DataSet ds = null;
             SqlParameter[] prams = {
@@ -99,7 +117,9 @@ namespace EADPPROJ.App_Code
             ds = data.RunProcReturn("SELECT * FROM tb_CreditRecord WHERE (Username = @Username) and (Act = 'Add')", prams, "tb_CreditRecord");
             return ds;
         }
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“CreditDAO.SelectCreditRecordByUsernameWhereActIsMinus(string)”的 XML 注释
         public DataSet SelectCreditRecordByUsernameWhereActIsMinus(string username)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“CreditDAO.SelectCreditRecordByUsernameWhereActIsMinus(string)”的 XML 注释
         {
             DataSet ds = null;
             SqlParameter[] prams = {

@@ -8,11 +8,15 @@ using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“managementEditPersonalInfo”的 XML 注释
     public partial class managementEditPersonalInfo : System.Web.UI.Page
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“managementEditPersonalInfo”的 XML 注释
     {
 
         Management management = new Management();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“managementEditPersonalInfo.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“managementEditPersonalInfo.Page_Load(object, EventArgs)”的 XML 注释
         {
             if (IsPostBack)
             {
@@ -90,7 +94,9 @@ namespace EADPPROJ
             }
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“managementEditPersonalInfo.btn_Delete_Click(object, EventArgs)”的 XML 注释
         protected void btn_Delete_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“managementEditPersonalInfo.btn_Delete_Click(object, EventArgs)”的 XML 注释
         {
             var btn_Delete = (Button)sender;
             GridViewRow row = (GridViewRow)btn_Delete.NamingContainer;
@@ -100,7 +106,9 @@ namespace EADPPROJ
             Response.Redirect("./managementStudent.aspx");
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“managementEditPersonalInfo.btn_Change_Click(object, EventArgs)”的 XML 注释
         protected void btn_Change_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“managementEditPersonalInfo.btn_Change_Click(object, EventArgs)”的 XML 注释
         {
             var change = (Button)sender;
             GridViewRow row = (GridViewRow)change.NamingContainer;

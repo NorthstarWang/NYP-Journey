@@ -20,7 +20,20 @@
      <nav class="navbar navbar-expand-lg "  id="sectionsNav" style="margin-bottom:0">
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="./index.aspx">Education System</a>
+                <a class="navbar-brand" style="display:none" href="./profile.aspx" id="profileUrl" runat="server">
+                      <div class="logo-image">
+                        <img src="assets/img/user-head-icon.jpg" class="rounded-circle img-fluid" alt="Circle Image" id="profileimg" runat="server">
+                      </div>
+                    <style>
+                        .logo-image {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
+}
+                    </style>
+                    </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     <span class="navbar-toggler-icon"></span>
@@ -64,13 +77,6 @@
                             </a>
                         </div>
                     </li>
-                                    <li class="nav-item" id="user">
-                                        <a href="./profile.aspx" class="profile-photo nav-link" id="profileUrl" runat="server">
-                                            <div class="profile-photo-small">
-                                                <img src="assets/img/user-head-icon.jpg" id="profileimg" alt="Circle Image" class="rounded-circle img-fluid" style="display:none" runat="server">
-                                            </div>
-                                        </a>
-                                    </li>
                     <li class="nav-item"  >
                         <a href="./index.aspx" id="logout" class="nav-link" runat="server" style="display:none;" onserverclick="btn_logout_Click">
                                            Log Out

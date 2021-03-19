@@ -12,10 +12,14 @@ using System.IO;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invoice”的 XML 注释
     public partial class invoice : System.Web.UI.Page
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invoice”的 XML 注释
     {
         Shop shop = new Shop();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invoice.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invoice.Page_Load(object, EventArgs)”的 XML 注释
         {
                 if (Request.QueryString["id"] != null)
                 {
@@ -30,30 +34,40 @@ namespace EADPPROJ
                 }
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invoice.loadName(int)”的 XML 注释
         protected string loadName(int id)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invoice.loadName(int)”的 XML 注释
         {
             DataSet ds = null;
             ds = shop.ReturnBookInfo(shop, id);
             return ds.Tables[0].Rows[0]["Name"].ToString();
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invoice.loadPrice(int)”的 XML 注释
         protected string loadPrice(int id)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invoice.loadPrice(int)”的 XML 注释
         {
             DataSet ds = null;
             ds = shop.ReturnBookInfo(shop, id);
             return ds.Tables[0].Rows[0]["Price"].ToString();
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invoice.loadTotal(int, int)”的 XML 注释
         protected string loadTotal(int quantity,int price)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invoice.loadTotal(int, int)”的 XML 注释
         {
             int i = quantity* price;
             return i.ToString();
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invoice.VerifyRenderingInServerForm(Control)”的 XML 注释
         public override void VerifyRenderingInServerForm(Control control)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invoice.VerifyRenderingInServerForm(Control)”的 XML 注释
         {
         }
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invoice.download_Click(object, EventArgs)”的 XML 注释
         protected void download_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invoice.download_Click(object, EventArgs)”的 XML 注释
         {
             var config = new GlobalConfig();
             var pechkin = new SimplePechkin(config);

@@ -8,13 +8,19 @@ using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“MasterPageCredit”的 XML 注释
     public partial class MasterPageCredit : System.Web.UI.MasterPage
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“MasterPageCredit”的 XML 注释
     {
         Notification notification = new Notification();
         Question question = new Question();
         Credit credit = new Credit();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“MasterPageCredit.priceCustom”的 XML 注释
         public string priceCustom = "0";
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“MasterPageCredit.priceCustom”的 XML 注释
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“MasterPageCredit.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“MasterPageCredit.Page_Load(object, EventArgs)”的 XML 注释
         {
             if (Session["Account"] != null)
             {
@@ -79,18 +85,24 @@ namespace EADPPROJ
                 Response.Redirect("./index.aspx");
             }
         }
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“MasterPageCredit.logout(object, EventArgs)”的 XML 注释
         protected void logout(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“MasterPageCredit.logout(object, EventArgs)”的 XML 注释
         {
             Session["Account"] = null;
             Response.Redirect("index.aspx");
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“MasterPageCredit.Dismiss_Click(object, EventArgs)”的 XML 注释
         protected void Dismiss_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“MasterPageCredit.Dismiss_Click(object, EventArgs)”的 XML 注释
         {
             RandomPrice.Visible = false;
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“MasterPageCredit.Try_Click(object, EventArgs)”的 XML 注释
         protected void Try_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“MasterPageCredit.Try_Click(object, EventArgs)”的 XML 注释
         {
             var btn = (LinkButton)sender;
             GridViewRow row = (GridViewRow)btn.NamingContainer;

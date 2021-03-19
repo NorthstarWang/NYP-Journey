@@ -10,11 +10,15 @@ using System.Collections;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“bookDetail”的 XML 注释
     public partial class bookDetail : System.Web.UI.Page
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“bookDetail”的 XML 注释
     {
         Profile profile = new Profile();
         Shop shop = new Shop();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“bookDetail.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“bookDetail.Page_Load(object, EventArgs)”的 XML 注释
         {
             if (Session["Account"] != null)
             {
@@ -25,18 +29,24 @@ namespace EADPPROJ
                 appGroup.Style["display"] = "block";
 
                 string ID = Session["Account"].ToString();
+#pragma warning disable CS1587 // XML 注释没有放在有效语言元素上
                 if (ID.Length == 7)///If Student
                 {
+#pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
                     profileimg.Src = profile.GetStudentIcon(profile, ID);
                     profileUrl.HRef += "?id=" + Session["Account"].ToString();
                 }
+#pragma warning disable CS1587 // XML 注释没有放在有效语言元素上
                 else if (ID.Length == 9)///If Sensei
                 {
+#pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
                     profileimg.Src = profile.GetTeacherIcon(profile, ID);
                     profileUrl.HRef += "?id=" + Session["Account"].ToString();
                 }
+#pragma warning disable CS1587 // XML 注释没有放在有效语言元素上
                 else///If Admin
                 {
+#pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
                     profileimg.Src = profile.GetAdminIcon(profile, ID);
                     profileUrl.HRef += "?id=" + Session["Account"].ToString();
                 }
@@ -62,13 +72,17 @@ namespace EADPPROJ
             }
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“bookDetail.btn_logout_Click(object, EventArgs)”的 XML 注释
         protected void btn_logout_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“bookDetail.btn_logout_Click(object, EventArgs)”的 XML 注释
         {
             Session["Account"] = null;
             Response.Redirect("./index.aspx");
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“bookDetail.LinkButton1_Click(object, EventArgs)”的 XML 注释
         protected void LinkButton1_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“bookDetail.LinkButton1_Click(object, EventArgs)”的 XML 注释
         {
             var button = (LinkButton)sender;
             int Id = Convert.ToInt32(Request.QueryString["id"].ToString());

@@ -7,16 +7,22 @@ using System.Data.SqlClient;
 
 namespace EADPPROJ.App_Code
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“NotificationDAO”的 XML 注释
     public class NotificationDAO
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“NotificationDAO”的 XML 注释
     {
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“NotificationDAO.NotificationDAO()”的 XML 注释
         public NotificationDAO()
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“NotificationDAO.NotificationDAO()”的 XML 注释
         {
 
         }
         Database data = new Database();
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“NotificationDAO.SelectNotificationByUsernameAndViewBool(string)”的 XML 注释
         public DataSet SelectNotificationByUsernameAndViewBool(string Username)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“NotificationDAO.SelectNotificationByUsernameAndViewBool(string)”的 XML 注释
         {
             SqlParameter[] prams = {
                 data.MakeInParam("@Username",  SqlDbType.VarChar, 50,Username),
@@ -26,7 +32,9 @@ namespace EADPPROJ.App_Code
             
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“NotificationDAO.UpdateNotificationViewBoolByUsernameAndId(string, int)”的 XML 注释
         public void UpdateNotificationViewBoolByUsernameAndId(string Username, int id)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“NotificationDAO.UpdateNotificationViewBoolByUsernameAndId(string, int)”的 XML 注释
         {
             SqlParameter[] prams = {
                 data.MakeInParam("@Username",  SqlDbType.VarChar, 50,Username),
@@ -37,7 +45,9 @@ namespace EADPPROJ.App_Code
         
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“NotificationDAO.InsertNotification(string, string, string)”的 XML 注释
         public void InsertNotification(string Username, string Url,string Type)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“NotificationDAO.InsertNotification(string, string, string)”的 XML 注释
         {
             SqlParameter[] prams = {
                 data.MakeInParam("@Username",  SqlDbType.VarChar, 50,Username),

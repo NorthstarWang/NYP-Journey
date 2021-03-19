@@ -8,12 +8,16 @@ using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“MasterPageAdminManagement”的 XML 注释
     public partial class MasterPageAdminManagement : System.Web.UI.MasterPage
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“MasterPageAdminManagement”的 XML 注释
     {
         Question question = new Question();
         Credit credit = new Credit();
         Notification notification = new Notification();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“MasterPageAdminManagement.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“MasterPageAdminManagement.Page_Load(object, EventArgs)”的 XML 注释
         {
             if (Session["Account"] != null)
             {
@@ -39,22 +43,30 @@ namespace EADPPROJ
                 Session["ErrorAccount"] = "true";
                 Response.Redirect("./index.aspx");
             }
+#pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             if (Session["successDelete"] == "true")
+#pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             {
                 successDelete.Visible = true;
                 Session["successDelete"] = null;
             }
+#pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             if (Session["successEdit"] == "true")
+#pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             {
                 Session["successEdit"] = null;
                 successEdit.Visible = true;
             }
+#pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             if (Session["QuestionDelete"] == "true")
+#pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             {
                 Session["QuestionDelete"] = null;
                 QuestionDelete.Visible = true;
             }
+#pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             if (Session["QuestionApprove"] == "true")
+#pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             {
                 Session["QuestionApprove"] = null;
                 QuestionApprove.Visible = true;
@@ -88,13 +100,17 @@ namespace EADPPROJ
                 
             }
         }
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“MasterPageAdminManagement.logout(object, EventArgs)”的 XML 注释
         protected void logout(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“MasterPageAdminManagement.logout(object, EventArgs)”的 XML 注释
         {
             Session["Account"] = null;
             Response.Redirect("index.aspx");
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“MasterPageAdminManagement.Try_Click(object, EventArgs)”的 XML 注释
         protected void Try_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“MasterPageAdminManagement.Try_Click(object, EventArgs)”的 XML 注释
         {
             var btn = (LinkButton)sender;
             GridViewRow row = (GridViewRow)btn.NamingContainer;

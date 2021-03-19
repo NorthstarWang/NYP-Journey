@@ -7,12 +7,18 @@ using System.Data.SqlClient;
 
 namespace EADPPROJ.App_Code
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“QuestionnaireClass”的 XML 注释
     public class QuestionnaireClass
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“QuestionnaireClass”的 XML 注释
     {
         Database data = new Database();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“QuestionnaireClass.InsertQuestionnaire(string, string, string, string, string, string, string, string)”的 XML 注释
         public void InsertQuestionnaire(string adminno,string school, string year, string qlty, string rcmd,string nav,string reas,string email)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“QuestionnaireClass.InsertQuestionnaire(string, string, string, string, string, string, string, string)”的 XML 注释
         {
+#pragma warning disable CS0219 // 变量“ds”已被赋值，但从未使用过它的值
             DataSet ds = null;
+#pragma warning restore CS0219 // 变量“ds”已被赋值，但从未使用过它的值
             SqlParameter[] prams = {
                 data.MakeInParam("@adminno",  SqlDbType.VarChar,50,adminno),
                 data.MakeInParam("@school",  SqlDbType.VarChar,50,school),

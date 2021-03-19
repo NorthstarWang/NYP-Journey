@@ -9,18 +9,24 @@ using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“profile1”的 XML 注释
     public partial class profile1 : System.Web.UI.Page
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“profile1”的 XML 注释
     {
         Profile profile = new Profile();
         Blog blog = new Blog();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“profile1.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“profile1.Page_Load(object, EventArgs)”的 XML 注释
         {
             if (Session["Account"] != null)
             {
                 string ID = Request.QueryString["id"].ToString();
                 BlogNo.Text = profile.GetBlogNo(profile, ID).ToString();
+#pragma warning disable CS1587 // XML 注释没有放在有效语言元素上
                 if (ID.Length == 7)///If Student
                 {
+#pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
                     headicon.Src = profile.GetStudentIcon(profile, ID);
                     Name.Text = profile.GetStudentName(profile,ID);
                     Identity.Text = "Student of "+ profile.GetStudentSchool(profile,ID);
@@ -30,8 +36,10 @@ namespace EADPPROJ
                     
                     
                 }
+#pragma warning disable CS1587 // XML 注释没有放在有效语言元素上
                 else if(ID.Length == 9)///If Sensei
                 {
+#pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
                     headicon.Src = profile.GetTeacherIcon(profile, ID);
                     Name.Text = profile.GetTeacherName(profile, ID);
                     Identity.Text = "Teacher";
@@ -41,8 +49,10 @@ namespace EADPPROJ
                     
 
                 }
+#pragma warning disable CS1587 // XML 注释没有放在有效语言元素上
                 else///If Admin
                 {
+#pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
                     headicon.Src = profile.GetAdminIcon(profile, ID);
                     Name.Text = "Admin";
                     Identity.Text = "NYP";
@@ -122,7 +132,9 @@ namespace EADPPROJ
             }
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“profile1.Button4_Click(object, EventArgs)”的 XML 注释
         protected void Button4_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“profile1.Button4_Click(object, EventArgs)”的 XML 注释
         {
             string path = System.IO.Path.GetExtension(this.FileUpload1.FileName).ToLower();
             bool validate = profile.ValidateImg(profile, path);
@@ -154,7 +166,9 @@ namespace EADPPROJ
         }
 
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“profile1.CommentPostButton_Click(object, EventArgs)”的 XML 注释
         protected void CommentPostButton_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“profile1.CommentPostButton_Click(object, EventArgs)”的 XML 注释
         {
             if (CommentPostText.Text != "")
             {
@@ -168,7 +182,9 @@ namespace EADPPROJ
             
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“profile1.post_Click(object, EventArgs)”的 XML 注释
         protected void post_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“profile1.post_Click(object, EventArgs)”的 XML 注释
         {
             if(blogContent.Text!= "" && blogTitle.Text!= "")
             {

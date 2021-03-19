@@ -8,12 +8,16 @@ using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“WebForm2”的 XML 注释
     public partial class WebForm2 : System.Web.UI.Page
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“WebForm2”的 XML 注释
     {
         Blog blog = new Blog();
         Profile profile = new Profile();
         Credit credit = new Credit();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“WebForm2.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“WebForm2.Page_Load(object, EventArgs)”的 XML 注释
         {
             if (Session["Account"] != null)
             {
@@ -100,13 +104,17 @@ namespace EADPPROJ
             }
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“WebForm2.visit_Click(object, EventArgs)”的 XML 注释
         protected void visit_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“WebForm2.visit_Click(object, EventArgs)”的 XML 注释
         {
             string userId = blog.GetUsername(Convert.ToInt32(Request.QueryString["id"]));
             Response.Redirect("./profile.aspx?id=" + userId);
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“WebForm2.confirmTip_Click(object, EventArgs)”的 XML 注释
         protected void confirmTip_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“WebForm2.confirmTip_Click(object, EventArgs)”的 XML 注释
         {
             string tipAmt = tip.Text;
             try
@@ -133,7 +141,9 @@ namespace EADPPROJ
             }
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“WebForm2.favorite_Click(object, EventArgs)”的 XML 注释
         protected void favorite_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“WebForm2.favorite_Click(object, EventArgs)”的 XML 注释
         {
             if(profile.ValidateFav(profile, Convert.ToInt32(Request.QueryString["id"]), Session["Account"].ToString()) == 0)
             {
@@ -150,7 +160,9 @@ namespace EADPPROJ
             
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“WebForm2.highlight_Click(object, EventArgs)”的 XML 注释
         protected void highlight_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“WebForm2.highlight_Click(object, EventArgs)”的 XML 注释
         {
             bool highlight = blog.CheckHighlight(Convert.ToInt32(Request.QueryString["id"]));
             if (highlight == true)

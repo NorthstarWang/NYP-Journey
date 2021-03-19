@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\EADPPROJ"
+    "\\EADPPROJ",
+    "\\EADPPROJ\\App_Data"
   ],
-  "SelectedNode": "\\EADPPROJ\\Index.aspx",
+  "SelectedNode": "\\EADPPROJ.sln",
   "PreviewInSolutionExplorer": false
 }

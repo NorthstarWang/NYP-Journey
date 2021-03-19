@@ -11,11 +11,15 @@ using System.Data;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“shoppingCart”的 XML 注释
     public partial class shoppingCart : System.Web.UI.Page
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“shoppingCart”的 XML 注释
     {
         Shop shop = new Shop();
         Credit credit = new Credit();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“shoppingCart.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“shoppingCart.Page_Load(object, EventArgs)”的 XML 注释
         {
             if (Session["cart"] != null)
             {
@@ -66,7 +70,9 @@ namespace EADPPROJ
             }
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“shoppingCart.remove_Click(object, EventArgs)”的 XML 注释
         protected void remove_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“shoppingCart.remove_Click(object, EventArgs)”的 XML 注释
         {
             LinkButton remove = (LinkButton)sender;
             RepeaterItem item = (RepeaterItem)remove.NamingContainer;
@@ -88,7 +94,9 @@ namespace EADPPROJ
             
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“shoppingCart.add_Click(object, EventArgs)”的 XML 注释
         protected void add_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“shoppingCart.add_Click(object, EventArgs)”的 XML 注释
         {
             LinkButton add = (LinkButton)sender;
             RepeaterItem item = (RepeaterItem)add.NamingContainer;
@@ -101,7 +109,9 @@ namespace EADPPROJ
             Response.Redirect("bookCart.aspx");
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“shoppingCart.delete_Click(object, EventArgs)”的 XML 注释
         protected void delete_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“shoppingCart.delete_Click(object, EventArgs)”的 XML 注释
         {
             LinkButton delete = (LinkButton)sender;
             RepeaterItem item = (RepeaterItem)delete.NamingContainer;
@@ -112,7 +122,9 @@ namespace EADPPROJ
             Response.Redirect("bookCart.aspx");
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“shoppingCart.Pay_Click(object, EventArgs)”的 XML 注释
         protected void Pay_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“shoppingCart.Pay_Click(object, EventArgs)”的 XML 注释
         {
             Label price = (Label)Repeater1.Controls[Repeater1.Controls.Count - 1].Controls[0].FindControl("OverallPrice");
             int cost = Convert.ToInt32(price.Text);

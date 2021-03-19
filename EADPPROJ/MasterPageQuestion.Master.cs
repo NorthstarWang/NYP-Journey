@@ -8,12 +8,16 @@ using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“Header”的 XML 注释
     public partial class Header : System.Web.UI.MasterPage
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“Header”的 XML 注释
     {
         Question question = new Question();
         Credit credit = new Credit();
         Notification notification = new Notification();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“Header.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“Header.Page_Load(object, EventArgs)”的 XML 注释
         {
             if (Session["Account"] != null)
             {
@@ -34,44 +38,66 @@ namespace EADPPROJ
             {
                 Response.Redirect("./index.aspx");
             }
-            ///Alert Message Show
+            
+#pragma warning disable CS1587 // XML 注释没有放在有效语言元素上
+///Alert Message Show
+#pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             if(Session["warningInsufficientCredit"] == "true")
+#pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
+#pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
             {
                 warningInsufficientCredit.Visible = true;
                 Session["warningInsufficientCredit"] = "false";
             }
-            ///Success Message Show
+            
+#pragma warning disable CS1587 // XML 注释没有放在有效语言元素上
+///Success Message Show
+#pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             if(Session["successPostSuccess"] == "true")
+#pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
+#pragma warning restore CS1587 // XML 注释没有放在有效语言元素上
             {
                 successPostSuccess.Visible = true;
                 Session["successPostSuccess"] = "false";
             }
+#pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             if (Session["successUpvote"] == "true")
+#pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             {
                 successUpvote.Visible = true;
                 Session["successUpvote"] = "false";
             }
+#pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             if (Session["illegal"] == "true")
+#pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             {
                 illegalAccess.Visible = true;
                 Session["illegal"] = "false";
             }
+#pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             if (Session["answerPost"] == "true")
+#pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             {
                 successAnswerPost.Visible = true;
                 Session["answerPost"] = "false";
             }
+#pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             if (Session["commentPost"] == "true")
+#pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             {
                 successCommentPost.Visible = true;
                 Session["commentPost"] = "false";
             }
+#pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             if (Session["replyPost"] == "true")
+#pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             {
                 successReplyPost.Visible = true;
                 Session["replyPost"] = "false";
             }
+#pragma warning disable CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             if (Session["SolutionSelect"] == "true")
+#pragma warning restore CS0252 // 可能非有意的引用比较；若要获取值比较，请将左边转换为类型“string”
             {
                 successSolutionSelect.Visible = true;
                 Session["SolutionSelect"] = "false";
@@ -107,13 +133,17 @@ namespace EADPPROJ
             }
 
         }
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“Header.logout(object, EventArgs)”的 XML 注释
         protected void logout(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“Header.logout(object, EventArgs)”的 XML 注释
         {
             Session["Account"] = null;
             Response.Redirect("index.aspx");
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“Header.Try_Click(object, EventArgs)”的 XML 注释
         protected void Try_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“Header.Try_Click(object, EventArgs)”的 XML 注释
         {
             var btn = (LinkButton)sender;
             GridViewRow row = (GridViewRow)btn.NamingContainer;

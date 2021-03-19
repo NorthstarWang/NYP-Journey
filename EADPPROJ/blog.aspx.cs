@@ -9,11 +9,15 @@ using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“blog”的 XML 注释
     public partial class blog : System.Web.UI.Page
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“blog”的 XML 注释
     {
         Profile profile = new Profile();
         Blog blog1 = new Blog();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“blog.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“blog.Page_Load(object, EventArgs)”的 XML 注释
         {
 
             if (Session["Success"] != null)
@@ -125,7 +129,9 @@ namespace EADPPROJ
             }
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“blog.addFav_Click(object, EventArgs)”的 XML 注释
         protected void addFav_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“blog.addFav_Click(object, EventArgs)”的 XML 注释
         {
             LinkButton add = (LinkButton)sender;
             GridViewRow row = (GridViewRow)add.NamingContainer;

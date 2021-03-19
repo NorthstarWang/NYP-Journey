@@ -8,11 +8,15 @@ using EADPPROJ.App_Code;
 
 namespace EADPPROJ
 {
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invitationCode”的 XML 注释
     public partial class invitationCode : System.Web.UI.Page
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invitationCode”的 XML 注释
     {
         Login_Class login = new Login_Class();
         Notification notification = new Notification();
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invitationCode.Page_Load(object, EventArgs)”的 XML 注释
         protected void Page_Load(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invitationCode.Page_Load(object, EventArgs)”的 XML 注释
         {
             if (Session["Account"] != null)
             {
@@ -30,7 +34,9 @@ namespace EADPPROJ
             }
         }
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invitationCode.btnSubmit_Click(object, EventArgs)”的 XML 注释
         protected void btnSubmit_Click(object sender, EventArgs e)
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invitationCode.btnSubmit_Click(object, EventArgs)”的 XML 注释
         {
             Session["code"]=login.fillInInvitationCode(code.Text, Session["Account"].ToString());
             notification.invitationCodeNotification(notification, Session["Account"].ToString());
