@@ -5,7 +5,7 @@
         <div class="container">
                     <div class="row">
                         <div class="col-md-12 ml-auto mr-auto">
-                        <asp:ListView ID="ListView1" runat="server" DataKeyNames="Id" DataSourceID="LatestQuestion" it GroupItemCount="6">
+                        <asp:ListView ID="ListView1" runat="server" DataKeyNames="Id" DataSourceID="LatestQuestion" it GroupItemCount="3">
                             
                             <GroupTemplate>
                                 <div class="title">
@@ -27,7 +27,7 @@
                                                     <i class="fa fa-newspaper-o"></i> Question
                                                 </h5>
                                                 <h4 class="card-title">
-                                                    <a href="#pablo"><%# Eval("Title") %></a>
+                                                    <%# Eval("Title") %>
                                                 </h4>
                                             </div>
                                         </div>
@@ -56,7 +56,7 @@
                                                 </div>
                             </LayoutTemplate>
                         </asp:ListView>
-                        <asp:SqlDataSource ID="LatestQuestion" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 6 [Id], [Title], [Content], [Review] FROM [tb_Question] WHERE ([Review] = @Review) ORDER BY [Id] DESC">
+                        <asp:SqlDataSource ID="LatestQuestion" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 3 [Id], [Title], [Content], [Review] FROM [tb_Question] WHERE ([Review] = @Review) ORDER BY [Id] DESC">
                             <SelectParameters>
                                 <asp:Parameter DefaultValue="1" Name="Review" Type="Int32" />
                             </SelectParameters>
@@ -64,54 +64,8 @@
                             </div>
                         </div>
             </div>
-        <div class="container" >
-                    <div class="row">
-                        <div class="col-md-12 ml-auto mr-auto">
-                            <h2 class="title">Latest Blogposts</h2>
-                            <br>
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="100%" BorderStyle="None" GridLines="None" ShowHeader="False">
-                                <Columns>
-                                    <asp:TemplateField HeaderText="Blog">
-                                        <ItemTemplate>
-                                            <div class="card card-plain card-blog" style="height:130px;">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="card-header card-header-image">
-                                            <img class="img img-raised" runat="server" id="BlogImg" src="assets/img/examples/card-blog4.jpg">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <h6 class="card-category text-info">Highlight</h6>
-                                        <h3 class="card-title">
-                                            <a href='./blogDetail.aspx?id=<%# Eval("Id") %>'><%# Eval("Title") %></a>
-                                        </h3>
-                                        <div class="card-description" style="overflow:hidden;max-height:90px">
-                                            <%# Eval("Content") %>
-                                            
-                                        </div><a href='./blogDetail.aspx?id=<%# Eval("Id") %>'> Read More </a>
-                                    </div>
-                                </div>
-                            </div>
-                                            <asp:Label ID="Default" Visible="false" runat="server" Text='<%# Eval("BGDefault") %>'></asp:Label>
-                                            <asp:Label ID="BlogId" Visible="false" runat="server" Text='<%# Eval("Id") %>'></asp:Label>
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
-                                </Columns>
-                            </asp:GridView>
-                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_Blog] WHERE ([HighLight] = @HighLight) ORDER BY [Id] DESC">
-                                <SelectParameters>
-                                    <asp:Parameter DefaultValue="1" Name="HighLight" Type="Int32" />
-                                </SelectParameters>
-                            </asp:SqlDataSource>
-                           
-                        </div>
-                    </div>
-                </div>
         </div>
                 </div>
-                </div>
-        </div>
-    </div>
     <footer class="footer footer-white footer-big">
                         <div class="container">
                             <div class="content">
