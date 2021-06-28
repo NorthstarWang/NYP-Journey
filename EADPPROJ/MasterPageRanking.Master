@@ -25,7 +25,7 @@
             <div class="navbar-translate">
                 <a class="navbar-brand" style="display:none" href="./profile.aspx" id="profileUrl" runat="server">
                       <div class="logo-image">
-                        <img src="assets/img/user-head-icon.jpg" class="rounded-circle img-fluid" alt="Circle Image" id="profileimg" runat="server">
+                          <img src="assets/img/user-head-icon.jpg" class="rounded-circle img-fluid" alt="Circle Image" id="profileimg" runat="server" />
                       </div>
                     <style>
                         .logo-image {
