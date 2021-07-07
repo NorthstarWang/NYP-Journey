@@ -1,8 +1,6 @@
 namespace UChat.ChatEngine
 {
-#pragma warning disable CS1591 // 缺少对公共可见类型或成员“IChatEngine”的 XML 注释
     public interface IChatEngine
-#pragma warning restore CS1591 // 缺少对公共可见类型或成员“IChatEngine”的 XML 注释
     {
         /// <summary>
         /// HTML Formatted user list

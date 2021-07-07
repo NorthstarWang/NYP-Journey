@@ -202,3 +202,9 @@ C:\Users\15276\Source\Repos\NorthstarWang\NYP-Journey\EADPPROJ\obj\Release\EADPP
 C:\Users\15276\Source\Repos\NorthstarWang\NYP-Journey\EADPPROJ\obj\Release\EADPPROJ.csproj.CopyComplete
 C:\Users\15276\Source\Repos\NorthstarWang\NYP-Journey\EADPPROJ\obj\Release\EADPPROJ.dll
 C:\Users\15276\Source\Repos\NorthstarWang\NYP-Journey\EADPPROJ\obj\Release\EADPPROJ.pdb
+C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\HtmlAgilityPack.dll
+C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\MarkdownSharp.dll
+C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\HtmlAgilityPack.pdb
+C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\HtmlAgilityPack.xml
+C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\MarkdownSharp.pdb
+C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\MarkdownSharp.xml

@@ -5,9 +5,7 @@ using System.Threading;
 ////////////5///1///a///s///p///x/////////////////////
 namespace UChat.ChatEngine
 {
-#pragma warning disable CS1591 // 缺少对公共可见类型或成员“ChatEngine”的 XML 注释
     public class ChatEngine : IChatEngine
-#pragma warning restore CS1591 // 缺少对公共可见类型或成员“ChatEngine”的 XML 注释
     {
         const string msg = "<li class=\"{0}\">{1}</li>\r\n";
         const string userlistfmt = "<li>{0}</li>\r\n";

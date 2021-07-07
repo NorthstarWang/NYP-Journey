@@ -3,15 +3,13 @@ using System;
 
 namespace EADPPROJ
 {
-#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invitationCode”的 XML 注释
     public partial class invitationCode : System.Web.UI.Page
-#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invitationCode”的 XML 注释
     {
         Login_Class login = new Login_Class();
         Notification notification = new Notification();
-#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invitationCode.Page_Load(object, EventArgs)”的 XML 注释
+        Profile profile = new Profile();
+
         protected void Page_Load(object sender, EventArgs e)
-#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invitationCode.Page_Load(object, EventArgs)”的 XML 注释
         {
             if (Session["Account"] != null)
             {
@@ -21,6 +19,26 @@ namespace EADPPROJ
                     Session["code"] = null;
                 }
                 codeno.Text = login.getInvitationCode(Session["Account"].ToString());
+                profileUrl.Style["display"] = "block";
+                logout.Style["display"] = "block";
+                appGroup.Style["display"] = "block";
+
+                string ID = Session["Account"].ToString();
+                if (ID.Length == 7)///If Student
+                {
+                    profileimg.Src = profile.GetStudentIcon(profile, ID);
+                    profileUrl.HRef += "?id=" + Session["Account"].ToString();
+                }
+                else if (ID.Length == 9)///If Sensei
+                {
+                    profileimg.Src = profile.GetTeacherIcon(profile, ID);
+                    profileUrl.HRef += "?id=" + Session["Account"].ToString();
+                }
+                else///If Admin
+                {
+                    profileimg.Src = profile.GetAdminIcon(profile, ID);
+                    profileUrl.HRef += "?id=" + Session["Account"].ToString();
+                }
             }
             else
             {
@@ -29,14 +47,18 @@ namespace EADPPROJ
             }
         }
 
-#pragma warning disable CS1591 // 缺少对公共可见类型或成员“invitationCode.btnSubmit_Click(object, EventArgs)”的 XML 注释
         protected void btnSubmit_Click(object sender, EventArgs e)
-#pragma warning restore CS1591 // 缺少对公共可见类型或成员“invitationCode.btnSubmit_Click(object, EventArgs)”的 XML 注释
         {
             Session["code"] = login.fillInInvitationCode(code.Text, Session["Account"].ToString());
             notification.invitationCodeNotification(notification, Session["Account"].ToString());
             notification.invitationCodeUseNotification(notification, login.getUserFromCode(code.Text));
             Response.Redirect("invitationCode.aspx");
+        }
+
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+            Session["Account"] = null;
+            Response.Redirect("./index.aspx");
         }
     }
 }

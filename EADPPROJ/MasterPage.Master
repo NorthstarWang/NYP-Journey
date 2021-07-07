@@ -10,8 +10,7 @@
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="./assets/img/apple-icon.png">
     <link rel="icon" href="./assets/img/favicon.png">
-    <title>Education System
-    </title>
+    <title>NYP Journey | Main</title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
@@ -19,9 +18,47 @@
 </head>
 <body class="sidebar-collapse">
     <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
+        <style>
+            .nyp-title {
+                margin-left: 6em;
+                font-size: large;
+                color: inherit;
+                font-weight: bolder;
+                transition: transform .3s;
+            }
+
+                .nyp-title:hover {
+                    color: inherit;
+                    transform: scale(1.2)
+                }
+
+            .logo-image {
+                width: 50px;
+                height: 50px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+
+            @media only screen and (max-width:992px) {
+                .nyp-title {
+                    margin-left: 3em;
+                    font-size: large;
+                    color: inherit;
+                    font-weight: bolder;
+                    transition: transform .3s;
+                }
+
+                    .nyp-title:hover {
+                        color: inherit;
+                        transform: scale(1.2)
+                    }
+            }
+        </style>
+        <a class="nyp-title" href="./Index.aspx"><strong>NYP Journey</strong></a>
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="./Index.aspx">NYP Journey</a>
+                <p class="navbar-brand"></p>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     <span class="navbar-toggler-icon"></span>
@@ -32,47 +69,47 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a href="invitationCode.aspx" class="nav-link">
-                            <i class="fa fa-ticket"></i>Invitation Code
+                            <i class="fa fa-ticket"></i>&nbsp;Invitation Code
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./rank.aspx" class="nav-link">
-                            <i class="fa fa-graduation-cap"></i>Ranking
+                        <a href="./Rank/rank.aspx" class="nav-link">
+                            <i class="fa fa-graduation-cap"></i>&nbsp;Ranking
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./blog.aspx" class="nav-link">
-                            <i class="fa fa-rss"></i>Blog
+                        <a href="./Blog/blog.aspx" class="nav-link">
+                            <i class="fa fa-rss"></i>&nbsp;Blog
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./bookShop.aspx" class="nav-link">
-                            <i class="fa fa-shopping-basket"></i>Shop
+                        <a href="./Shop/bookShop.aspx" class="nav-link">
+                            <i class="fa fa-shopping-basket"></i>&nbsp;Shop
                         </a>
                     </li>
                     <li class="dropdown nav-item" runat="server" id="appGroup" style="display: none">
                         <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                            <i class="material-icons">apps</i> Apps
+                            <i class="material-icons">apps</i>&nbsp;Apps
                         </a>
                         <div class="dropdown-menu dropdown-with-icons">
-                            <a href="./questionList.aspx" class="dropdown-item">
-                                <i class="material-icons">forum</i> Let's Ask
+                            <a href="./Forum/questionList.aspx" class="dropdown-item">
+                                <i class="material-icons">forum</i>&nbsp;Let's Ask
                             </a>
-                            <a href="./creditBalance.aspx" class="dropdown-item">
-                                <i class="material-icons">account_balance_wallet</i> Account Wallet
+                            <a href="./Credit/creditBalance.aspx" class="dropdown-item">
+                                <i class="material-icons">account_balance_wallet</i>&nbsp;Account Wallet
                             </a>
                         </div>
                     </li>
                     <li class="dropdown nav-item">
                         <a class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
-                            <div class="profile-photo-small">
-                                <img src="assets/img/faces/user-head-icon.jpg" class="rounded-circle img-fluid" alt="Circle Image" id="profileimg" runat="server" />
+                            <div style="text-align: center; margin: 10px">
+                                <img src="assets/img/faces/user-head-icon.jpg" class="logo-image" alt="Circle Image" id="profileimg" runat="server" />
                             </div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-menu dropdown-menu-right" style="overflow-y: hidden;">
                             <a href="./login.aspx" id="login_func" runat="server" class="dropdown-item">Login</a>
-                            <a href="./registerType.aspx" id="register_func" runat="server" class="dropdown-item">Register</a>
-                            <a class="dropdown-item" style="display: none" href="./profile.aspx" id="profileUrl" runat="server">Profile</a>
+                            <a href="./Registration/registerType.aspx" id="register_func" runat="server" class="dropdown-item">Register</a>
+                            <a class="dropdown-item" style="display: none" href="./Profile/profile.aspx" id="profileUrl" runat="server">Profile</a>
                             <a class="dropdown-item" href="./index.aspx" id="logout" runat="server" style="display: none;" onserverclick="btn_logout_Click">Sign out</a>
                         </div>
                     </li>

@@ -7,9 +7,7 @@ using System.Web.Http;
 
 namespace EADPPROJ
 {
-#pragma warning disable CS1591 // 缺少对公共可见类型或成员“Global”的 XML 注释
     public class Global : HttpApplication
-#pragma warning restore CS1591 // 缺少对公共可见类型或成员“Global”的 XML 注释
     {
         Database data = new Database();
 
@@ -19,12 +17,9 @@ namespace EADPPROJ
             this.components = new System.ComponentModel.Container();
         }
 
-#pragma warning disable CS1591 // 缺少对公共可见类型或成员“Global.Engine”的 XML 注释
         public static UChat.ChatEngine.IChatEngine Engine = new UChat.ChatEngine.ChatEngine();
-#pragma warning restore CS1591 // 缺少对公共可见类型或成员“Global.Engine”的 XML 注释
-#pragma warning disable CS1591 // 缺少对公共可见类型或成员“Global.Global()”的 XML 注释
+
         public Global()
-#pragma warning restore CS1591 // 缺少对公共可见类型或成员“Global.Global()”的 XML 注释
         {
             InitializeComponent();
         }

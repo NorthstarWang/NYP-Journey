@@ -58,8 +58,14 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.34.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.34\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Humanizer, Version=2.7.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
       <HintPath>..\packages\Humanizer.Core.2.7.9\lib\netstandard1.0\Humanizer.dll</HintPath>
+    </Reference>
+    <Reference Include="MarkdownSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -911,14 +917,13 @@
     <Content Include="bin\System.Web.Http.WebHost.dll" />
     <Content Include="bin\WebActivator.dll" />
     <Content Include="bin\WebActivatorEx.dll" />
-    <Content Include="blog.aspx" />
-    <Content Include="blogDetail.aspx" />
-    <Content Include="bookDetail.aspx" />
-    <Content Include="bookShop.aspx" />
-    <Content Include="Contact.aspx" />
-    <Content Include="creditBalance.aspx" />
+    <Content Include="Blog\blog.aspx" />
+    <Content Include="Blog\blogDetail.aspx" />
+    <Content Include="Shop\bookDetail.aspx" />
+    <Content Include="Shop\bookShop.aspx" />
+    <Content Include="Credit\creditBalance.aspx" />
     <Content Include="invitationCode.aspx" />
-    <Content Include="invoice.aspx" />
+    <Content Include="Credit\invoice.aspx" />
     <Content Include="libeay32.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -928,185 +933,30 @@
     <Content Include="mingwm10.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="components\base\accordions.html" />
-    <Content Include="components\base\alert.html" />
-    <Content Include="components\base\badge.html" />
-    <Content Include="components\base\breadcrumb.html" />
-    <Content Include="components\base\button-group.html" />
-    <Content Include="components\base\buttons.html" />
-    <Content Include="components\base\card.html" />
-    <Content Include="components\base\collapse.html" />
-    <Content Include="components\base\dropdown.html" />
-    <Content Include="components\base\list-group.html" />
-    <Content Include="components\base\modal.html" />
-    <Content Include="components\base\navs.html" />
-    <Content Include="components\base\pagination.html" />
-    <Content Include="components\base\popovers.html" />
-    <Content Include="components\base\progress.html" />
-    <Content Include="components\base\spinners.html" />
-    <Content Include="components\base\table.html" />
-    <Content Include="components\base\tabs\base.html" />
-    <Content Include="components\base\tabs\button.html" />
-    <Content Include="components\base\tabs\line.html" />
-    <Content Include="components\base\toasts.html" />
-    <Content Include="components\base\tooltips.html" />
-    <Content Include="components\calendar\agenda-week.html" />
-    <Content Include="components\calendar\basic.html" />
-    <Content Include="components\calendar\external.html" />
-    <Content Include="components\calendar\google.html" />
-    <Content Include="components\calendar\list-view.html" />
-    <Content Include="components\calendar\rendering.html" />
-    <Content Include="components\charts\chart-js.html" />
-    <Content Include="components\charts\flotcharts.html" />
-    <Content Include="components\charts\google-charts.html" />
-    <Content Include="components\charts\morris-charts.html" />
-    <Content Include="components\custom\colors.html" />
-    <Content Include="components\custom\head.html" />
-    <Content Include="components\custom\lists.html" />
-    <Content Include="components\custom\media.html" />
-    <Content Include="components\custom\navs.html" />
-    <Content Include="components\custom\notes.html" />
-    <Content Include="components\custom\notifications.html" />
-    <Content Include="components\custom\pagination.html" />
-    <Content Include="components\custom\spinners.html" />
-    <Content Include="components\custom\timeline.html" />
-    <Content Include="components\custom\typography.html" />
-    <Content Include="components\datatables\advanced\column-rendering.html" />
-    <Content Include="components\datatables\advanced\column-visibility.html" />
-    <Content Include="components\datatables\advanced\footer-callback.html" />
-    <Content Include="components\datatables\advanced\multiple-controls.html" />
-    <Content Include="components\datatables\advanced\row-callback.html" />
-    <Content Include="components\datatables\advanced\row-grouping.html" />
-    <Content Include="components\datatables\basic\basic.html" />
-    <Content Include="components\datatables\basic\headers.html" />
-    <Content Include="components\datatables\basic\paginations.html" />
-    <Content Include="components\datatables\basic\scrollable.html" />
-    <Content Include="components\datatables\data-sources\ajax-client-side.html" />
-    <Content Include="components\datatables\data-sources\ajax-server-side.html" />
-    <Content Include="components\datatables\data-sources\html.html" />
-    <Content Include="components\datatables\data-sources\javascript.html" />
-    <Content Include="components\datatables\extensions\buttons.html" />
-    <Content Include="components\datatables\extensions\colreorder.html" />
-    <Content Include="components\datatables\extensions\keytable.html" />
-    <Content Include="components\datatables\extensions\responsive.html" />
-    <Content Include="components\datatables\extensions\rowgroup.html" />
-    <Content Include="components\datatables\extensions\rowreorder.html" />
-    <Content Include="components\datatables\extensions\scroller.html" />
-    <Content Include="components\datatables\extensions\select.html" />
-    <Content Include="components\datatables\search-options\advanced-search.html" />
-    <Content Include="components\datatables\search-options\column-search.html" />
-    <Content Include="components\extended\blockui.html" />
-    <Content Include="components\extended\dual-listbox.html" />
-    <Content Include="components\extended\idle-timer.html" />
-    <Content Include="components\extended\scroll.html" />
-    <Content Include="components\extended\session-timeout.html" />
-    <Content Include="components\extended\sticky-panels.html" />
-    <Content Include="components\extended\sweetalert2.html" />
-    <Content Include="components\extended\toastr.html" />
-    <Content Include="components\extended\treeview.html" />
-    <Content Include="components\extended\uppy.html" />
-    <Content Include="components\forms\controls\avatar.html" />
-    <Content Include="components\forms\controls\base.html" />
-    <Content Include="components\forms\controls\checkbox.html" />
-    <Content Include="components\forms\controls\input-group.html" />
-    <Content Include="components\forms\controls\option.html" />
-    <Content Include="components\forms\controls\radio.html" />
-    <Content Include="components\forms\controls\switch.html" />
-    <Content Include="components\forms\file-upload\dropzonejs.html" />
-    <Content Include="components\forms\file-upload\uppy.html" />
-    <Content Include="components\forms\layouts\action-bars.html" />
-    <Content Include="components\forms\layouts\basic.html" />
-    <Content Include="components\forms\layouts\multi-column.html" />
-    <Content Include="components\forms\layouts\repeater.html" />
-    <Content Include="components\forms\layouts\sticky-action-bars.html" />
-    <Content Include="components\forms\validation\controls.html" />
-    <Content Include="components\forms\validation\states.html" />
-    <Content Include="components\forms\validation\widgets.html" />
-    <Content Include="components\forms\widgets\autosize.html" />
-    <Content Include="components\forms\widgets\bootstrap-datepicker.html" />
-    <Content Include="components\forms\widgets\bootstrap-daterangepicker.html" />
-    <Content Include="components\forms\widgets\bootstrap-datetimepicker.html" />
-    <Content Include="components\forms\widgets\bootstrap-markdown.html" />
-    <Content Include="components\forms\widgets\bootstrap-maxlength.html" />
-    <Content Include="components\forms\widgets\bootstrap-multipleselectsplitter.html" />
-    <Content Include="components\forms\widgets\bootstrap-select.html" />
-    <Content Include="components\forms\widgets\bootstrap-timepicker.html" />
-    <Content Include="components\forms\widgets\bootstrap-touchspin.html" />
-    <Content Include="components\forms\widgets\clipboard.html" />
-    <Content Include="components\forms\widgets\dropzone.html" />
-    <Content Include="components\forms\widgets\input-mask.html" />
-    <Content Include="components\forms\widgets\nouislider.html" />
-    <Content Include="components\forms\widgets\quill.html" />
-    <Content Include="components\forms\widgets\recaptcha.html" />
-    <Content Include="components\forms\widgets\summernote.html" />
-    <Content Include="components\forms\widgets\tagify.html" />
-    <Content Include="components\forms\widgets\typeahead.html" />
-    <Content Include="components\icons\flaticon.html" />
-    <Content Include="components\icons\fontawesome5.html" />
-    <Content Include="components\icons\lineawesome.html" />
-    <Content Include="components\icons\socicons.html" />
-    <Content Include="components\keen-datatable\advanced\column-rendering.html" />
-    <Content Include="components\keen-datatable\advanced\column-width.html" />
-    <Content Include="components\keen-datatable\advanced\modal.html" />
-    <Content Include="components\keen-datatable\advanced\record-selection.html" />
-    <Content Include="components\keen-datatable\advanced\row-details.html" />
-    <Content Include="components\keen-datatable\api\events.html" />
-    <Content Include="components\keen-datatable\api\methods.html" />
-    <Content Include="components\keen-datatable\base\data-ajax.html" />
-    <Content Include="components\keen-datatable\base\data-json.html" />
-    <Content Include="components\keen-datatable\base\data-local.html" />
-    <Content Include="components\keen-datatable\base\html-table.html" />
-    <Content Include="components\keen-datatable\base\local-sort.html" />
-    <Content Include="components\keen-datatable\base\translation.html" />
-    <Content Include="components\keen-datatable\child\data-ajax.html" />
-    <Content Include="components\keen-datatable\child\data-local.html" />
-    <Content Include="components\keen-datatable\scrolling\vertical.html" />
-    <Content Include="components\portlets\base.html" />
-    <Content Include="components\portlets\draggable.html" />
-    <Content Include="components\portlets\sticky.html" />
-    <Content Include="components\portlets\tools.html" />
-    <Content Include="components\widgets\charts.html" />
-    <Content Include="components\widgets\general.html" />
     <Content Include="Content\Chart.css" />
     <Content Include="Content\Chart.min.css" />
-    <Content Include="creditTopUp.aspx" />
-    <Content Include="docs\documentation.html" />
+    <Content Include="Credit\creditTopUp.aspx" />
     <Content Include="forgetPwd.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
-    <Content Include="layout\features\aside\dropdown-menu.html" />
-    <Content Include="layout\features\aside\minimized.html" />
-    <Content Include="layout\features\aside\no-aside-fixed-content.html" />
-    <Content Include="layout\features\aside\no-aside.html" />
-    <Content Include="layout\features\aside\non-fixed.html" />
-    <Content Include="layout\features\header\menu-removed.html" />
-    <Content Include="layout\features\header\non-fixed.html" />
-    <Content Include="layout\features\misc\blank-page.html" />
-    <Content Include="layout\features\misc\fixed-content-subheader.html" />
-    <Content Include="layout\features\misc\fixed-content.html" />
-    <Content Include="layout\features\misc\fixed-footer.html" />
-    <Content Include="layout\features\misc\secondary-aside.html" />
-    <Content Include="layout\features\subheader\fixed.html" />
-    <Content Include="layout\features\subheader\removed.html" />
-    <Content Include="layout\features\subheader\subheader-v2.html" />
     <Content Include="login.aspx" />
-    <Content Include="managementCreditTransaction.aspx" />
-    <Content Include="managementStudent.aspx" />
-    <Content Include="managementTeacher.aspx" />
-    <Content Include="managementQuestionReview.aspx" />
-    <Content Include="managementConnectionRecord.aspx" />
-    <Content Include="managementVisualization.aspx" />
+    <Content Include="Admin\managementCreditTransaction.aspx" />
+    <Content Include="Admin\managementStudent.aspx" />
+    <Content Include="Admin\managementTeacher.aspx" />
+    <Content Include="Admin\managementQuestionReview.aspx" />
+    <Content Include="Admin\managementConnectionRecord.aspx" />
+    <Content Include="Admin\managementVisualization.aspx" />
     <Content Include="obj\Debug\EADPPROJ.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\EADPPROJ.dll" />
     <Content Include="obj\Debug\EADPPROJ.pdb" />
-    <Content Include="postQuestion.aspx" />
-    <Content Include="profile.aspx" />
-    <Content Include="questionDetail.aspx" />
-    <Content Include="rank.aspx" />
-    <Content Include="rankDetail.aspx" />
-    <Content Include="registerStudent.aspx" />
-    <Content Include="registerTeacher.aspx" />
-    <Content Include="registerType.aspx" />
+    <Content Include="Forum\postQuestion.aspx" />
+    <Content Include="Profile\profile.aspx" />
+    <Content Include="Forum\questionDetail.aspx" />
+    <Content Include="Rank\rank.aspx" />
+    <Content Include="Rank\rankDetail.aspx" />
+    <Content Include="Registration\registerStudent.aspx" />
+    <Content Include="Registration\registerTeacher.aspx" />
+    <Content Include="Registration\registerType.aspx" />
     <Content Include="Scripts\Chart.js" />
     <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\tinymce\jquery.tinymce.min.js" />
@@ -1235,7 +1085,7 @@
     <Content Include="Scripts\tinymce\themes\silver\theme.min.js" />
     <Content Include="Scripts\tinymce\tinymce.js" />
     <Content Include="Scripts\tinymce\tinymce.min.js" />
-    <Content Include="bookCart.aspx" />
+    <Content Include="Shop\bookCart.aspx" />
     <Content Include="ssleay32.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1270,7 +1120,7 @@
     <Content Include="uploads\_cache\thumb_try-cms-now.jpg.png" />
     <Content Include="uploads\_cache\thumb_wolf2.jpg.png" />
     <Content Include="Web.config" />
-    <Content Include="questionList.aspx" />
+    <Content Include="Forum\questionList.aspx" />
     <Content Include="wkhtmltox0.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1300,48 +1150,41 @@
     <Compile Include="App_Code\Shop.cs" />
     <Compile Include="App_Code\ShopDAO.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="blog.aspx.cs">
+    <Compile Include="Blog\blog.aspx.cs">
       <DependentUpon>blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="blog.aspx.designer.cs">
+    <Compile Include="Blog\blog.aspx.designer.cs">
       <DependentUpon>blog.aspx</DependentUpon>
     </Compile>
-    <Compile Include="blogDetail.aspx.cs">
+    <Compile Include="Blog\blogDetail.aspx.cs">
       <DependentUpon>blogDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="blogDetail.aspx.designer.cs">
+    <Compile Include="Blog\blogDetail.aspx.designer.cs">
       <DependentUpon>blogDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="bookDetail.aspx.cs">
+    <Compile Include="Shop\bookDetail.aspx.cs">
       <DependentUpon>bookDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="bookDetail.aspx.designer.cs">
+    <Compile Include="Shop\bookDetail.aspx.designer.cs">
       <DependentUpon>bookDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="bookShop.aspx.cs">
+    <Compile Include="Shop\bookShop.aspx.cs">
       <DependentUpon>bookShop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="bookShop.aspx.designer.cs">
+    <Compile Include="Shop\bookShop.aspx.designer.cs">
       <DependentUpon>bookShop.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChatEngine\ChatEngine.cs" />
     <Compile Include="ChatEngine\IChatEngine.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="creditBalance.aspx.cs">
+    <Compile Include="Credit\creditBalance.aspx.cs">
       <DependentUpon>creditBalance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="creditBalance.aspx.designer.cs">
+    <Compile Include="Credit\creditBalance.aspx.designer.cs">
       <DependentUpon>creditBalance.aspx</DependentUpon>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
@@ -1352,25 +1195,25 @@
     <Compile Include="invitationCode.aspx.designer.cs">
       <DependentUpon>invitationCode.aspx</DependentUpon>
     </Compile>
-    <Compile Include="invoice.aspx.cs">
+    <Compile Include="Credit\invoice.aspx.cs">
       <DependentUpon>invoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="invoice.aspx.designer.cs">
+    <Compile Include="Credit\invoice.aspx.designer.cs">
       <DependentUpon>invoice.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPageShop.Master.cs">
+    <Compile Include="Shop\MasterPageShop.Master.cs">
       <DependentUpon>MasterPageShop.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPageShop.Master.designer.cs">
+    <Compile Include="Shop\MasterPageShop.Master.designer.cs">
       <DependentUpon>MasterPageShop.Master</DependentUpon>
     </Compile>
-    <Compile Include="creditTopUp.aspx.cs">
+    <Compile Include="Credit\creditTopUp.aspx.cs">
       <DependentUpon>creditTopUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="creditTopUp.aspx.designer.cs">
+    <Compile Include="Credit\creditTopUp.aspx.designer.cs">
       <DependentUpon>creditTopUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="forgetPwd.aspx.cs">
@@ -1383,67 +1226,67 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="managementCreditTransaction.aspx.cs">
+    <Compile Include="Admin\managementCreditTransaction.aspx.cs">
       <DependentUpon>managementCreditTransaction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="managementCreditTransaction.aspx.designer.cs">
+    <Compile Include="Admin\managementCreditTransaction.aspx.designer.cs">
       <DependentUpon>managementCreditTransaction.aspx</DependentUpon>
     </Compile>
-    <Compile Include="managementStudent.aspx.cs">
+    <Compile Include="Admin\managementStudent.aspx.cs">
       <DependentUpon>managementStudent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="managementStudent.aspx.designer.cs">
+    <Compile Include="Admin\managementStudent.aspx.designer.cs">
       <DependentUpon>managementStudent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="managementTeacher.aspx.cs">
+    <Compile Include="Admin\managementTeacher.aspx.cs">
       <DependentUpon>managementTeacher.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="managementTeacher.aspx.designer.cs">
+    <Compile Include="Admin\managementTeacher.aspx.designer.cs">
       <DependentUpon>managementTeacher.aspx</DependentUpon>
     </Compile>
-    <Compile Include="managementQuestionReview.aspx.cs">
+    <Compile Include="Admin\managementQuestionReview.aspx.cs">
       <DependentUpon>managementQuestionReview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="managementQuestionReview.aspx.designer.cs">
+    <Compile Include="Admin\managementQuestionReview.aspx.designer.cs">
       <DependentUpon>managementQuestionReview.aspx</DependentUpon>
     </Compile>
-    <Compile Include="managementConnectionRecord.aspx.cs">
+    <Compile Include="Admin\managementConnectionRecord.aspx.cs">
       <DependentUpon>managementConnectionRecord.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="managementConnectionRecord.aspx.designer.cs">
+    <Compile Include="Admin\managementConnectionRecord.aspx.designer.cs">
       <DependentUpon>managementConnectionRecord.aspx</DependentUpon>
     </Compile>
-    <Compile Include="managementVisualization.aspx.cs">
+    <Compile Include="Admin\managementVisualization.aspx.cs">
       <DependentUpon>managementVisualization.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="managementVisualization.aspx.designer.cs">
+    <Compile Include="Admin\managementVisualization.aspx.designer.cs">
       <DependentUpon>managementVisualization.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPageAdminManagement.Master.cs">
+    <Compile Include="Admin\MasterPageAdminManagement.Master.cs">
       <DependentUpon>MasterPageAdminManagement.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPageAdminManagement.Master.designer.cs">
+    <Compile Include="Admin\MasterPageAdminManagement.Master.designer.cs">
       <DependentUpon>MasterPageAdminManagement.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPageCredit.Master.cs">
+    <Compile Include="Credit\MasterPageCredit.Master.cs">
       <DependentUpon>MasterPageCredit.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPageCredit.Master.designer.cs">
+    <Compile Include="Credit\MasterPageCredit.Master.designer.cs">
       <DependentUpon>MasterPageCredit.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPageQuestion.Master.cs">
+    <Compile Include="Forum\MasterPageQuestion.Master.cs">
       <DependentUpon>MasterPageQuestion.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPageQuestion.Master.designer.cs">
+    <Compile Include="Forum\MasterPageQuestion.Master.designer.cs">
       <DependentUpon>MasterPageQuestion.Master</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
@@ -1467,109 +1310,109 @@
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPageBlog.Master.cs">
+    <Compile Include="Blog\MasterPageBlog.Master.cs">
       <DependentUpon>MasterPageBlog.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPageBlog.Master.designer.cs">
+    <Compile Include="Blog\MasterPageBlog.Master.designer.cs">
       <DependentUpon>MasterPageBlog.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPageProfile.Master.cs">
+    <Compile Include="Profile\MasterPageProfile.Master.cs">
       <DependentUpon>MasterPageProfile.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPageProfile.Master.designer.cs">
+    <Compile Include="Profile\MasterPageProfile.Master.designer.cs">
       <DependentUpon>MasterPageProfile.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPageRanking.Master.cs">
+    <Compile Include="Rank\MasterPageRanking.Master.cs">
       <DependentUpon>MasterPageRanking.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPageRanking.Master.designer.cs">
+    <Compile Include="Rank\MasterPageRanking.Master.designer.cs">
       <DependentUpon>MasterPageRanking.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPageRegistration.Master.cs">
+    <Compile Include="Registration\MasterPageRegistration.Master.cs">
       <DependentUpon>MasterPageRegistration.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPageRegistration.Master.designer.cs">
+    <Compile Include="Registration\MasterPageRegistration.Master.designer.cs">
       <DependentUpon>MasterPageRegistration.Master</DependentUpon>
     </Compile>
-    <Compile Include="MyInfo.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="postQuestion.aspx.cs">
+    <Compile Include="Forum\postQuestion.aspx.cs">
       <DependentUpon>postQuestion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="postQuestion.aspx.designer.cs">
+    <Compile Include="Forum\postQuestion.aspx.designer.cs">
       <DependentUpon>postQuestion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="profile.aspx.cs">
+    <Compile Include="Profile\profile.aspx.cs">
       <DependentUpon>profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="profile.aspx.designer.cs">
+    <Compile Include="Profile\profile.aspx.designer.cs">
       <DependentUpon>profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="questionDetail.aspx.cs">
+    <Compile Include="Forum\questionDetail.aspx.cs">
       <DependentUpon>questionDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="questionDetail.aspx.designer.cs">
+    <Compile Include="Forum\questionDetail.aspx.designer.cs">
       <DependentUpon>questionDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="rank.aspx.cs">
+    <Compile Include="Rank\rank.aspx.cs">
       <DependentUpon>rank.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="rank.aspx.designer.cs">
+    <Compile Include="Rank\rank.aspx.designer.cs">
       <DependentUpon>rank.aspx</DependentUpon>
     </Compile>
-    <Compile Include="rankDetail.aspx.cs">
+    <Compile Include="Rank\rankDetail.aspx.cs">
       <DependentUpon>rankDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="rankDetail.aspx.designer.cs">
+    <Compile Include="Rank\rankDetail.aspx.designer.cs">
       <DependentUpon>rankDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="registerStudent.aspx.cs">
+    <Compile Include="Registration\registerStudent.aspx.cs">
       <DependentUpon>registerStudent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="registerStudent.aspx.designer.cs">
+    <Compile Include="Registration\registerStudent.aspx.designer.cs">
       <DependentUpon>registerStudent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="registerTeacher.aspx.cs">
+    <Compile Include="Registration\registerTeacher.aspx.cs">
       <DependentUpon>registerTeacher.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="registerTeacher.aspx.designer.cs">
+    <Compile Include="Registration\registerTeacher.aspx.designer.cs">
       <DependentUpon>registerTeacher.aspx</DependentUpon>
     </Compile>
-    <Compile Include="registerType.aspx.cs">
+    <Compile Include="Registration\registerType.aspx.cs">
       <DependentUpon>registerType.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="registerType.aspx.designer.cs">
+    <Compile Include="Registration\registerType.aspx.designer.cs">
       <DependentUpon>registerType.aspx</DependentUpon>
     </Compile>
-    <Compile Include="questionList.aspx.cs">
+    <Compile Include="Forum\questionList.aspx.cs">
       <DependentUpon>questionList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="questionList.aspx.designer.cs">
+    <Compile Include="Forum\questionList.aspx.designer.cs">
       <DependentUpon>questionList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="bookCart.aspx.cs">
+    <Compile Include="Shop\bookCart.aspx.cs">
       <DependentUpon>bookCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="bookCart.aspx.designer.cs">
+    <Compile Include="Shop\bookCart.aspx.designer.cs">
       <DependentUpon>bookCart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RichTextConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.Master" />
@@ -1758,9 +1601,9 @@
     <Content Include="assets\scss\pro\_sections.scss" />
     <Content Include="assets\scss\pro\_social-buttons.scss" />
     <Content Include="assets\scss\pro\_tables.scss" />
-    <Content Include="MasterPageBlog.Master" />
-    <Content Include="MasterPageRegistration.Master" />
-    <Content Include="MasterPageQuestion.Master" />
+    <Content Include="Blog\MasterPageBlog.Master" />
+    <Content Include="Registration\MasterPageRegistration.Master" />
+    <Content Include="Forum\MasterPageQuestion.Master" />
     <Content Include="assets\plugins\bootstrap-multiselectsplitter\LICENCE" />
     <Content Include="assets\plugins\bootstrap-session-timeout\.jshintrc" />
     <Content Include="assets\plugins\bootstrap-session-timeout\bower.json" />
@@ -2009,13 +1852,13 @@
     <Content Include="obj\Release\EADPPROJ.csproj.CoreCompileInputs.cache" />
     <Content Include="bin\EADPPROJ.dll.config" />
     <Content Include="bin\richtexteditor.lic" />
-    <Content Include="MasterPageCredit.Master" />
-    <Content Include="MasterPageAdminManagement.Master" />
-    <Content Include="MasterPageRanking.Master" />
-    <Content Include="MasterPageShop.Master" />
+    <Content Include="Credit\MasterPageCredit.Master" />
+    <Content Include="Admin\MasterPageAdminManagement.Master" />
+    <Content Include="Rank\MasterPageRanking.Master" />
+    <Content Include="Shop\MasterPageShop.Master" />
     <Content Include="assets\download\invoice.pdf" />
     <None Include="packages.config" />
-    <Content Include="MasterPageProfile.Master" />
+    <Content Include="Profile\MasterPageProfile.Master" />
     <Content Include="uploads\Guest\_cache\_cache_image.cache" />
     <Content Include="uploads\_cache\_cache_image.cache" />
     <Content Include="Scripts\tinymce\skins\ui\oxide\fonts\tinymce-mobile.woff" />
@@ -2032,7 +1875,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\zh-Hans\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>

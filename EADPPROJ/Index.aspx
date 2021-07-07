@@ -26,12 +26,11 @@
                         <div class="card card-blog">
                             <div class="card-header card-header-image">
                                 <a href="<%# Eval("Id","./blogDetail.aspx?id={0}") %>">
-                                    <img src="<%# Convert.ToInt32(Eval("BGDefault"))==0?Eval("BGImage","./assets/img/BlogBG/{0}"):"./assets/img/bg.jpg" %>" alt="">
+                                    <img src="<%# Convert.ToInt32(Eval("BGDefault"))==0?Eval("BGImage","./assets/img/BlogBG/{0}"):"./assets/img/bg.jpg" %>" style="height: 200px" alt="">
                                 </a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                             <div class="card-body">
-                                <h4 class="card-title">
+                                <h4 class="card-title" style="height: 100px; overflow: hidden">
                                     <a href="<%# Eval("Id","./blogDetail.aspx?id={0}") %>"><%# Eval("Title") %></a>
                                 </h4>
                             </div>
@@ -45,8 +44,8 @@
                 </SelectParameters>
             </asp:SqlDataSource>
         </div>
-        
-    <div class="section">
+
+        <div class="section">
             <asp:ListView ID="ListView2" runat="server" DataSourceID="SqlDataSourceBook" GroupItemCount="3">
                 <LayoutTemplate>
                     <div class="container">
@@ -70,12 +69,12 @@
                         <div class="card card-blog">
                             <div class="card-header card-header-image">
                                 <a href="<%# Eval("Id","./bookDetail.aspx?id={0}") %>">
-                                    <img src="<%# Eval("Image","./assets/img/books/{0}") %>" style="height:400px" alt="">
+                                    <img src="<%# Eval("Image","./assets/img/books/{0}") %>" style="height: 400px" alt="">
                                 </a>
                                 &nbsp;&nbsp;&nbsp;
                             </div>
                             <div class="card-body">
-                                <h4 class="card-title" style="height: 100px;overflow: hidden">
+                                <h4 class="card-title" style="height: 100px; overflow: hidden">
                                     <a href="<%# Eval("Id","./bookDetail.aspx?id={0}") %>"><%# Eval("Name").ToString() %></a>
                                 </h4>
                             </div>
@@ -84,30 +83,17 @@
                 </ItemTemplate>
             </asp:ListView>
             <asp:SqlDataSource ID="SqlDataSourceBook" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 6 SUM(i.Quantity) AS Sells, s.Name, s.Image, s.Id FROM tb_Invoice AS i RIGHT OUTER JOIN tb_Shop AS s ON s.Id = i.BookId GROUP BY s.Id, s.Name, s.Image ORDER BY Sells DESC"></asp:SqlDataSource>
-       </div>
+        </div>
     </div>
     <footer class="footer footer-white footer-big">
         <div class="container">
             <div class="content">
                 <div class="row">
                     <div class="col-md-3">
-                        <h5>Schools</h5>
-                        <ul class="links-vertical">
-                            <li>
-                                <a href="https://www.nyp.edu.sg/about-nyp/nyp-overview/who-we-are/about-nyp.html">About Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.nyp.edu.sg/be-part-of-nyp/contact-us.html">Contact Us
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
                         <h5>Blog</h5>
                         <ul class="links-vertical">
                             <li>
-                                <a href="./blog.aspx">Blog
+                                <a href="/Blog/blog.aspx">Blog
                                 </a>
                             </li>
                         </ul>
@@ -116,25 +102,24 @@
                         <h5>Online Shop</h5>
                         <ul class="links-vertical">
                             <li>
-                                <a href="./bookShop.aspx">Buy Now
+                                <a href="/Shop/bookShop.aspx">Buy Now
                                 </a>
                             </li>
-
                         </ul>
                     </div>
                     <div class="col-md-3">
                         <h5>Ranking</h5>
                         <ul class="links-vertical">
                             <li>
-                                <a href="./rankDetail.aspx?type=Question">Let's Ask ranking
+                                <a href="/Rank/rankDetail.aspx?type=Question">Let's Ask ranking
                                 </a>
                             </li>
                             <li>
-                                <a href="./rankDetail.aspx?type=User">User ranking
+                                <a href="/Rank/rankDetail.aspx?type=User">User ranking
                                 </a>
                             </li>
                             <li>
-                                <a href="./rankDetail.aspx?type=Blog">Blog ranking
+                                <a href="/Rank/rankDetail.aspx?type=Blog">Blog ranking
                                 </a>
                             </li>
                         </ul>
