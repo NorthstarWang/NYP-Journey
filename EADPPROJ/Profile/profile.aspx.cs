@@ -116,7 +116,7 @@ namespace EADPPROJ
             }
             else
             {
-                Response.Redirect("./index.aspx");
+                Response.Redirect("~/index.aspx");
             }
         }
 
@@ -156,7 +156,7 @@ namespace EADPPROJ
             if (CommentPostText.Text != "")
             {
                 profile.PostComment(profile, Request.QueryString["id"].ToString(), Session["Account"].ToString(), CommentPostText.Text);
-                Response.Redirect("./profile.aspx?id=" + Request.QueryString["id"]);
+                Response.Redirect("~/Profile/profile.aspx?id=" + Request.QueryString["id"]);
             }
             else
             {
@@ -177,7 +177,7 @@ namespace EADPPROJ
                     {
                         FileUpload2.SaveAs(Server.MapPath("") + "./assets/img/BlogBG/" + FileUpload2.FileName);
                         profile.PostBlog(profile, blogTitle.Text, blogContent.Text, Session["Account"].ToString(), false, FileUpload2.FileName);
-                        Response.Redirect("./profile.aspx?id=" + Request.QueryString["id"]);
+                        Response.Redirect("~/Profile/profile.aspx?id=" + Request.QueryString["id"]);
                     }
                     else
                     {
@@ -187,7 +187,7 @@ namespace EADPPROJ
                 else
                 {
                     profile.PostBlog(profile, blogTitle.Text, blogContent.Text, Session["Account"].ToString(), true, null);
-                    Response.Redirect("./profile.aspx?id=" + Request.QueryString["id"]);
+                    Response.Redirect("~/Profile/profile.aspx?id=" + Request.QueryString["id"]);
                 }
             }
         }

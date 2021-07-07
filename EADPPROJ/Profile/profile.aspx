@@ -211,7 +211,7 @@
                                                         </h4>
                                                         <div style="overflow: hidden; max-height: 200px"><%# Eval("Content", "{0}") %></div>
                                                         <div class="card-stats justify-content-center">
-                                                            <a href='./blogDetail.aspx?id=<%# Eval("Id", "{0}") %>' class="btn btn-white btn-round"><i class="material-icons">subject</i>Read Blog</a>
+                                                            <a href='./Blog/blogDetail.aspx?id=<%# Eval("Id", "{0}") %>' class="btn btn-white btn-round"><i class="material-icons">subject</i>Read Blog</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -240,7 +240,7 @@
                                                     <div class="card-body" runat="server">
                                                         <h4 class="card-title" runat="server" id="title"></h4>
                                                         <div class="card-stats justify-content-center">
-                                                            <a href='./blogDetail.aspx?id=<%# Eval("BlogId", "{0}") %>' class="btn btn-white btn-round"><i class="material-icons">subject</i>Read Blog</a>
+                                                            <a href='./Blog/blogDetail.aspx?id=<%# Eval("BlogId", "{0}") %>' class="btn btn-white btn-round"><i class="material-icons">subject</i>Read Blog</a>
                                                         </div>
                                                     </div>
                                                 </div>

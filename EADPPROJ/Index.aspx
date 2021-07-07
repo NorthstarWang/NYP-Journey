@@ -89,7 +89,7 @@
         <div class="container">
             <div class="content">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <h5>Blog</h5>
                         <ul class="links-vertical">
                             <li>
@@ -98,7 +98,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <h5>Online Shop</h5>
                         <ul class="links-vertical">
                             <li>
@@ -107,7 +107,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <h5>Ranking</h5>
                         <ul class="links-vertical">
                             <li>

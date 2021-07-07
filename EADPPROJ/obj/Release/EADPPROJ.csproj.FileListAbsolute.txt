@@ -197,7 +197,6 @@ C:\Users\15276\Source\Repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\zh-Hans\Human
 C:\Users\15276\Source\Repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\zh-Hant\Humanizer.resources.dll
 C:\Users\15276\Source\Repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\de\PdfSharp.resources.dll
 C:\Users\15276\Source\Repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\de\PdfSharp.Charting.resources.dll
-C:\Users\15276\Source\Repos\NorthstarWang\NYP-Journey\EADPPROJ\obj\Release\EADPPROJ.csproj.AssemblyReference.cache
 C:\Users\15276\Source\Repos\NorthstarWang\NYP-Journey\EADPPROJ\obj\Release\EADPPROJ.csproj.CoreCompileInputs.cache
 C:\Users\15276\Source\Repos\NorthstarWang\NYP-Journey\EADPPROJ\obj\Release\EADPPROJ.csproj.CopyComplete
 C:\Users\15276\Source\Repos\NorthstarWang\NYP-Journey\EADPPROJ\obj\Release\EADPPROJ.dll
@@ -208,3 +207,4 @@ C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\HtmlAgilityPa
 C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\HtmlAgilityPack.xml
 C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\MarkdownSharp.pdb
 C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\MarkdownSharp.xml
+C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\obj\Release\EADPPROJ.csproj.AssemblyReference.cache

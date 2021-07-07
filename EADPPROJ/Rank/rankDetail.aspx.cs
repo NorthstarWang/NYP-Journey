@@ -21,8 +21,8 @@ namespace EADPPROJ
                     LinkButton blog = (LinkButton)item.FindControl("viewBlog");
                     HiddenField poster = (HiddenField)item.FindControl("posterId");
                     HiddenField id = (HiddenField)item.FindControl("blogId");
-                    profile.PostBackUrl = "./profile.aspx?id=" + poster.Value;
-                    blog.PostBackUrl = "./blogDetail.aspx?id=" + id.Value;
+                    profile.PostBackUrl = "./Profile/profile.aspx?id=" + poster.Value;
+                    blog.PostBackUrl = "./Blog/blogDetail.aspx?id=" + id.Value;
                 }
                 foreach (RepeaterItem item in Repeater2.Items)
                 {
@@ -30,8 +30,8 @@ namespace EADPPROJ
                     LinkButton blog = (LinkButton)item.FindControl("viewBlog");
                     HiddenField poster = (HiddenField)item.FindControl("posterId");
                     HiddenField id = (HiddenField)item.FindControl("blogId");
-                    profile.PostBackUrl = "./profile.aspx?id=" + poster.Value;
-                    blog.PostBackUrl = "./blogDetail.aspx?id=" + id.Value;
+                    profile.PostBackUrl = "./Profile/profile.aspx?id=" + poster.Value;
+                    blog.PostBackUrl = "./Blog/blogDetail.aspx?id=" + id.Value;
                 }
             }
             else if (Request.QueryString["type"] == "User")
@@ -42,26 +42,26 @@ namespace EADPPROJ
                 {
                     HiddenField id = (HiddenField)item.FindControl("username");
                     LinkButton viewProfile = (LinkButton)item.FindControl("viewProfile");
-                    viewProfile.PostBackUrl = "./profile.aspx?id=" + id.Value;
+                    viewProfile.PostBackUrl = "./Profile/profile.aspx?id=" + id.Value;
                 }
                 foreach (RepeaterItem item in Repeater4.Items)
                 {
                     HiddenField id = (HiddenField)item.FindControl("username");
                     LinkButton viewProfile = (LinkButton)item.FindControl("viewProfile");
-                    viewProfile.PostBackUrl = "./profile.aspx?id=" + id.Value;
+                    viewProfile.PostBackUrl = "./Profile/profile.aspx?id=" + id.Value;
                 }
                 foreach (RepeaterItem item in Repeater5.Items)
                 {
                     HiddenField id = (HiddenField)item.FindControl("username");
                     LinkButton viewProfile = (LinkButton)item.FindControl("viewProfile");
-                    viewProfile.PostBackUrl = "./profile.aspx?id=" + id.Value;
+                    viewProfile.PostBackUrl = "./Profile/profile.aspx?id=" + id.Value;
 
                 }
                 foreach (RepeaterItem item in Repeater6.Items)
                 {
                     HiddenField id = (HiddenField)item.FindControl("username");
                     LinkButton viewProfile = (LinkButton)item.FindControl("viewProfile");
-                    viewProfile.PostBackUrl = "./profile.aspx?id=" + id.Value;
+                    viewProfile.PostBackUrl = "./Profile/profile.aspx?id=" + id.Value;
                 }
             }
             else if (Request.QueryString["type"] == "Question")
@@ -77,8 +77,8 @@ namespace EADPPROJ
                     LinkButton viewQuestion = (LinkButton)item.FindControl("viewQuestion");
                     title.Text = question.GetQuestionTitle(question, Convert.ToInt32(id.Value));
                     poster.Text = question.GetQuestionPoster(question, Convert.ToInt32(id.Value));
-                    viewProfile.PostBackUrl = "./profile.aspx?id=" + question.GetQuestionPoster(question, Convert.ToInt32(id.Value));
-                    viewQuestion.PostBackUrl = "./questionDetail.aspx?id=" + id.Value;
+                    viewProfile.PostBackUrl = "./Profile/profile.aspx?id=" + question.GetQuestionPoster(question, Convert.ToInt32(id.Value));
+                    viewQuestion.PostBackUrl = "./Forum/questionDetail.aspx?id=" + id.Value;
                 }
                 foreach (RepeaterItem item in Repeater8.Items)
                 {
@@ -89,14 +89,14 @@ namespace EADPPROJ
                     LinkButton viewQuestion = (LinkButton)item.FindControl("viewQuestion");
                     title.Text = question.GetQuestionTitle(question, Convert.ToInt32(id.Value));
                     poster.Text = question.GetQuestionPoster(question, Convert.ToInt32(id.Value));
-                    viewProfile.PostBackUrl = "./profile.aspx?id=" + question.GetQuestionPoster(question, Convert.ToInt32(id.Value));
-                    viewQuestion.PostBackUrl = "./questionDetail.aspx?id=" + id.Value;
+                    viewProfile.PostBackUrl = "./Profile/profile.aspx?id=" + question.GetQuestionPoster(question, Convert.ToInt32(id.Value));
+                    viewQuestion.PostBackUrl = "./Forum/questionDetail.aspx?id=" + id.Value;
                 }
             }
             else
             {
                 Session["illegal"] = true;
-                Response.Redirect("./rank.aspx");
+                Response.Redirect("~/Rank/rank.aspx");
             }
 
         }
