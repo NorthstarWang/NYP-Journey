@@ -5,18 +5,17 @@
 <html>
 <head runat="server">
     <meta charset="utf-8">
-    <base href="../">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="./assets/img/apple-icon.png">
-    <link rel="icon" href="./assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/img/apple-icon.png">
+    <link rel="icon" href="../assets/img/favicon.png">
     <title>NYP Journey | Profile</title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./assets/css/material-kit.css?v=2.0.3">
-    <script type="text/javascript" src="./Scripts/tinymce/tinymce.js"></script>
+    <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.3">
+    <script type="text/javascript" src="../Scripts/tinymce/tinymce.js"></script>
     <script>
         tinymce.init({
             selector: 'textarea',
@@ -65,7 +64,7 @@
                     }
             }
         </style>
-        <a class="nyp-title" href="./Index.aspx"><strong>NYP Journey</strong></a>
+        <a class="nyp-title" href="../Index.aspx"><strong>NYP Journey</strong></a>
         <div class="container">
             <div class="navbar-translate">
                 <p class="navbar-brand"></p>
@@ -78,18 +77,18 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="./Rank/rank.aspx" class="nav-link">
+                        <a href="../Rank/rank.aspx" class="nav-link">
                             <i class="fa fa-graduation-cap"></i>Ranking
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./Blog/blog.aspx" class="nav-link">
+                        <a href="../Blog/blog.aspx" class="nav-link">
                             <i class="fa fa-rss"></i>Blog
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./Shop/bookShop.aspx" class="nav-link">
-                            <i class="fa fa-shopping-basket"></i>Shop
+                        <a href="../Shop/bookShop.aspx" class="nav-link">
+                            <i class="fa fa-shopping-basket"></i>&nbsp;Shop
                         </a>
                     </li>
                     <li class="dropdown nav-item" runat="server" id="appGroup">
@@ -97,10 +96,10 @@
                             <i class="material-icons">apps</i> Apps
                         </a>
                         <div class="dropdown-menu dropdown-with-icons">
-                            <a href="./Forum/questionList.aspx" class="dropdown-item">
+                            <a href="../Forum/questionList.aspx" class="dropdown-item">
                                 <i class="material-icons">forum</i>Let's Ask
                             </a>
-                            <a href="./Credit/creditBalance.aspx" class="dropdown-item">
+                            <a href="../Credit/creditBalance.aspx" class="dropdown-item">
                                 <i class="material-icons">account_balance_wallet</i>Account Wallet
                             </a>
                         </div>
@@ -112,8 +111,8 @@
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" style="overflow-y: hidden;">
-                            <a class="dropdown-item" style="display: none" href="./Profile/profile.aspx" id="profileUrl" runat="server">Profile</a>
-                            <a class="dropdown-item" href="./index.aspx" id="logout" runat="server" style="display: none;" onserverclick="btn_logout_Click">Sign out</a>
+                            <a class="dropdown-item" style="display: none" href="./profile.aspx" id="profileUrl" runat="server">Profile</a>
+                            <a class="dropdown-item" href="../index.aspx" id="logout" runat="server" style="display: none;" onserverclick="btn_logout_Click">Sign out</a>
                         </div>
                     </li>
                 </ul>
@@ -134,7 +133,7 @@
                         <h5>Blog</h5>
                         <ul class="links-vertical">
                             <li>
-                                <a href="./Blog/blog.aspx">Blog
+                                <a href="../Blog/blog.aspx">Blog
                                 </a>
                             </li>
                         </ul>
@@ -143,7 +142,7 @@
                         <h5>Online Shop</h5>
                         <ul class="links-vertical">
                             <li>
-                                <a href="./Shop/bookShop.aspx">Buy Now
+                                <a href="../Shop/bookShop.aspx">Buy Now
                                 </a>
                             </li>
                         </ul>
@@ -152,15 +151,15 @@
                         <h5>Ranking</h5>
                         <ul class="links-vertical">
                             <li>
-                                <a href="./Rank/rankDetail.aspx?type=Question">Let's Ask ranking
+                                <a href="../Rank/rankDetail.aspx?type=Question">Let's Ask ranking
                                 </a>
                             </li>
                             <li>
-                                <a href="./Rank/rankDetail.aspx?type=User">User ranking
+                                <a href="../Rank/rankDetail.aspx?type=User">User ranking
                                 </a>
                             </li>
                             <li>
-                                <a href="./Rank/rankDetail.aspx?type=Blog">Blog ranking
+                                <a href="../Rank/rankDetail.aspx?type=Blog">Blog ranking
                                 </a>
                             </li>
                         </ul>
@@ -181,7 +180,7 @@
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/bootstrap-material-design.js"></script>
     <!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-    <script src="./assets/js/plugins/jasny-bootstrap.min.js"></script>
-    <script src="./assets/js/material-kit.js?v=2.0.3"></script>
+    <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
+    <script src="../assets/js/material-kit.js?v=2.0.3"></script>
 </body>
 </html>

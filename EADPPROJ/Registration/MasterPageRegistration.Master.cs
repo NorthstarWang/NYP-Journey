@@ -9,11 +9,10 @@ namespace EADPPROJ
         {
             if (Session["Account"] != null)
             {
-                Response.Redirect("./Index.aspx");
+                Response.Redirect("~/Index.aspx");
             }
  
             if (Session["NoChoice"] == "true")
- 
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "", "window.onload = function Show(){$('#SelectModal').modal('show');}", true);
                 Session["NoChoice"] = null;

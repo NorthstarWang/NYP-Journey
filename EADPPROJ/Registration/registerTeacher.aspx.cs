@@ -12,14 +12,9 @@ namespace EADPPROJ
         {
             if (Session["Account"] != null)
             {
-                Response.Redirect("./Index.aspx");
-            }
-            else
-            {
-
+                Response.Redirect("~/Index.aspx");
             }
         }
-
         protected void register_Click(object sender, EventArgs e)
         {
             DateTime date_of_birth = Convert.ToDateTime(DOB.Text);
@@ -48,7 +43,7 @@ namespace EADPPROJ
                     Session["Account"] = NRIC.Text;
                     registration.generateInvitationCode(NRIC.Text);
                     Session["Welcome"] = "true";
-                    Response.Redirect("./index.aspx");
+                    Response.Redirect("~/index.aspx");
                 }
                 catch (Exception)
                 {

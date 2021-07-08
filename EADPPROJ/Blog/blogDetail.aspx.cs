@@ -99,7 +99,7 @@ namespace EADPPROJ
         protected void visit_Click(object sender, EventArgs e)
         {
             string userId = blog.GetUsername(Convert.ToInt32(Request.QueryString["id"]));
-            Response.Redirect("./profile.aspx?id=" + userId);
+            Response.Redirect("./Profile/profile.aspx?id=" + userId);
         }
 
         protected void confirmTip_Click(object sender, EventArgs e)

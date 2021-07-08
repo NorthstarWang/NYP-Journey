@@ -133,22 +133,22 @@ namespace EADPPROJ
                 int ID = Session["Account"].ToString().Length;
                 if (ID == 7)
                 {
-                    FileUpload1.SaveAs(Server.MapPath("") + "./assets/img/faces/" + FileUpload1.FileName);
+                    FileUpload1.SaveAs(Server.MapPath("../") + "./assets/img/faces/" + FileUpload1.FileName);
                     profile.SaveStudentImg(profile, Session["Account"].ToString(), FileUpload1.FileName);
                 }
                 else if (ID == 9)
                 {
-                    FileUpload1.SaveAs(Server.MapPath("") + "./assets/img/faces/" + FileUpload1.FileName);
+                    FileUpload1.SaveAs(Server.MapPath("../") + "./assets/img/faces/" + FileUpload1.FileName);
                     profile.SaveTeacherImg(profile, Session["Account"].ToString(), FileUpload1.FileName);
                 }
                 else
                 {
-                    FileUpload1.SaveAs(Server.MapPath("") + "./assets/img/faces/" + FileUpload1.FileName);
+                    FileUpload1.SaveAs(Server.MapPath("../") + "./assets/img/faces/" + FileUpload1.FileName);
                     profile.SaveAdminImg(profile, Session["Account"].ToString(), FileUpload1.FileName);
                 }
 
             }
-            Response.Redirect("./profile.aspx?id=" + Request.QueryString["id"]);
+            Response.Redirect("~/Profile/profile.aspx?id=" + Request.QueryString["id"]);
         }
 
         protected void CommentPostButton_Click(object sender, EventArgs e)
@@ -175,7 +175,7 @@ namespace EADPPROJ
                     bool validate = profile.ValidateImg(profile, extension);
                     if (validate == true)
                     {
-                        FileUpload2.SaveAs(Server.MapPath("") + "./assets/img/BlogBG/" + FileUpload2.FileName);
+                        FileUpload2.SaveAs(Server.MapPath("../") + "./assets/img/BlogBG/" + FileUpload2.FileName);
                         profile.PostBlog(profile, blogTitle.Text, blogContent.Text, Session["Account"].ToString(), false, FileUpload2.FileName);
                         Response.Redirect("~/Profile/profile.aspx?id=" + Request.QueryString["id"]);
                     }

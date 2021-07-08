@@ -9,7 +9,7 @@
                     <div class="col-md-6 ml-auto mr-auto">
                         <div class="profile">
                             <div class="avatar">
-                                <img src="./assets/img/faces/user-head-icon.jpg" id="headicon" alt="Circle Image" class="img-raised rounded-circle img-fluid" runat="server" />
+                                <img src="../assets/img/faces/user-head-icon.jpg" id="headicon" alt="Circle Image" class="img-raised rounded-circle img-fluid" runat="server" />
                             </div>
                             <div class="name" style="margin: 30px">
                                 <asp:Label ID="Name" CssClass="title" runat="server" Font-Size="XX-Large"></asp:Label><br />
@@ -35,7 +35,7 @@
                                         <div class="modal-body" style="margin: 0 auto; display: inline-block">
                                             <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                                 <div class="fileinput-new thumbnail img-raised">
-                                                    <img src="./assets/img/image_placeholder.jpg" alt="...">
+                                                    <img src="../assets/img/image_placeholder.jpg" alt="...">
                                                 </div>
                                                 <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
                                                 <div>
@@ -182,7 +182,7 @@
                                     <div class="media media-post" runat="server" id="postSection">
                                         <a class="author float-left">
                                             <div class="avatar">
-                                                <img src="./assets/img/user-head-icon.jpg" id="profileimg" alt="64x64" runat="server" />
+                                                <img src="../assets/img/user-head-icon.jpg" id="profileimg" alt="64x64" runat="server" />
                                             </div>
                                         </a>
                                         <div class="media-body">
@@ -211,7 +211,7 @@
                                                         </h4>
                                                         <div style="overflow: hidden; max-height: 200px"><%# Eval("Content", "{0}") %></div>
                                                         <div class="card-stats justify-content-center">
-                                                            <a href='./Blog/blogDetail.aspx?id=<%# Eval("Id", "{0}") %>' class="btn btn-white btn-round"><i class="material-icons">subject</i>Read Blog</a>
+                                                            <a href='../Blog/blogDetail.aspx?id=<%# Eval("Id", "{0}") %>' class="btn btn-white btn-round"><i class="material-icons">subject</i>Read Blog</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -240,7 +240,7 @@
                                                     <div class="card-body" runat="server">
                                                         <h4 class="card-title" runat="server" id="title"></h4>
                                                         <div class="card-stats justify-content-center">
-                                                            <a href='./Blog/blogDetail.aspx?id=<%# Eval("BlogId", "{0}") %>' class="btn btn-white btn-round"><i class="material-icons">subject</i>Read Blog</a>
+                                                            <a href='../Blog/blogDetail.aspx?id=<%# Eval("BlogId", "{0}") %>' class="btn btn-white btn-round"><i class="material-icons">subject</i>Read Blog</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -259,6 +259,5 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </asp:Content>

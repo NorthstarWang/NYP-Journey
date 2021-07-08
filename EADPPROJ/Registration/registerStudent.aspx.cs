@@ -12,11 +12,7 @@ namespace EADPPROJ
         {
             if (Session["Account"] != null)
             {
-                Response.Redirect("./Index.aspx");
-            }
-            else
-            {
-
+                Response.Redirect("~/Index.aspx");
             }
         }
 
@@ -50,9 +46,7 @@ namespace EADPPROJ
                 registration.generateInvitationCode(adminNo.Text);
                 Session["Account"] = adminNo.Text;
                 Session["Welcome"] = "true";
-                Response.Redirect("./index.aspx");
-
-
+                Response.Redirect("~/index.aspx");
             }
 
         }

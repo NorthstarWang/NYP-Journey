@@ -103,8 +103,8 @@
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" style="overflow-y: hidden;">
-                            <a class="dropdown-item" style="display: none" href="./Profile/profile.aspx" id="profileUrl" runat="server">Profile</a>
-                            <a class="dropdown-item" href="./index.aspx" id="logout" runat="server" style="display: none;" onserverclick="btn_logout_Click">Sign out</a>
+                            <a class="dropdown-item" href="./Profile/profile.aspx" id="profileUrl" runat="server">Profile</a>
+                            <a class="dropdown-item" href="./index.aspx" id="logout" runat="server" onserverclick="btn_logout_Click">Sign out</a>
                         </div>
                     </li>
                 </ul>
