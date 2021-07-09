@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Blog/MasterPageBlog.Master" AutoEventWireup="true" CodeBehind="blog.aspx.cs" Inherits="EADPPROJ.blog" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPageBlog.Master" AutoEventWireup="true" CodeBehind="blog.aspx.cs" Inherits="EADPPROJ.blog" %>
 
 <%@ Import Namespace="EADPPROJ" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="blogPost" runat="server">

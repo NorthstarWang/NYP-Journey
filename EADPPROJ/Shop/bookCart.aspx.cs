@@ -75,12 +75,12 @@ namespace EADPPROJ
                 int Id = Convert.ToInt32(bookId.Text);
                 Hashtable ht = (Hashtable)Session["cart"];
                 ht[Id] = newNum;
-                Response.Redirect("bookCart.aspx");
+                Response.Redirect("./bookCart.aspx");
             }
             else
             {
                 Session["MinimumNo"] = true;
-                Response.Redirect("bookCart.aspx");
+                Response.Redirect("./bookCart.aspx");
             }
 
         }
@@ -95,7 +95,7 @@ namespace EADPPROJ
             int Id = Convert.ToInt32(bookId.Text);
             Hashtable ht = (Hashtable)Session["cart"];
             ht[Id] = newNum;
-            Response.Redirect("bookCart.aspx");
+            Response.Redirect("./bookCart.aspx");
         }
 
         protected void delete_Click(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace EADPPROJ
             Label bookId = (Label)item.FindControl("bookId");
             int Id = Convert.ToInt32(bookId.Text);
             ht.Remove(Id);
-            Response.Redirect("bookCart.aspx");
+            Response.Redirect("./bookCart.aspx");
         }
 
         protected void Pay_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace EADPPROJ
             }
             Session["cart"] = null;
             Session["successPayment"] = true;
-            Response.Redirect("bookCart.aspx");
+            Response.Redirect("./bookCart.aspx");
         }
     }
 }

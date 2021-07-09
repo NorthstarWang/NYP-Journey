@@ -86,20 +86,20 @@ namespace EADPPROJ
                 }
                 else
                 {
-                    Response.Redirect("./index.aspx");
+                    Response.Redirect("~/index.aspx");
                 }
             }
             else
             {
                 Session["ErrorAccount"] = "true";
-                Response.Redirect("./index.aspx");
+                Response.Redirect("~/index.aspx");
             }
         }
 
         protected void visit_Click(object sender, EventArgs e)
         {
             string userId = blog.GetUsername(Convert.ToInt32(Request.QueryString["id"]));
-            Response.Redirect("./Profile/profile.aspx?id=" + userId);
+            Response.Redirect("../Profile/profile.aspx?id=" + userId);
         }
 
         protected void confirmTip_Click(object sender, EventArgs e)

@@ -4,13 +4,13 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <!-- Favicons -->
-    <title>
-        Shop
-    </title>
+    <link rel="apple-touch-icon" href="../assets/img/apple-icon.png">
+    <link rel="icon" href="../assets/img/favicon.png">
+    <title>NYP Journey | Book Shop</title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
@@ -18,89 +18,106 @@
 </head>
 <body class="ecommerce ">
     <form id="form1" runat="server">
-    <nav class="navbar navbar-expand-lg " id="sectionsNav" style="margin-bottom:0">
-        <div class="container">
-            <div class="navbar-translate">
-                <a class="navbar-brand" style="display:none" href="./profile.aspx" id="profileUrl" runat="server">
-                      <div class="logo-image">
-                        <img src="assets/img/user-head-icon.jpg" class="rounded-circle img-fluid" alt="Circle Image" id="profileimg" runat="server">
-                      </div>
-                    <style>
-                        .logo-image {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-top: -6px;
-}
-                    </style>
-                    </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto"> 
-                    <li class="nav-item">
-                                        <a href="./rank.aspx" class="nav-link">
-                                            <i class="fa fa-graduation-cap"></i> Ranking
-                                        </a>
-                                    </li>
-                    <li class="nav-item">
-                                        <a href="./blog.aspx" class="nav-link">
-                                            <i class="fa fa-rss"></i> Blog
-                                        </a>
-                                    </li>
-                    <li class="nav-item">
-                                        <a href="./bookShop.aspx" class="nav-link">
-                                            <i class="fa fa-shopping-basket"></i> Shop
-                                        </a>
-                                    </li>
-                    <li class="nav-item">
-                                        <a href="./bookCart.aspx" class="nav-link">
-                                            <i class="fa fa-shopping-cart"></i> Cart
-                                        </a>
-                                    </li>
-                    <li class="dropdown nav-item" runat="server" id="appGroup">
-                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                            <i class="material-icons">apps</i> Apps
-                        </a>
-                        <div class="dropdown-menu dropdown-with-icons">
-                            <a href="./questionList.aspx" class="dropdown-item">
-                                <i class="material-icons">forum</i>Let's Ask
+        <nav class="navbar navbar-expand-lg " style="margin-bottom: 0" id="sectionsNav">
+            <style>
+                .nyp-title {
+                    margin-left: 6em;
+                    font-size: large;
+                    color: inherit;
+                    font-weight: bolder;
+                    transition: transform .3s;
+                }
+
+                    .nyp-title:hover {
+                        color: inherit;
+                        transform: scale(1.2)
+                    }
+
+                .logo-image {
+                    width: 50px;
+                    height: 50px;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 50%;
+                }
+
+                @media only screen and (max-width:992px) {
+                    .nyp-title {
+                        margin-left: 3em;
+                        font-size: large;
+                        color: inherit;
+                        font-weight: bolder;
+                        transition: transform .3s;
+                    }
+
+                        .nyp-title:hover {
+                            color: inherit;
+                            transform: scale(1.2)
+                        }
+                }
+            </style>
+            <a class="nyp-title" href="../Index.aspx"><strong>NYP Journey</strong></a>
+            <div class="container">
+                <div class="navbar-translate">
+                    <p class="navbar-brand"></p>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="../Rank/rank.aspx" class="nav-link">
+                                <i class="fa fa-graduation-cap"></i>Ranking
                             </a>
-                            <a href="./creditBalance.aspx" class="dropdown-item">
-                                <i class="material-icons">account_balance_wallet</i>Account Wallet
+                        </li>
+                        <li class="nav-item">
+                            <a href="../Blog/blog.aspx" class="nav-link">
+                                <i class="fa fa-rss"></i>Blog
                             </a>
-                            <a href="#" class="dropdown-item">
-                                <i class="material-icons">shopping_cart</i>Shop Related
+                        </li>
+                        <li class="nav-item">
+                            <a href="../Shop/bookShop.aspx" class="nav-link">
+                                <i class="fa fa-shopping-basket"></i>&nbsp;&nbsp;Shop
                             </a>
-                        </div>
-                    </li>
-                    <li class="nav-item"  >
-                        <a href="./index.aspx" id="logout" class="nav-link" runat="server" style="display:none;" onserverclick="btn_logout_Click">
-                                           Log Out
-                                        </a>
-                                    </li>
-                    <li class="nav-item" id="login_func" runat="server">
-                                        <a href="./login.aspx" class="nav-link">
-                                            Login
-                                        </a>
-                                    </li>
-                    <li class="nav-item" id="register_func" runat="server">
-                                        <a href="./registerType.aspx" class="nav-link">
-                                            Register
-                                        </a>
-                                    </li>
-                </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../Shop/bookCart.aspx" class="nav-link">
+                                <i class="fa fa-shopping-cart"></i>&nbsp;Cart
+                            </a>
+                        </li>
+                        <li class="dropdown nav-item" runat="server" id="appGroup">
+                            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                <i class="material-icons">apps</i> Apps
+                            </a>
+                            <div class="dropdown-menu dropdown-with-icons">
+                                <a href="../Forum/questionList.aspx" class="dropdown-item">
+                                    <i class="material-icons">forum</i>Let's Ask
+                                </a>
+                                <a href="../Credit/creditBalance.aspx" class="dropdown-item">
+                                    <i class="material-icons">account_balance_wallet</i>Account Wallet
+                                </a>
+                            </div>
+                        </li>
+                        <li class="dropdown nav-item">
+                            <a class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
+                                <div style="text-align: center; margin: 10px">
+                                    <img src="../assets/img/faces/user-head-icon.jpg" class="logo-image" alt="Circle Image" id="profileimg" runat="server" />
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" style="overflow-y: hidden;">
+                                <a class="dropdown-item" style="display: none" href="../Profile/profile.aspx" id="profileUrl" runat="server">Profile</a>
+                                <a class="dropdown-item" href="../index.aspx" id="logout" runat="server" style="display: none;" onserverclick="btn_logout_Click">Sign out</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-    </nav>
-        <asp:Panel ID="successCart" runat="server" Visible="false" >
-    <div class="alert alert-success" style="margin-bottom:0">
+        </nav>
+        <asp:Panel ID="successCart" runat="server" Visible="false">
+            <div class="alert alert-success" style="margin-bottom: 0">
                 <div class="container">
                     <div class="alert-icon">
                         <i class="material-icons">check</i>
@@ -111,9 +128,9 @@
                     <b>Success :</b> Added to Cart!
                 </div>
             </div>
-    </asp:Panel>
-        <asp:Panel ID="successPayment" runat="server" Visible="false" >
-    <div class="alert alert-success" style="margin-bottom:0">
+        </asp:Panel>
+        <asp:Panel ID="successPayment" runat="server" Visible="false">
+            <div class="alert alert-success" style="margin-bottom: 0">
                 <div class="container">
                     <div class="alert-icon">
                         <i class="material-icons">check</i>
@@ -124,95 +141,78 @@
                     <b>Success :</b> Purchase successful! You can now checked your invoice in App List > My Wallet!
                 </div>
             </div>
-    </asp:Panel>
-    <div class="page-header header-filter header-small" data-parallax="true" style="background-image: url(&apos;../assets/img/examples/clark-street-merc.jpg&apos;);">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 ml-auto mr-auto text-center">
-                    <div class="brand">
-                        <h1 class="title">Book Shop</h1>
+        </asp:Panel>
+        <div class="page-header header-filter header-small" data-parallax="true" style="background-image: url(&apos;../assets/img/examples/clark-street-merc.jpg&apos;);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto text-center">
+                        <div class="brand">
+                            <h1 class="title">Book Shop</h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
+
         <div class="main main-raised">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
     <footer class="footer footer-white footer-big">
-                        <div class="container">
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <h5>Schools</h5>
-                                        <ul class="links-vertical">
-                                            <li>
-                                                <a href="./about.aspx">
-                                                    About Us
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h5>Blog</h5>
-                                        <ul class="links-vertical">
-                                            <li>
-                                                <a href="./blog.aspx">
-                                                    Blog
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h5>Online Shop</h5>
-                                        <ul class="links-vertical">
-                                            <li>
-                                                <a href="./bookShop.aspx">
-                                                    Buy Now
-                                                </a>
-                                            </li>
-                                            
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h5>Ranking</h5>
-                                        <ul class="links-vertical">
-                                            <li>
-                                                <a href="./rankDetail.aspx?type=Question">
-                                                    Let's Ask ranking
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="./rankDetail.aspx?type=User">
-                                                    User ranking
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="./rankDetail.aspx?type=Blog">
-                                                    Blog ranking
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="copyright pull-center">
-                                <script>
-                                    document.write(new Date().getFullYear())
-                                </script> NYP Journey
-                            </div>
-                        </div>
-                    </footer>
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h5>Blog</h5>
+                        <ul class="links-vertical">
+                            <li>
+                                <a href="../Blog/blog.aspx">Blog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Online Shop</h5>
+                        <ul class="links-vertical">
+                            <li>
+                                <a href="../Shop/bookShop.aspx">Buy Now
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Ranking</h5>
+                        <ul class="links-vertical">
+                            <li>
+                                <a href="../Rank/rankDetail.aspx?type=Question">Let's Ask ranking
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../Rank/rankDetail.aspx?type=User">User ranking
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../Rank/rankDetail.aspx?type=Blog">Blog ranking
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright pull-center">
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                NYP Journey
+            </div>
+        </div>
+    </footer>
     <!--   Core JS Files   -->
     <script src="../assets/js/core/jquery.min.js"></script>
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/bootstrap-material-design.js"></script>
-    <!--  Google Maps Plugin  -->
-    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
     <!--  Plugin for Date Time Picker and Full Calendar Plugin  -->
     <script src="../assets/js/plugins/moment.min.js"></script>
     <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
@@ -223,13 +223,8 @@
     <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
     <!--	Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
     <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
-    <!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-    <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
     <!--	Plugin for Small Gallery in Product Page -->
     <script src="../assets/js/plugins/jquery.flexisel.js"></script>
-    <!-- Plugins for presentation and navigation  -->
-    <script src="../assets/assets-for-demo/js/modernizr.js"></script>
-    <script src="../assets/assets-for-demo/js/vertical-nav.js"></script>
     <!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
     <script src="../assets/js/material-kit.js?v=2.0.3"></script>
 </body>

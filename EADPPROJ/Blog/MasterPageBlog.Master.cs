@@ -35,14 +35,14 @@ namespace EADPPROJ
             else
             {
                 Session["ErrorAccount"] = "true";
-                Response.Redirect("./index.aspx");
+                Response.Redirect("~/index.aspx");
             }
         }
 
         protected void btn_logout_Click(object sender, EventArgs e)
         {
             Session["Account"] = null;
-            Response.Redirect("./index.aspx");
+            Response.Redirect("~/index.aspx");
         }
     }
 }

@@ -15,8 +15,6 @@ namespace EADPPROJ
         {
             if (Session["Account"] != null)
             {
-                login_func.Style["display"] = "none";
-                register_func.Style["display"] = "none";
                 profileimg.Style["display"] = "block";
                 logout.Style["display"] = "block";
                 appGroup.Style["display"] = "block";
@@ -49,7 +47,7 @@ namespace EADPPROJ
             else
             {
                 Session["ErrorAccount"] = "true";
-                Response.Redirect("./index.aspx");
+                Response.Redirect("~/index.aspx");
             }
 
             if (Session["successCart"] != null)
@@ -62,7 +60,7 @@ namespace EADPPROJ
         protected void btn_logout_Click(object sender, EventArgs e)
         {
             Session["Account"] = null;
-            Response.Redirect("./index.aspx");
+            Response.Redirect("~/index.aspx");
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
