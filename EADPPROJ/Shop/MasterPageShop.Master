@@ -16,12 +16,33 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.3">
 </head>
-<body class="ecommerce ">
-    <form id="form1" runat="server">
-        <nav class="navbar navbar-expand-lg " style="margin-bottom: 0" id="sectionsNav">
-            <style>
+<body class="product-page ">
+    <nav class="navbar navbar-expand-lg" style="margin-bottom:0" id="sectionsNav">
+        <style>
+            .nyp-title {
+                margin-left: 6em;
+                font-size: large;
+                color: inherit;
+                font-weight: bolder;
+                transition: transform .3s;
+            }
+
+                .nyp-title:hover {
+                    color: inherit;
+                    transform: scale(1.2)
+                }
+
+            .logo-image {
+                width: 50px;
+                height: 50px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+
+            @media only screen and (max-width:992px) {
                 .nyp-title {
-                    margin-left: 6em;
+                    margin-left: 3em;
                     font-size: large;
                     color: inherit;
                     font-weight: bolder;
@@ -32,90 +53,70 @@
                         color: inherit;
                         transform: scale(1.2)
                     }
-
-                .logo-image {
-                    width: 50px;
-                    height: 50px;
-                    position: relative;
-                    overflow: hidden;
-                    border-radius: 50%;
-                }
-
-                @media only screen and (max-width:992px) {
-                    .nyp-title {
-                        margin-left: 3em;
-                        font-size: large;
-                        color: inherit;
-                        font-weight: bolder;
-                        transition: transform .3s;
-                    }
-
-                        .nyp-title:hover {
-                            color: inherit;
-                            transform: scale(1.2)
-                        }
-                }
-            </style>
-            <a class="nyp-title" href="../Index.aspx"><strong>NYP Journey</strong></a>
-            <div class="container">
-                <div class="navbar-translate">
-                    <p class="navbar-brand"></p>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        <span class="navbar-toggler-icon"></span>
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="../Rank/rank.aspx" class="nav-link">
-                                <i class="fa fa-graduation-cap"></i>Ranking
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../Blog/blog.aspx" class="nav-link">
-                                <i class="fa fa-rss"></i>Blog
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../Shop/bookShop.aspx" class="nav-link">
-                                <i class="fa fa-shopping-basket"></i>&nbsp;&nbsp;Shop
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../Shop/bookCart.aspx" class="nav-link">
-                                <i class="fa fa-shopping-cart"></i>&nbsp;Cart
-                            </a>
-                        </li>
-                        <li class="dropdown nav-item" runat="server" id="appGroup">
-                            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                <i class="material-icons">apps</i> Apps
-                            </a>
-                            <div class="dropdown-menu dropdown-with-icons">
-                                <a href="../Forum/questionList.aspx" class="dropdown-item">
-                                    <i class="material-icons">forum</i>Let's Ask
-                                </a>
-                                <a href="../Credit/creditBalance.aspx" class="dropdown-item">
-                                    <i class="material-icons">account_balance_wallet</i>Account Wallet
-                                </a>
-                            </div>
-                        </li>
-                        <li class="dropdown nav-item">
-                            <a class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
-                                <div style="text-align: center; margin: 10px">
-                                    <img src="../assets/img/faces/user-head-icon.jpg" class="logo-image" alt="Circle Image" id="profileimg" runat="server" />
-                                </div>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" style="overflow-y: hidden;">
-                                <a class="dropdown-item" style="display: none" href="../Profile/profile.aspx" id="profileUrl" runat="server">Profile</a>
-                                <a class="dropdown-item" href="../index.aspx" id="logout" runat="server" style="display: none;" onserverclick="btn_logout_Click">Sign out</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+            }
+        </style>
+        <a class="nyp-title" href="../Index.aspx"><strong>NYP Journey</strong></a>
+        <div class="container">
+            <div class="navbar-translate">
+                <p class="navbar-brand"></p>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-        </nav>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="../Rank/rank.aspx" class="nav-link">
+                            <i class="fa fa-graduation-cap"></i>Ranking
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Blog/blog.aspx" class="nav-link">
+                            <i class="fa fa-rss"></i>Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Shop/bookShop.aspx" class="nav-link">
+                            <i class="fa fa-shopping-basket"></i>&nbsp;&nbsp;Shop
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Shop/bookCart.aspx" class="nav-link">
+                            <i class="fa fa-shopping-cart"></i>&nbsp;Cart
+                        </a>
+                    </li>
+                    <li class="dropdown nav-item" runat="server" id="appGroup">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            <i class="material-icons">apps</i> Apps
+                        </a>
+                        <div class="dropdown-menu dropdown-with-icons">
+                            <a href="../Forum/questionList.aspx" class="dropdown-item">
+                                <i class="material-icons">forum</i>Let's Ask
+                            </a>
+                            <a href="../Credit/creditBalance.aspx" class="dropdown-item">
+                                <i class="material-icons">account_balance_wallet</i>Account Wallet
+                            </a>
+                        </div>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
+                            <div style="text-align: center; margin: 10px">
+                                <img src="../assets/img/faces/user-head-icon.jpg" class="logo-image" alt="Circle Image" id="profileimg" runat="server" />
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" style="overflow-y: hidden;">
+                            <a class="dropdown-item" style="display: none" href="../Profile/profile.aspx" id="profileUrl" runat="server">Profile</a>
+                            <a class="dropdown-item" href="../index.aspx" id="logout" runat="server" style="display: none;" onserverclick="btn_logout_Click">Sign out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form id="form1" runat="server">
+
         <asp:Panel ID="successCart" runat="server" Visible="false">
             <div class="alert alert-success" style="margin-bottom: 0">
                 <div class="container">
@@ -153,7 +154,6 @@
                 </div>
             </div>
         </div>
-
         <div class="main main-raised">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

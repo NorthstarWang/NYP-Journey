@@ -34,7 +34,7 @@ namespace EADPPROJ
                         title.InnerText = Convert.ToString(ds.Tables[0].Rows[0]["Title"]);
                         PostTime.Text = Convert.ToString(ds.Tables[0].Rows[0]["PostTime"]);
                         Username.Text = Convert.ToString(ds.Tables[0].Rows[0]["Username"]);
-                        Username.NavigateUrl = "./profile.aspx?id=" + Convert.ToString(ds.Tables[0].Rows[0]["Username"]);
+                        Username.NavigateUrl = "../Profile/profile.aspx?id=" + Convert.ToString(ds.Tables[0].Rows[0]["Username"]);
                         answerCount.Text = question.CalculateTotalAnswerForQuestionDetail(question, Request.QueryString["id"]).ToString();
                         if ((Session["Account"].ToString() == Convert.ToString(ds.Tables[0].Rows[0]["Username"])) && (question.GetQuestionStatus(question, Convert.ToInt32(Request.QueryString["id"])) == "Not Solved"))//check whether the current user is the poster
                         {
@@ -56,7 +56,7 @@ namespace EADPPROJ
                             {
                                 HyperLink usernameControl = (HyperLink)AnswerList.Rows[i].Cells[0].FindControl("answerUsername");
                                 string username = usernameControl.Text;
-                                usernameControl.NavigateUrl = "./profile.aspx?id=" + username;
+                                usernameControl.NavigateUrl = "../Profile/profile.aspx?id=" + username;
                                 if (username.Length == 7)
                                 {
                                     Image iconControl = (Image)AnswerList.Rows[i].Cells[0].FindControl("answerIcon");
@@ -82,7 +82,7 @@ namespace EADPPROJ
                             {
                                 HyperLink usernameControl = (HyperLink)AnswerList.Rows[i].Cells[0].FindControl("answerUsername");
                                 string username = usernameControl.Text;
-                                usernameControl.NavigateUrl = "./profile.aspx?id=" + username;
+                                usernameControl.NavigateUrl = "../Profile/profile.aspx?id=" + username;
                                 if (username.Length == 7)
                                 {
                                     Image iconControl = (Image)AnswerList.Rows[i].Cells[0].FindControl("answerIcon");
@@ -109,7 +109,7 @@ namespace EADPPROJ
                             {
                                 HyperLink usernameControl = (HyperLink)AnswerList.Rows[i].Cells[0].FindControl("answerUsername");
                                 string username = usernameControl.Text;
-                                usernameControl.NavigateUrl = "./profile.aspx?id=" + username;
+                                usernameControl.NavigateUrl = "../Profile/profile.aspx?id=" + username;
                                 if (username.Length == 7)
                                 {
                                     Image iconControl = (Image)AnswerList.Rows[i].Cells[0].FindControl("answerIcon");
@@ -133,7 +133,7 @@ namespace EADPPROJ
                             DataSet bestAnswer = question.GetBestAnswer(question, Convert.ToInt32(Request.QueryString["id"]));
                             bestAnswerPostTime.Text = Convert.ToString(bestAnswer.Tables[0].Rows[0]["PostTime"]);
                             bestAnswerUsername.Text = Convert.ToString(bestAnswer.Tables[0].Rows[0]["Username"]);
-                            bestAnswerUsername.NavigateUrl = "./profile.aspx?id=" + Convert.ToString(bestAnswer.Tables[0].Rows[0]["Username"]);
+                            bestAnswerUsername.NavigateUrl = "../Profile/profile.aspx?id=" + Convert.ToString(bestAnswer.Tables[0].Rows[0]["Username"]);
                             bestAnswerDetailContent.Text = Convert.ToString(bestAnswer.Tables[0].Rows[0]["Content"]);
                             if (Convert.ToString(bestAnswer.Tables[0].Rows[0]["Username"]).Length == 7)
                             {
@@ -161,7 +161,7 @@ namespace EADPPROJ
             catch (Exception)
             {
                 Session["ErrorAccount"] = "true";
-                Response.Redirect("./index.aspx");
+                Response.Redirect("~/index.aspx");
             }
 
         }
@@ -248,7 +248,7 @@ namespace EADPPROJ
                     Image icon = (Image)replies.Cells[0].FindControl("ReplyUserIcon");
                     HyperLink UserId = (HyperLink)replies.Cells[0].FindControl("ReplyUsername");
                     HyperLink Name = (HyperLink)replies.Cells[0].FindControl("ReplyName");
-                    Name.NavigateUrl = "./profile.aspx?id=" + UserId.Text;
+                    Name.NavigateUrl = "../Profile/profile.aspx?id=" + UserId.Text;
                     Label Content = (Label)replies.Cells[0].FindControl("Content");
                     Label ReplyTo = (Label)replies.Cells[0].FindControl("ReplyTo");
                     Label ReferenceId = (Label)replies.Cells[0].FindControl("ReferenceId");

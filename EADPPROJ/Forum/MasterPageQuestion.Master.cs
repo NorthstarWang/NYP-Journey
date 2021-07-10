@@ -18,18 +18,15 @@ namespace EADPPROJ
                 {
                     managementSide.Visible = true;
                 }
-
-
-                userID.Text = Session["Account"].ToString();
+                userID.InnerText = Session["Account"].ToString();
                 creditBalance.Text = credit.GetCreditAmount(Session["Account"].ToString()).ToString() + " Credits";
-                string iconPath = question.GetHeadIcon(question, Session["Account"].ToString());
-                icon.Src = iconPath;
-                profile.HRef = "./profile.aspx?id=" + Session["Account"].ToString();
-                profileIcon.Src = question.GetHeadIcon(question, Session["Account"].ToString());
+                profile.HRef = "../Profile/profile.aspx?id=" + Session["Account"].ToString();
+                profileIcon.Style.Remove("background-image");
+                profileIcon.Style.Add("background-image", string.Format("url('{0}')", question.GetHeadIcon(question, Session["Account"].ToString())));
             }
             else
             {
-                Response.Redirect("./index.aspx");
+                Response.Redirect("~/index.aspx");
             }
 
             ///Alert Message Show
@@ -116,7 +113,6 @@ namespace EADPPROJ
                 else
                 {
                     msgNo.Text = notification.GetNotificationNewTotalNo(notification, Session["Account"].ToString()).ToString() + " New Notifications";
-                    notificationDot.Visible = true;
                 }
 
             }
@@ -126,7 +122,7 @@ namespace EADPPROJ
         protected void logout(object sender, EventArgs e)
         {
             Session["Account"] = null;
-            Response.Redirect("index.aspx");
+            Response.Redirect("~/index.aspx");
         }
 
         protected void Try_Click(object sender, EventArgs e)

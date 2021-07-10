@@ -28,17 +28,17 @@ namespace EADPPROJ.App_Code
             notificationDAO.InsertNotification(Username, Url, Type);
         }
 
-        public void invitationCodeNotification(Notification notification, string Username, string Url = "index.aspx", string Type = "You have used an invitation code")
+        public void invitationCodeNotification(Notification notification, string Username, string Url = "~/index.aspx", string Type = "You have used an invitation code")
         {
             notificationDAO.InsertNotification(Username, Url, Type);
         }
 
-        public void invitationCodeUseNotification(Notification notification, string Username, string Url = "index.aspx", string Type = "Your invitation code has been used.")
+        public void invitationCodeUseNotification(Notification notification, string Username, string Url = "~/index.aspx", string Type = "Your invitation code has been used.")
         {
             notificationDAO.InsertNotification(Username, Url, Type);
         }
 
-        public void QuestionRejectNotification(Notification notification, string Username, string Url = "./questionList.aspx", string Type = "Your question has been rejected")
+        public void QuestionRejectNotification(Notification notification, string Username, string Url = "~/Forum/questionList.aspx", string Type = "Your question has been rejected")
         {
             notificationDAO.InsertNotification(Username, Url, Type);
         }
@@ -88,7 +88,7 @@ namespace EADPPROJ.App_Code
             notificationDAO.InsertNotification(Username, url, Type);
         }
 
-        public void RegistrationWelcome(Notification notification, string Username, string Url = "index.aspx", string Type = "Welcome to NYP Journey")
+        public void RegistrationWelcome(Notification notification, string Username, string Url = "~/index.aspx", string Type = "Welcome to NYP Journey")
         {
             notificationDAO.InsertNotification(Username, Url, Type);
         }

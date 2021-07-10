@@ -26,7 +26,7 @@ namespace EADPPROJ
             HiddenField un = (HiddenField)row.Cells[0].FindControl("User");
             HiddenField url = (HiddenField)row.Cells[0].FindControl("URL");
             int Id = Convert.ToInt32(hf.Value);
-            string Url = "./questionDetail.aspx?id=" + url.Value.ToString();
+            string Url = "../Forum/questionDetail.aspx?id=" + url.Value.ToString();
             management.ApproveQuestion(Id);
             notification.QuestionApproveNotification(notification, un.Value.ToString(), Url);
             Session["QuestionApprove"] = "true";

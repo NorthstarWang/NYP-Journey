@@ -81,32 +81,21 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./webpack/styles.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "../demo1/src/sass/style.scss");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "../src/assets/sass/style.scss":
-/*!*************************************!*\
-  !*** ../src/assets/sass/style.scss ***!
-  \*************************************/
+/***/ "../demo1/src/sass/style.scss":
+/*!************************************!*\
+  !*** ../demo1/src/sass/style.scss ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///../src/assets/sass/style.scss?");
-
-/***/ }),
-
-/***/ "./webpack/styles.js":
-/*!***************************!*\
-  !*** ./webpack/styles.js ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\r\n\r\n/**\r\n * Define the output of this file. The output of CSS and JS file will be auto detected.\r\n *\r\n * @output css/style.bundle\r\n */\r\n\r\n// demo styles\r\n__webpack_require__(/*! ../../src/assets/sass/style.scss */ \"../src/assets/sass/style.scss\");\n\n//# sourceURL=webpack:///./webpack/styles.js?");
+// extracted by mini-css-extract-plugin
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=style.bundle.js.map
