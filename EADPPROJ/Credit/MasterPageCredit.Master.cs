@@ -20,7 +20,7 @@ namespace EADPPROJ
                 creditBalance.Text = credit.GetCreditAmount(Session["Account"].ToString()).ToString() + " Credits";
                 string iconPath = question.GetHeadIcon(question, Session["Account"].ToString());
                 icon.Src = iconPath;
-                profile.HRef = "./profile.aspx?id=" + Session["Account"].ToString();
+                profile.HRef = "../Profile/profile.aspx?id=" + Session["Account"].ToString();
                 profileIcon.Src = question.GetHeadIcon(question, Session["Account"].ToString());
                 if (Session["Account"].ToString().Length != 7 && Session["Account"].ToString().Length != 9)
                 {
@@ -73,14 +73,14 @@ namespace EADPPROJ
             else
             {
                 Session["ErrorAccount"] = "true";
-                Response.Redirect("./index.aspx");
+                Response.Redirect("../index.aspx");
             }
         }
 
         protected void logout(object sender, EventArgs e)
         {
             Session["Account"] = null;
-            Response.Redirect("index.aspx");
+            Response.Redirect("../index.aspx");
         }
 
         protected void Dismiss_Click(object sender, EventArgs e)

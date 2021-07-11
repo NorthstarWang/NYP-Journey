@@ -32,7 +32,6 @@
                 </div>
             </div>
             <div class="kt-subheader__toolbar">
-                <a href="#" class=""></a>
                 <a href="./postQuestion.aspx" class="btn btn-brand btn-bold">Ask Now! </a>
             </div>
         </div>

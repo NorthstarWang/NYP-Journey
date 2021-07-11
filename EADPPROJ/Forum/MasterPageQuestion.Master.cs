@@ -18,11 +18,12 @@ namespace EADPPROJ
                 {
                     managementSide.Visible = true;
                 }
-                userID.InnerText = Session["Account"].ToString();
+                userID.Text = Session["Account"].ToString();
                 creditBalance.Text = credit.GetCreditAmount(Session["Account"].ToString()).ToString() + " Credits";
+                string iconPath = question.GetHeadIcon(question, Session["Account"].ToString());
+                icon.Src = iconPath;
                 profile.HRef = "../Profile/profile.aspx?id=" + Session["Account"].ToString();
-                profileIcon.Style.Remove("background-image");
-                profileIcon.Style.Add("background-image", string.Format("url('{0}')", question.GetHeadIcon(question, Session["Account"].ToString())));
+                profileIcon.Src = question.GetHeadIcon(question, Session["Account"].ToString());
             }
             else
             {
@@ -113,6 +114,7 @@ namespace EADPPROJ
                 else
                 {
                     msgNo.Text = notification.GetNotificationNewTotalNo(notification, Session["Account"].ToString()).ToString() + " New Notifications";
+                    notificationDot.Visible = true;
                 }
 
             }

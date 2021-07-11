@@ -8,26 +8,33 @@
     <link rel="apple-touch-icon" href="../assets/img/apple-icon.png">
     <link rel="icon" href="../assets/img/favicon.png">
     <title>NYP Journey | Forum</title>
-    <meta name="description" content="Updates and statistics" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!--begin::Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
-    <!--end::Fonts-->
-    <!--begin::Page Vendors Styles(used by this page)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!--begin::Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
+
+    <!--end::Fonts -->
+
+    <!--begin::Page Vendors Styles(used by this page) -->
     <link href="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-    <!--end::Page Vendors Styles-->
-    <!--begin::Global Theme Styles(used by all pages)-->
+
+    <!--end::Page Vendors Styles -->
+
+    <!--begin::Global Theme Styles(used by all pages) -->
     <link href="../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-    <!--end::Global Theme Styles-->
-    <!--begin::Layout Themes(used by all pages)-->
-    <link href="../assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
-    <!--end::Layout Themes-->
+
+    <!--end::Global Theme Styles -->
+
+    <!--begin::Layout Skins(used by all pages) -->
+    <link href="../assets/css/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/skins/brand/navy.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/skins/aside/navy.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../Scripts/tinymce/tinymce.js"></script>
+    <!--end::Layout Skins -->
+    <link href="../assets/css/pages/blog/post.css" rel="stylesheet" type="text/css" />
     <script>
         tinymce.init({
             selector: 'textarea',
@@ -36,647 +43,315 @@
         });
     </script>
 </head>
-<body id="kt_body" class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-fixed aside-minimize-hoverable page-loading">
-
+<body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed kt-page--loading">
+    <!-- begin:: Root -->
     <form runat="server" id="form1">
-        <!--begin::Main-->
-        <!--begin::Header Mobile-->
-        <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
-            <!--begin::Logo-->
-            <a href="index.html">NYP Journey</a>
-            <!--end::Logo-->
-            <!--begin::Toolbar-->
-            <div class="d-flex align-items-center">
-                <!--begin::Aside Mobile Toggle-->
-                <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
-                    <span></span>
-                </button>
-                <!--end::Aside Mobile Toggle-->
-                <!--begin::Topbar Mobile Toggle-->
-                <button class="btn btn-hover-text-primary p-0 ml-3" id="kt_header_mobile_topbar_toggle">
-                    <span class="svg-icon svg-icon-xl">
-                        <!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <polygon points="0 0 24 0 24 24 0 24" />
-                                <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
-                            </g>
-                        </svg>
-                        <!--end::Svg Icon-->
-                    </span>
-                </button>
-                <!--end::Topbar Mobile Toggle-->
-            </div>
-            <!--end::Toolbar-->
-        </div>
-        <!--end::Header Mobile-->
-        <div class="d-flex flex-column flex-root">
-            <!--begin::Page-->
-            <div class="d-flex flex-row flex-column-fluid page">
-                <asp:Panel ID="warningInsufficientCredit" runat="server" Visible="false">
-                    <div class="alert alert-danger fade show" role="alert">
-                        <div class="alert-text">Not enough credit!</div>
-                        <div class="alert-close">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true"><i class="la la-close"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                </asp:Panel>
-                <asp:Panel ID="illegalAccess" runat="server" Visible="false">
-                    <div class="alert alert-danger fade show" role="alert">
-                        <div class="alert-text">You are not authorized to access the page</div>
-                        <div class="alert-close">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true"><i class="la la-close"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                </asp:Panel>
-                <asp:Panel ID="successPostSuccess" runat="server" Visible="false">
+        <div class="kt-grid kt-grid--hor kt-grid--root">
 
-                    <div class="alert alert-success fade show" role="alert">
-                        <div class="alert-text">You have successfully posted you question.</div>
-                        <div class="alert-close">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true"><i class="la la-close"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                </asp:Panel>
-                <asp:Panel ID="successUpvote" runat="server" Visible="false">
+            <!-- begin:: Page -->
+            <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 
-                    <div class="alert alert-success fade show" role="alert">
-                        <div class="alert-text">You have successfully Upvoted the answer</div>
-                        <div class="alert-close">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true"><i class="la la-close"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                </asp:Panel>
-                <asp:Panel ID="successAnswerPost" runat="server" Visible="false">
+                <!-- begin:: Aside -->
+                <button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
+                <div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
 
-                    <div class="alert alert-success fade show" role="alert">
-                        <div class="alert-text">You have successfully post your answer</div>
-                        <div class="alert-close">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true"><i class="la la-close"></i></span>
-                            </button>
+                    <!-- begin::Aside Brand -->
+                    <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
+                        <div class="kt-aside__brand-tools">
+                            <button class="kt-aside__brand-aside-toggler kt-aside__brand-aside-toggler--left" id="kt_aside_toggler" onclick="return false;"><span></span></button>
                         </div>
                     </div>
-                </asp:Panel>
-                <asp:Panel ID="successCommentPost" runat="server" Visible="false">
 
-                    <div class="alert alert-success fade show" role="alert">
-                        <div class="alert-text">You have successfully post your comment</div>
-                        <div class="alert-close">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true"><i class="la la-close"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                </asp:Panel>
-                <asp:Panel ID="successSolutionSelect" runat="server" Visible="false">
+                    <!-- end:: Aside Brand -->
 
-                    <div class="alert alert-success fade show" role="alert">
-                        <div class="alert-text">You have successfully select an answer as your solution</div>
-                        <div class="alert-close">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true"><i class="la la-close"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                </asp:Panel>
-                <asp:Panel ID="successReplyPost" runat="server" Visible="false">
-
-                    <div class="alert alert-success fade show" role="alert">
-                        <div class="alert-text">You have successfully post your Reply</div>
-                        <div class="alert-close">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true"><i class="la la-close"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                </asp:Panel>
-                <!--begin::Aside-->
-                <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
-                    <!--begin::Brand-->
-                    <div class="brand flex-column-auto" id="kt_brand">
-                        <!--begin::Logo-->
-                        <a href="index.html" class="brand-logo">NYP Journey</a>
-                        <!--end::Logo-->
-                        <!--begin::Toggle-->
-                        <button class="brand-toggle btn btn-sm px-0" id="kt_aside_toggle">
-                            <span class="svg-icon svg-icon svg-icon-xl">
-                                <!--begin::Svg Icon | path:assets/media/svg/icons/Text/Toggle-Right.svg-->
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <rect x="0" y="0" width="24" height="24" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22 11.5C22 12.3284 21.3284 13 20.5 13H3.5C2.6716 13 2 12.3284 2 11.5C2 10.6716 2.6716 10 3.5 10H20.5C21.3284 10 22 10.6716 22 11.5Z" fill="black" />
-                                        <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M14.5 20C15.3284 20 16 19.3284 16 18.5C16 17.6716 15.3284 17 14.5 17H3.5C2.6716 17 2 17.6716 2 18.5C2 19.3284 2.6716 20 3.5 20H14.5ZM8.5 6C9.3284 6 10 5.32843 10 4.5C10 3.67157 9.3284 3 8.5 3H3.5C2.6716 3 2 3.67157 2 4.5C2 5.32843 2.6716 6 3.5 6H8.5Z" fill="black" />
-                                    </g>
-                                </svg>
-                                <!--end::Svg Icon-->
-                            </span>
-                        </button>
-                        <!--end::Toolbar-->
-                    </div>
-                    <!--end::Brand-->
-                    <!--begin::Aside Menu-->
-                    <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
-                        <!--begin::Menu Container-->
-                        <div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
-                            <!--begin::Menu Nav-->
-                            <ul class="menu-nav">
-                                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="javascript:;" class="menu-link menu-toggle">
-                                        <span class="svg-icon menu-icon">
-                                            <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Bucket.svg-->
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <rect x="0" y="0" width="24" height="24" />
-                                                    <path d="M5,5 L5,15 C5,15.5948613 5.25970314,16.1290656 5.6719139,16.4954176 C5.71978107,16.5379595 5.76682388,16.5788906 5.81365532,16.6178662 C5.82524933,16.6294602 15,7.45470952 15,7.45470952 C15,6.9962515 15,6.17801499 15,5 L5,5 Z M5,3 L15,3 C16.1045695,3 17,3.8954305 17,5 L17,15 C17,17.209139 15.209139,19 13,19 L7,19 C4.790861,19 3,17.209139 3,15 L3,5 C3,3.8954305 3.8954305,3 5,3 Z" fill="#000000" fill-rule="nonzero" transform="translate(10.000000, 11.000000) rotate(-315.000000) translate(-10.000000, -11.000000)" />
-                                                    <path d="M20,22 C21.6568542,22 23,20.6568542 23,19 C23,17.8954305 22,16.2287638 20,14 C18,16.2287638 17,17.8954305 17,19 C17,20.6568542 18.3431458,22 20,22 Z" fill="#000000" opacity="0.3" />
-                                                </g>
-                                            </svg>
-                                            <!--end::Svg Icon-->
-                                        </span>
-                                        <span class="menu-text">Forum</span>
-                                        <i class="menu-arrow"></i>
-                                    </a>
-                                    <div class="menu-submenu">
-                                        <i class="menu-arrow"></i>
-                                        <ul class="menu-subnav">
-                                            <li class="menu-item menu-item-parent" aria-haspopup="true">
-                                                <span class="menu-link">
-                                                    <span class="menu-text">Let's Ask!</span>
-                                                </span>
-                                            </li>
-                                            <li class="menu-item" aria-haspopup="true">
-                                                <a href="../Forum/questionList.aspx" class="menu-link">
-                                                    <i class="menu-bullet menu-bullet-dot">
-                                                        <span></span>
-                                                    </i>
-                                                    <span class="menu-text">Posts list</span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item" aria-haspopup="true">
-                                                <a href="../Forum/postQuestion.aspx" class="menu-link">
-                                                    <i class="menu-bullet menu-bullet-dot">
-                                                        <span></span>
-                                                    </i>
-                                                    <span class="menu-text">Post Question</span>
-                                                </a>
-                                            </li>
+                    <!-- begin:: Aside Menu -->
+                    <div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
+                        <div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
+                            <ul class="kt-menu__nav ">
+                                <li class="kt-menu__item  kt-menu__item--submenu " aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-rectangular"></i><span class="kt-menu__link-text">Let's Ask!</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <div class="kt-menu__submenu ">
+                                        <span class="kt-menu__arrow"></span>
+                                        <ul class="kt-menu__subnav">
+                                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Let's Ask!</span></span></li>
+                                            <li class="kt-menu__item " aria-haspopup="true"><a href="./questionList.aspx" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Question List</span></a></li>
+                                            <li class="kt-menu__item " aria-haspopup="true"><a href="./postQuestion.aspx" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Ask Now</span></a></li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="javascript:;" class="menu-link menu-toggle">
-                                        <span class="svg-icon menu-icon">
-                                            <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Bucket.svg-->
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <rect x="0" y="0" width="24" height="24" />
-                                                    <path d="M5,5 L5,15 C5,15.5948613 5.25970314,16.1290656 5.6719139,16.4954176 C5.71978107,16.5379595 5.76682388,16.5788906 5.81365532,16.6178662 C5.82524933,16.6294602 15,7.45470952 15,7.45470952 C15,6.9962515 15,6.17801499 15,5 L5,5 Z M5,3 L15,3 C16.1045695,3 17,3.8954305 17,5 L17,15 C17,17.209139 15.209139,19 13,19 L7,19 C4.790861,19 3,17.209139 3,15 L3,5 C3,3.8954305 3.8954305,3 5,3 Z" fill="#000000" fill-rule="nonzero" transform="translate(10.000000, 11.000000) rotate(-315.000000) translate(-10.000000, -11.000000)" />
-                                                    <path d="M20,22 C21.6568542,22 23,20.6568542 23,19 C23,17.8954305 22,16.2287638 20,14 C18,16.2287638 17,17.8954305 17,19 C17,20.6568542 18.3431458,22 20,22 Z" fill="#000000" opacity="0.3" />
-                                                </g>
-                                            </svg>
-                                            <!--end::Svg Icon-->
-                                        </span>
-                                        <span class="menu-text">Credit Balance</span>
-                                        <i class="menu-arrow"></i>
-                                    </a>
-                                    <div class="menu-submenu">
-                                        <i class="menu-arrow"></i>
-                                        <ul class="menu-subnav">
-                                            <li class="menu-item menu-item-parent" aria-haspopup="true">
-                                                <span class="menu-link">
-                                                    <span class="menu-text">Credit Balance</span>
-                                                </span>
-                                            </li>
-                                            <li class="menu-item" aria-haspopup="true">
-                                                <a href="../Credit/creditBalance.aspx" class="menu-link">
-                                                    <i class="menu-bullet menu-bullet-dot">
-                                                        <span></span>
-                                                    </i>
-                                                    <span class="menu-text">My Balance</span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item" aria-haspopup="true">
-                                                <a href="../Credit/creditTopUp.aspx" class="menu-link">
-                                                    <i class="menu-bullet menu-bullet-dot">
-                                                        <span></span>
-                                                    </i>
-                                                    <span class="menu-text">Top up credits</span>
-                                                </a>
-                                            </li>
+
+                                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-tools-and-utensils"></i><span class="kt-menu__link-text">My Wallet</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <div class="kt-menu__submenu ">
+                                        <span class="kt-menu__arrow"></span>
+                                        <ul class="kt-menu__subnav">
+                                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">My Wallet</span></span></li>
+                                            <li class="kt-menu__item " aria-haspopup="true"><a href="../Credit/creditBalance.aspx" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">My Balance</span></a></li>
+                                            <li class="kt-menu__item " aria-haspopup="true"><a href="../Credit/creditTopUp.aspx" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Top Up Balance</span></a></li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="javascript:;" class="menu-link menu-toggle">
-                                        <span class="svg-icon menu-icon">
-                                            <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Bucket.svg-->
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <rect x="0" y="0" width="24" height="24" />
-                                                    <path d="M5,5 L5,15 C5,15.5948613 5.25970314,16.1290656 5.6719139,16.4954176 C5.71978107,16.5379595 5.76682388,16.5788906 5.81365532,16.6178662 C5.82524933,16.6294602 15,7.45470952 15,7.45470952 C15,6.9962515 15,6.17801499 15,5 L5,5 Z M5,3 L15,3 C16.1045695,3 17,3.8954305 17,5 L17,15 C17,17.209139 15.209139,19 13,19 L7,19 C4.790861,19 3,17.209139 3,15 L3,5 C3,3.8954305 3.8954305,3 5,3 Z" fill="#000000" fill-rule="nonzero" transform="translate(10.000000, 11.000000) rotate(-315.000000) translate(-10.000000, -11.000000)" />
-                                                    <path d="M20,22 C21.6568542,22 23,20.6568542 23,19 C23,17.8954305 22,16.2287638 20,14 C18,16.2287638 17,17.8954305 17,19 C17,20.6568542 18.3431458,22 20,22 Z" fill="#000000" opacity="0.3" />
-                                                </g>
-                                            </svg>
-                                            <!--end::Svg Icon-->
-                                        </span>
-                                        <span class="menu-text">Admin Management System</span>
-                                        <i class="menu-arrow"></i>
-                                    </a>
-                                    <div class="menu-submenu">
-                                        <i class="menu-arrow"></i>
-                                        <ul class="menu-subnav">
-                                            <li class="menu-item menu-item-parent" aria-haspopup="true">
-                                                <span class="menu-link">
-                                                    <span class="menu-text">Credit Balance</span>
-                                                </span>
-                                            </li>
-                                            <li class="menu-item" aria-haspopup="true">
-                                                <a href="../Credit/creditBalance.aspx" class="menu-link">
-                                                    <i class="menu-bullet menu-bullet-dot">
-                                                        <span></span>
-                                                    </i>
-                                                    <span class="menu-text">My Balance</span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item" aria-haspopup="true">
-                                                <a href="../Credit/creditTopUp.aspx" class="menu-link">
-                                                    <i class="menu-bullet menu-bullet-dot">
-                                                        <span></span>
-                                                    </i>
-                                                    <span class="menu-text">Top up credits</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li id="managementSide" runat="server" visible="false" class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="javascript:;" class="menu-link menu-toggle">
-                                        <span class="svg-icon menu-icon">
-                                            <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <rect x="0" y="0" width="24" height="24" />
-                                                    <rect fill="#000000" opacity="0.3" x="4" y="4" width="8" height="16" />
-                                                    <path d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z" fill="#000000" fill-rule="nonzero" />
-                                                </g>
-                                            </svg>
-                                            <!--end::Svg Icon-->
-                                        </span>
-                                        <span class="menu-text">Admin Management System</span>
-                                        <i class="menu-arrow"></i>
-                                    </a>
-                                    <div class="menu-submenu">
-                                        <i class="menu-arrow"></i>
-                                        <ul class="menu-subnav">
-                                            <li class="menu-item menu-item-parent" aria-haspopup="true">
-                                                <span class="menu-link">
-                                                    <span class="menu-text">Admin Management System</span>
-                                                </span>
-                                            </li>
-                                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                                <a href="javascript:;" class="menu-link menu-toggle">
-                                                    <i class="menu-bullet menu-bullet-dot">
-                                                        <span></span>
-                                                    </i>
-                                                    <span class="menu-text">User Management</span>
-                                                    <i class="menu-arrow"></i>
-                                                </a>
-                                                <div class="menu-submenu">
-                                                    <i class="menu-arrow"></i>
-                                                    <ul class="menu-subnav">
-                                                        <li class="menu-item" aria-haspopup="true">
-                                                            <a href="../Admin/managementStudent.aspx" class="menu-link">
-                                                                <i class="menu-bullet menu-bullet-dot">
-                                                                    <span></span>
-                                                                </i>
-                                                                <span class="menu-text">Student</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="menu-item" aria-haspopup="true">
-                                                            <a href="../Admin/managementTeacher.aspx" class="menu-link">
-                                                                <i class="menu-bullet menu-bullet-dot">
-                                                                    <span></span>
-                                                                </i>
-                                                                <span class="menu-text">Teacher</span>
-                                                            </a>
-                                                        </li>
+
+                                <li id="managementSide" runat="server" visible="false" class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-protected"></i><span class="kt-menu__link-text">Management System</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <div class="kt-menu__submenu ">
+                                        <span class="kt-menu__arrow"></span>
+                                        <ul class="kt-menu__subnav">
+                                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Pages</span></span></li>
+                                            <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">User Management</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                                <div class="kt-menu__submenu ">
+                                                    <span class="kt-menu__arrow"></span>
+                                                    <ul class="kt-menu__subnav">
+                                                        <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">User Management</span></span></li>
+                                                        <li class="kt-menu__item " aria-haspopup="true"><a href="../Admin/managementStudent.aspx" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Student</span></a></li>
+                                                        <li class="kt-menu__item " aria-haspopup="true"><a href="../Admin/managementTeacher.aspx" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Teacher</span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                                <a href="javascript:;" class="menu-link menu-toggle">
-                                                    <i class="menu-bullet menu-bullet-dot">
-                                                        <span></span>
-                                                    </i>
-                                                    <span class="menu-text">Forum Management</span>
-                                                    <i class="menu-arrow"></i>
-                                                </a>
-                                                <div class="menu-submenu">
-                                                    <i class="menu-arrow"></i>
-                                                    <ul class="menu-subnav">
-                                                        <li class="menu-item" aria-haspopup="true">
-                                                            <a href="../Admin/managementQuestionReview.aspx" class="menu-link">
-                                                                <i class="menu-bullet menu-bullet-dot">
-                                                                    <span></span>
-                                                                </i>
-                                                                <span class="menu-text">Post Review</span>
-                                                            </a>
-                                                        </li>
+                                            <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Let's Ask Management</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                                <div class="kt-menu__submenu ">
+                                                    <span class="kt-menu__arrow"></span>
+                                                    <ul class="kt-menu__subnav">
+                                                        <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Let's Ask Management</span></span></li>
+                                                        <li class="kt-menu__item " aria-haspopup="true"><a href="../Admin/managementQuestionReview.aspx" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Question Review</span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                                <a href="javascript:;" class="menu-link menu-toggle">
-                                                    <i class="menu-bullet menu-bullet-dot">
-                                                        <span></span>
-                                                    </i>
-                                                    <span class="menu-text">Data Statistics</span>
-                                                    <i class="menu-arrow"></i>
-                                                </a>
-                                                <div class="menu-submenu">
-                                                    <i class="menu-arrow"></i>
-                                                    <ul class="menu-subnav">
-                                                        <li class="menu-item" aria-haspopup="true">
-                                                            <a href="../Admin/managementVisualization.aspx" class="menu-link">
-                                                                <i class="menu-bullet menu-bullet-dot">
-                                                                    <span></span>
-                                                                </i>
-                                                                <span class="menu-text">Statistic Visualization</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="menu-item" aria-haspopup="true">
-                                                            <a href="../Admin/managementCreditTransaction.aspx" class="menu-link">
-                                                                <i class="menu-bullet menu-bullet-dot">
-                                                                    <span></span>
-                                                                </i>
-                                                                <span class="menu-text">Credit Transaction</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="menu-item" aria-haspopup="true">
-                                                            <a href="../Admin/managementConnectionRecord.aspx" class="menu-link">
-                                                                <i class="menu-bullet menu-bullet-dot">
-                                                                    <span></span>
-                                                                </i>
-                                                                <span class="menu-text">Connection Record</span>
-                                                            </a>
-                                                        </li>
+                                            <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Data Statistics</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                                <div class="kt-menu__submenu ">
+                                                    <span class="kt-menu__arrow"></span>
+                                                    <ul class="kt-menu__subnav">
+                                                        <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Data Statistics</span></span></li>
+                                                        <li class="kt-menu__item " aria-haspopup="true"><a href="../Admin/managementVisualization.aspx" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Statistic Visualization</span></a></li>
+                                                        <li class="kt-menu__item " aria-haspopup="true"><a href="../Admin/managementCreditTransaction.aspx" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Credit Transaction</span></a></li>
+                                                        <li class="kt-menu__item " aria-haspopup="true"><a href="../Admin/managementConnectionRecord.aspx" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Connection Record</span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
+
                                         </ul>
                                     </div>
                                 </li>
                             </ul>
-                            <!--end::Menu Nav-->
                         </div>
-                        <!--end::Menu Container-->
                     </div>
-                    <!--end::Aside Menu-->
+                    <div class="kt-aside__footer kt-grid__item" id="kt_aside_footer" kt-hidden-height="59" style="">
+                        <div class="kt-aside__footer-nav">
+                            <div class="kt-aside__footer-item">
+                                <a href="../Index.aspx" class="btn btn-icon"><i class="flaticon2-cube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end:: Aside Menu -->
+
+
                 </div>
-                <!--end::Aside-->
-                <!--begin::Wrapper-->
-                <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-                    <!--begin::Header-->
-                    <div id="kt_header" class="header header-fixed">
-                        <!--begin::Container-->
-                        <div class="container-fluid d-flex align-items-stretch justify-content-between">
-                            <!--begin::Header Menu Wrapper-->
-                            <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
-                                <!--begin::Header Menu-->
-                                <div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default"></div>
-                                <!--end::Header Menu-->
-                            </div>
-                            <!--end::Header Menu Wrapper-->
-                            <!--begin::Topbar-->
-                            <div class="topbar">
+                <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+                    <!-- begin:: Header -->
+                    <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
+                        <!-- begin:: Header Topbar -->
+                        <div class="kt-header__topbar" style="position: fixed; right: 10px; top: 10px">
 
-                                <div class="kt-header__topbar-item kt-header__topbar-item--user">
-                                    <div class="kt-header__topbar-user kt-rounded-">
-                                        <asp:Label ID="creditBalance" runat="server" class="kt-header__topbar-username kt-hidden-mobile"></asp:Label>
-                                    </div>
+                            <div class="kt-header__topbar-item kt-header__topbar-item--user">
+                                <div class="kt-header__topbar-user kt-rounded-">
+                                    <asp:Label ID="creditBalance" runat="server" class="kt-header__topbar-username kt-hidden-mobile"></asp:Label>
                                 </div>
-
-                                <!--begin::Notifications-->
-                                <div class="dropdown mr-1">
-                                    <!--begin::Toggle-->
-                                    <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
-                                        <div class="btn btn-icon btn-clean btn-dropdown btn-lg pulse pulse-primary">
-                                            <span class="svg-icon svg-icon-xl svg-icon-primary">
-                                                <!--begin::Svg Icon | path:assets/media/svg/icons/Code/Compiling.svg-->
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
-                                                        <path d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z" fill="#000000" opacity="0.3" />
-                                                        <path d="M8.56066017,16.6819805 L10.6819805,14.5606602 C11.267767,13.9748737 12.2175144,13.9748737 12.8033009,14.5606602 L14.9246212,16.6819805 C15.5104076,17.267767 15.5104076,18.2175144 14.9246212,18.8033009 L12.8033009,20.9246212 C12.2175144,21.5104076 11.267767,21.5104076 10.6819805,20.9246212 L8.56066017,18.8033009 C7.97487373,18.2175144 7.97487373,17.267767 8.56066017,16.6819805 Z M8.56066017,4.68198052 L10.6819805,2.56066017 C11.267767,1.97487373 12.2175144,1.97487373 12.8033009,2.56066017 L14.9246212,4.68198052 C15.5104076,5.26776695 15.5104076,6.21751442 14.9246212,6.80330086 L12.8033009,8.9246212 C12.2175144,9.51040764 11.267767,9.51040764 10.6819805,8.9246212 L8.56066017,6.80330086 C7.97487373,6.21751442 7.97487373,5.26776695 8.56066017,4.68198052 Z" fill="#000000" />
-                                                    </g>
-                                                </svg>
-                                                <!--end::Svg Icon-->
-                                            </span>
-                                            <span class="pulse-ring"></span>
-                                        </div>
-                                    </div>
-                                    <!--end::Toggle-->
-                                    <!--begin::Dropdown-->
-                                    <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
-                                        <form>
-                                            <!--begin::Header-->
-                                            <div class="d-flex flex-column pt-12 bgi-size-cover bgi-no-repeat rounded-top" style="background-image: url(../assets/media/misc/head_bg_sm.jpg)">
-                                                <!--begin::Title-->
-                                                <h4 class="d-flex flex-center rounded-top">
-                                                    <span class="text-white">Notification Center</span>
-                                                    <asp:Label ID="msgNo" CssClass="kt-head__desc" runat="server"></asp:Label>
-                                                </h4>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Header-->
-                                            <!--begin::Content-->
-                                            <div>
-                                                <!--begin::Tabpane-->
-                                                <div class="tab-pane active show p-8" id="topbar_notifications_notifications" role="tabpanel">
-                                                    <!--begin::Scroll-->
-                                                    <div class="scroll pr-7 mr-n7" data-scroll="true" data-height="300" data-mobile-height="200">
-                                                        <asp:GridView ID="GridViewNotification" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="NotificationData" ShowHeader="False" BorderStyle="None" GridLines="None" Width="100%">
-                                                            <Columns>
-                                                                <asp:TemplateField HeaderText="Notification">
-                                                                    <ItemTemplate>
-
-                                                                        <asp:LinkButton ID="Try" runat="server" OnClick="Try_Click" Width="100%" BorderStyle="None">
-                                                                            <!--begin::Item-->
-                                                                            <div class="d-flex align-items-center mb-6">
-                                                                                <!--begin::Symbol-->
-                                                                                <div class="symbol symbol-35 flex-shrink-0 mr-3">
-                                                                                    <img alt="Pic" src="../assets/img/faces/user-head-icon.jpg" />
-                                                                                </div>
-                                                                                <!--end::Symbol-->
-                                                                                <!--begin::Content-->
-                                                                                <div class="d-flex flex-wrap flex-row-fluid">
-                                                                                    <!--begin::Text-->
-                                                                                    <div class="d-flex flex-column pr-5 flex-grow-1">
-                                                                                        <a href="#" class="text-dark text-hover-primary mb-1 font-weight-bold font-size-lg"><%# Eval("Type") %></a>
-                                                                                        <asp:Label ID="TimeAgo" CssClass="text-muted font-weight-bold" runat="server"></asp:Label>
-                                                                                    </div>
-                                                                                    <!--end::Text-->
-                                                                                </div>
-                                                                                <!--end::Content-->
-                                                                            </div>
-                                                                            <!--end::Item-->
-                                                                        </asp:LinkButton>
-                                                                        <asp:HiddenField ID="RT" Value='<%# Eval("PostTime").ToString() %>' Visible="false" runat="server" />
-                                                                        <asp:Label ID="Url" runat="server" Text='<%# Eval("Url") %>' Visible="false" />
-                                                                        <asp:Label ID="notificationId" runat="server" Text='<%# Eval("Id") %>' Visible="false"></asp:Label>
-                                                                    </ItemTemplate>
-                                                                    <ControlStyle BorderStyle="None"></ControlStyle>
-
-                                                                    <FooterStyle BorderStyle="None"></FooterStyle>
-
-                                                                    <HeaderStyle BorderStyle="None"></HeaderStyle>
-
-                                                                    <ItemStyle BorderStyle="None"></ItemStyle>
-                                                                </asp:TemplateField>
-                                                            </Columns>
-                                                        </asp:GridView>
-                                                        <asp:SqlDataSource runat="server" ID="NotificationData" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT * FROM [tb_Notification] WHERE ([Username] = @Username) ORDER BY [ViewBool], [PostTime] DESC">
-                                                            <SelectParameters>
-                                                                <asp:SessionParameter SessionField="Account" Name="Username" Type="String"></asp:SessionParameter>
-                                                            </SelectParameters>
-                                                        </asp:SqlDataSource>
-                                                    </div>
-                                                    <!--end::Scroll-->
-                                                </div>
-                                                <!--end::Tabpane-->
-
-
-                                            </div>
-                                            <!--end::Content-->
-                                        </form>
-                                    </div>
-                                    <!--end::Dropdown-->
-                                </div>
-                                <!--end::Notifications-->
-                                <!--begin::User-->
-                                <div class="topbar-item ml-4">
-                                    <div class="btn btn-icon btn-light-primary h-40px w-40px p-0" id="kt_quick_user_toggle">
-                                        <img src="../assets/img/faces/user-head-icon.jpg" class="h-30px align-self-end" alt="" />
-                                    </div>
-                                </div>
-                                <!--end::User-->
                             </div>
-                            <!--end::Topbar-->
-                        </div>
-                        <!--end::Container-->
-                    </div>
-                    <!--end::Header-->
-                    <!--begin::Content-->
-                    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-                        <!--begin::Entry-->
-                        <div class="d-flex flex-column-fluid">
-                            <!--begin::Container-->
-                            <div class="container">
-                                <asp:ContentPlaceHolder ID="Content" runat="server">
-                                </asp:ContentPlaceHolder>
-                            </div>
-                            <!--end::Container-->
-                        </div>
-                        <!--end::Entry-->
-                    </div>
-                    <!--end::Content-->
-                    <!--begin::Footer-->
-                    <div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
-                        <!--begin::Container-->
-                        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-                            <!--begin::Copyright-->
-                            <div class="text-dark order-2 order-md-1">
-                                <p target="_blank" class="text-dark-75 text-hover-primary">NYP Journey</p>
-                            </div>
-                            <!--end::Copyright-->
-                        </div>
-                        <!--end::Container-->
-                    </div>
-                    <!--end::Footer-->
-                </div>
-                <!--end::Wrapper-->
-            </div>
-            <!--end::Page-->
-        </div>
-        <!--end::Main-->
-        <!-- begin::User Panel-->
-        <div id="kt_quick_user" class="offcanvas offcanvas-right p-10">
-            <!--begin::Header-->
-            <div class="offcanvas-header d-flex align-items-center justify-content-between pb-5">
-                <h3 class="font-weight-bold m-0">User Profile</h3>
-            </div>
-            <!--end::Header-->
-            <!--begin::Content-->
-            <div class="offcanvas-content pr-5 mr-n5">
-                <!--begin::Header-->
-                <div class="d-flex align-items-center mt-5">
-                    <div class="symbol symbol-100 mr-5">
-                        <div class="symbol-label" runat="server" id="profileIcon" style="background-image: url('../assets/img/faces/user-head-icon.jpg')"></div>
-                    </div>
-                    <div class="d-flex flex-column">
-                        <p id="userID" runat="server" href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary"></p>
-                        <div class="text-muted mt-1"><%Response.Write(Session["Account"].ToString()); %></div>
-                    </div>
-                </div>
-                <!--end::Header-->
-                <!--begin::Separator-->
-                <div class="separator separator-dashed mt-8 mb-5"></div>
-                <!--end::Separator-->
-                <!--begin::Nav-->
-                <div class="navi navi-spacer-x-0 p-0">
-                    <!--begin::Item-->
-                    <a runat="server" id="profile" class="navi-item">
-                        <div class="navi-link">
-                            <div class="symbol symbol-40 bg-light mr-3">
-                                <div class="symbol-label">
-                                    <span class="svg-icon svg-icon-md svg-icon-danger">
-                                        <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Adress-book2.svg-->
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                <rect x="0" y="0" width="24" height="24" />
-                                                <path d="M18,2 L20,2 C21.6568542,2 23,3.34314575 23,5 L23,19 C23,20.6568542 21.6568542,22 20,22 L18,22 L18,2 Z" fill="#000000" opacity="0.3" />
-                                                <path d="M5,2 L17,2 C18.6568542,2 20,3.34314575 20,5 L20,19 C20,20.6568542 18.6568542,22 17,22 L5,22 C4.44771525,22 4,21.5522847 4,21 L4,3 C4,2.44771525 4.44771525,2 5,2 Z M12,11 C13.1045695,11 14,10.1045695 14,9 C14,7.8954305 13.1045695,7 12,7 C10.8954305,7 10,7.8954305 10,9 C10,10.1045695 10.8954305,11 12,11 Z M7.00036205,16.4995035 C6.98863236,16.6619875 7.26484009,17 7.4041679,17 C11.463736,17 14.5228466,17 16.5815,17 C16.9988413,17 17.0053266,16.6221713 16.9988413,16.5 C16.8360465,13.4332455 14.6506758,12 11.9907452,12 C9.36772908,12 7.21569918,13.5165724 7.00036205,16.4995035 Z" fill="#000000" />
-                                            </g>
-                                        </svg>
-                                        <!--end::Svg Icon-->
+                            <div class="kt-header__topbar-item dropdown">
+                                <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="30px,0px">
+                                    <span class="kt-header__topbar-icon">
+                                        <i class="flaticon2-bell-alarm-symbol"></i>
+                                        <asp:Label ID="notificationDot" Visible="false" runat="server" CssClass="kt-badge kt-badge--dot kt-badge--notify kt-badge--sm kt-badge--brand"></asp:Label>
+
                                     </span>
                                 </div>
-                            </div>
-                            <div class="navi-text">
-                                <div class="font-weight-bold">My Profile</div>
-                                <div class="text-muted">
-                                    Profile info
+                                <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
+
+                                    <div class="kt-head" style="background-image: url(../assets/media/misc/head_bg_sm.jpg)">
+                                        <h3 class="kt-head__title">My Notifications</h3>
+                                        <div class="kt-head__sub">
+                                            <asp:Label ID="msgNo" CssClass="kt-head__desc" runat="server"></asp:Label>
+                                        </div>
+                                    </div>
+                                    <div class="kt-notification kt-margin-t-30 kt-margin-b-20 kt-scroll" data-scroll="true" data-height="270" data-mobile-height="220">
+                                        <asp:GridView ID="GridViewNotification" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="NotificationData" ShowHeader="False" BorderStyle="None" GridLines="None" Width="100%">
+                                            <Columns>
+                                                <asp:TemplateField HeaderText="Notification">
+                                                    <ItemTemplate>
+                                                        <asp:LinkButton CssClass="kt-notification__item" ID="Try" runat="server" OnClick="Try_Click" Width="100%" BorderStyle="None" Style="align-items: center">
+
+                                                            <div class="kt-notification__item-details" style="display: inline-block; position: relative; left: 10%; width: 80%">
+                                                                <div class="kt-notification__item-title">
+                                                                    <%# Eval("Type") %>.
+                                                                </div>
+                                                                <asp:Label ID="TimeAgo" CssClass="kt-notification__item-time" runat="server"></asp:Label>
+                                                            </div>
+                                                        </asp:LinkButton>
+                                                        <asp:HiddenField ID="RT" Value='<%# Eval("PostTime").ToString() %>' Visible="false" runat="server" />
+                                                        <asp:Label ID="Url" runat="server" Text='<%# Eval("Url") %>' Visible="false" />
+                                                        <asp:Label ID="notificationId" runat="server" Text='<%# Eval("Id") %>' Visible="false"></asp:Label>
+                                                    </ItemTemplate>
+                                                    <ControlStyle BorderStyle="None"></ControlStyle>
+
+                                                    <FooterStyle BorderStyle="None"></FooterStyle>
+
+                                                    <HeaderStyle BorderStyle="None"></HeaderStyle>
+
+                                                    <ItemStyle BorderStyle="None"></ItemStyle>
+                                                </asp:TemplateField>
+                                            </Columns>
+                                        </asp:GridView>
+                                        <asp:SqlDataSource runat="server" ID="NotificationData" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT * FROM [tb_Notification] WHERE ([Username] = @Username) ORDER BY [ViewBool], [PostTime] DESC">
+                                            <SelectParameters>
+                                                <asp:SessionParameter SessionField="Account" Name="Username" Type="String"></asp:SessionParameter>
+                                            </SelectParameters>
+                                        </asp:SqlDataSource>
+                                    </div>
+
+
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <!--end:Item-->
-                    <!--begin::Item-->
-                    <span class="navi-item mt-2">
-                        <span class="navi-link">
-                            <button runat="server" onserverclick="logout" class="btn btn-sm btn-light-primary font-weight-bolder py-3 px-6">Sign Out</button>
-                        </span>
-                    </span>
-                    <!--end:Item-->
-                </div>
-                <!--end::Nav-->
-            </div>
-            <!--end::Content-->
-        </div>
-        <!-- end::User Panel-->
-    </form>
+                            <!--begin: User Bar -->
+                            <div class="kt-header__topbar-item kt-header__topbar-item--user">
+                                <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
 
-    <!--begin::Global Config(global config for global JS scripts)-->
+                                    <!--use "kt-rounded" class for rounded avatar style-->
+                                    <div class="kt-header__topbar-user kt-rounded-">
+                                        <span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
+                                        <asp:Label ID="userID" CssClass="kt-header__topbar-username kt-hidden-mobile" runat="server" Text=""></asp:Label>
+                                        <img alt="Pic" src="assets/img/faces/user-head-icon.jpg" class="kt-rounded-" id="icon" runat="server" />
+
+                                        <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
+                                        <span class="kt-badge kt-badge--username kt-badge--lg kt-badge--brand kt-hidden kt-badge--bold">S</span>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-sm">
+                                    <div class="kt-user-card kt-margin-b-40 kt-margin-b-30-tablet-and-mobile" style="background-image: url(../assets/media/misc/head_bg_sm.jpg)">
+                                        <div class="kt-user-card__wrapper">
+                                            <div class="kt-user-card__pic">
+
+                                                <!--use "kt-rounded" class for rounded avatar style-->
+                                                <img alt="Pic" runat="server" id="profileIcon" src="assets/img/faces/user-head-icon.jpg" class="kt-rounded-" />
+                                            </div>
+                                            <div class="kt-user-card__details">
+                                                <div class="kt-user-card__name"><%Response.Write(Session["Account"].ToString()); %></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="kt-nav kt-margin-b-10">
+                                        <li class="kt-nav__item">
+                                            <a href="#" class="kt-nav__link" runat="server" id="profile">
+                                                <span class="kt-nav__link-icon"><i class="flaticon2-calendar-3"></i></span>
+                                                <span class="kt-nav__link-text">My Profile</span>
+                                            </a>
+                                        </li>
+                                        <li class="kt-nav__separator kt-nav__separator--fit"></li>
+                                        <li class="kt-nav__custom kt-space-between">
+                                            <button type="button" runat="server" onserverclick="logout" class="btn btn-label-brand btn-upper btn-sm btn-bold">Sign Out</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!--end: User Bar -->
+                        </div>
+
+                        <!-- end:: Header Topbar -->
+                    </div>
+
+                    <!-- end:: Header -->
+                    <asp:Panel ID="warningInsufficientCredit" runat="server" Visible="false">
+                        <div class="alert alert-danger fade show" role="alert">
+                            <div class="alert-text">Not enough credit!</div>
+                            <div class="alert-close">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="la la-close"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel ID="illegalAccess" runat="server" Visible="false">
+                        <div class="alert alert-danger fade show" role="alert">
+                            <div class="alert-text">You are not authorized to access the page</div>
+                            <div class="alert-close">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="la la-close"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel ID="successPostSuccess" runat="server" Visible="false">
+
+                        <div class="alert alert-success fade show" role="alert">
+                            <div class="alert-text">You have successfully posted you question.</div>
+                            <div class="alert-close">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="la la-close"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel ID="successUpvote" runat="server" Visible="false">
+
+                        <div class="alert alert-success fade show" role="alert">
+                            <div class="alert-text">You have successfully Upvoted the answer</div>
+                            <div class="alert-close">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="la la-close"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel ID="successAnswerPost" runat="server" Visible="false">
+
+                        <div class="alert alert-success fade show" role="alert">
+                            <div class="alert-text">You have successfully post your answer</div>
+                            <div class="alert-close">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="la la-close"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel ID="successCommentPost" runat="server" Visible="false">
+
+                        <div class="alert alert-success fade show" role="alert">
+                            <div class="alert-text">You have successfully post your comment</div>
+                            <div class="alert-close">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="la la-close"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel ID="successSolutionSelect" runat="server" Visible="false">
+
+                        <div class="alert alert-success fade show" role="alert">
+                            <div class="alert-text">You have successfully select an answer as your solution</div>
+                            <div class="alert-close">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="la la-close"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel ID="successReplyPost" runat="server" Visible="false">
+
+                        <div class="alert alert-success fade show" role="alert">
+                            <div class="alert-text">You have successfully post your Reply</div>
+                            <div class="alert-close">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="la la-close"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </asp:Panel>
+
+                    <div>
+                        <asp:ContentPlaceHolder ID="Content" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
     <script>
         var KTAppOptions = {
             "colors": {
@@ -708,18 +383,25 @@
                 }
             }
         };
-        var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3E97FF", "secondary": "#E5EAEE", "success": "#08D1AD", "info": "#844AFF", "warning": "#F5CE01", "danger": "#FF3D60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#DEEDFF", "secondary": "#EBEDF3", "success": "#D6FBF4", "info": "#6125E1", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };
     </script>
-    <!--end::Global Config-->
-    <!--begin::Global Theme Bundle(used by all pages)-->
-    <script src="../assets/plugins/global/plugins.bundle.js"></script>
-    <script src="../assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
-    <script src="../assets/js/scripts.bundle.js"></script>
-    <!--end::Global Theme Bundle-->
+
+    <!-- end::Global Config -->
+
+    <!--begin::Global Theme Bundle(used by all pages) -->
+    <script src="../assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
+    <script src="../assets/js/scripts.bundle.js" type="text/javascript"></script>
+
+    <!--end::Global Theme Bundle -->
 
     <!--begin::Page Vendors(used by this page) -->
     <script src="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 
     <!--end::Page Vendors -->
+
+    <!--begin::Page Scripts(used by this page) -->
+    <script src="../assets/js/pages/dashboard.js" type="text/javascript"></script>
+
+    <!--end::Page Scripts -->
+    <script src="../assets/js/pages/custom/users/list-datatable.js" type="text/javascript"></script>
 </body>
 </html>

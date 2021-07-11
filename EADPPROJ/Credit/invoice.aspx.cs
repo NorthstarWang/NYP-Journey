@@ -63,10 +63,10 @@ namespace EADPPROJ
             pdfHTML.RenderControl(htw);
             string htmlinner = html.ToString();
             byte[] pdf = pechkin.Convert(oc, htmlinner);
-            File.WriteAllBytes("C:\\Users\\Wang Yang\\Desktop\\EADPPROJ\\EADPPROJ\\assets\\download\\invoice.pdf", pdf);
+            File.WriteAllBytes(Server.MapPath("../")+"assets/download/invoice.pdf", pdf);
             Response.ContentType = "Application/pdf";
             Response.AppendHeader("Content-Disposition", "attachment; filename=INVOICE_PDF.pdf");
-            Response.TransmitFile(Server.MapPath("~/assets/download/invoice.pdf"));
+            Response.TransmitFile(Server.MapPath("../assets/download/invoice.pdf"));
             Response.End();
         }
     }

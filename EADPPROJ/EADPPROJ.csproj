@@ -1120,6 +1120,12 @@
     <Compile Include="Blog\blogDetail.aspx.designer.cs">
       <DependentUpon>blogDetail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107111727571_Initial.cs" />
+    <Compile Include="Migrations\202107111727571_Initial.designer.cs">
+      <DependentUpon>202107111727571_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\EducationDB.cs" />
     <Compile Include="Shop\bookDetail.aspx.cs">
       <DependentUpon>bookDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1830,7 +1836,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\zh-Hans\" />
-    <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
@@ -1843,6 +1848,11 @@
     <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202107111727571_Initial.resx">
+      <DependentUpon>202107111727571_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

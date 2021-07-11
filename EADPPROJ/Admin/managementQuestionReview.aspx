@@ -1,8 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageAdminManagement.Master" AutoEventWireup="true" CodeBehind="managementQuestionReview.aspx.cs" Inherits="EADPPROJ.managementQuestionReview" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="server" >
-    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" style="height:100%">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPageAdminManagement.Master" AutoEventWireup="true" CodeBehind="managementQuestionReview.aspx.cs" Inherits="EADPPROJ.managementQuestionReview" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="server">
+    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" style="height: 100%">
         <div class="kt-subheader   kt-grid__item" id="kt_subheader"></div>
-        <div class="kt-portlet kt-portlet--mobile" style="height:86%;width:83%;position:fixed">
+        <div class="kt-portlet kt-portlet--mobile" style="height: 86%; width: 83%; position: fixed">
             <div class="kt-portlet__head">
                 <div class="kt-portlet__head-label">
                     <h3 class="kt-portlet__head-title">Question Review
@@ -36,5 +37,5 @@
                 </asp:SqlDataSource>
             </div>
         </div>
-                                </div>
+    </div>
 </asp:Content>

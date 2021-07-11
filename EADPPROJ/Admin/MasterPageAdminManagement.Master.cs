@@ -28,13 +28,13 @@ namespace EADPPROJ
                 else
                 {
                     Session["ErrorAccount"] = "true";
-                    Response.Redirect("./index.aspx");
+                    Response.Redirect("~/index.aspx");
                 }
             }
             else
             {
                 Session["ErrorAccount"] = "true";
-                Response.Redirect("./index.aspx");
+                Response.Redirect("~/index.aspx");
             }
  
             if (Session["successDelete"] == "true")
@@ -98,7 +98,7 @@ namespace EADPPROJ
         protected void logout(object sender, EventArgs e)
         {
             Session["Account"] = null;
-            Response.Redirect("index.aspx");
+            Response.Redirect("~/index.aspx");
         }
 
         protected void Try_Click(object sender, EventArgs e)

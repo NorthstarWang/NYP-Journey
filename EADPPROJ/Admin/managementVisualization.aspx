@@ -1,47 +1,45 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageAdminManagement.Master" AutoEventWireup="true" CodeBehind="managementVisualization.aspx.cs" Inherits="EADPPROJ.managementVisualization" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPageAdminManagement.Master" AutoEventWireup="true" CodeBehind="managementVisualization.aspx.cs" Inherits="EADPPROJ.managementVisualization" %>
 <%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="server">
-    <script src="Scripts/Chart.js"></script>
+    <script src="../Scripts/Chart.js"></script>
     <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-    
-    <div class="row">
-        <div class="col-xl-6">
-    <div class="kt-portlet">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<h3 class="kt-portlet__head-title">Visitors On Recent 7 Days</h3>
-											</div>
-										</div>
-										<div class="kt-portlet__body">
-											<canvas id="View" style="height: 300px;"></canvas>
-                                            <asp:HiddenField ID="RecentDateTime" runat="server" />
-                                            <asp:HiddenField ID="Admin" runat="server" />
-                                            <asp:HiddenField ID="days" runat="server" />
-                                            <asp:HiddenField ID="Student" runat="server" />
-                                            <asp:HiddenField ID="Teacher" runat="server" />
-                                            <asp:HiddenField ID="Guest" runat="server" />
-                                            </div>
-									</div>
+
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">Visitors On Recent 7 Days</h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <canvas id="View" style="height: 300px;"></canvas>
+                        <asp:HiddenField ID="RecentDateTime" runat="server" />
+                        <asp:HiddenField ID="Admin" runat="server" />
+                        <asp:HiddenField ID="days" runat="server" />
+                        <asp:HiddenField ID="Student" runat="server" />
+                        <asp:HiddenField ID="Teacher" runat="server" />
+                        <asp:HiddenField ID="Guest" runat="server" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">OS Total Percentage</h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <canvas id="OS" style="height: 300px;"></canvas>
+                        <asp:HiddenField ID="WinNT" runat="server" />
+                        <asp:HiddenField ID="Linux" runat="server" />
+                        <asp:HiddenField ID="MacOS" runat="server" />
+                    </div>
+                </div>
+            </div>
         </div>
-    <div class="col-xl-6">
-    <div class="kt-portlet">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<h3 class="kt-portlet__head-title">OS Total Percentage</h3>
-											</div>
-										</div>
-										<div class="kt-portlet__body">
-											<canvas id="OS" style="height: 300px;"></canvas>
-                                            <asp:HiddenField ID="WinNT" runat="server" />
-                                            <asp:HiddenField ID="Linux" runat="server" />
-                                            <asp:HiddenField ID="MacOS" runat="server" />
-										</div>
-									</div>
-        </div>
-        </div>
-        
     </div>
-        </div>
     <script>
         var ctxOS = document.getElementById("OS").getContext('2d');
         var myChart = new Chart(ctxOS, {
@@ -70,7 +68,7 @@
 
             }
         });
-        </script>
+    </script>
     <script>
         var dayDist = "<%=days.Value %>".split(",");
         var viewStud = "<%=Student.Value %>".split(",");
@@ -105,9 +103,9 @@
         var dataFourth = {
             label: "Guest",
             data: [parseInt(viewGuest[6]), parseInt(viewGuest[5]), parseInt(viewGuest[4]), parseInt(viewGuest[3]), parseInt(viewGuest[2]), parseInt(viewGuest[1]), parseInt(viewGuest[0])],
-            backgroundColor:'#616774',
+            backgroundColor: '#616774',
             borderColor: '#616774',
-            fill:false
+            fill: false
         };
         var dayData = {
             labels: [dayDist[6], dayDist[5], dayDist[4], dayDist[3], dayDist[2], dayDist[1], dayDist[0]],
