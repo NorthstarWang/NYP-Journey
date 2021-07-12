@@ -53,10 +53,9 @@
                                 <h4 class="card-title">Log in</h4>
                             </div>
                             <div class="card-body">
-                                <p class="title" style="color: black;text-align: center">Student Test Account: 201001A</p>
-                                <p class="title" style="color: black;text-align: center">Password: 12345678</p>
-                                <p class="title" style="color: black;text-align: center">Teacher Test Account: S1000000G</p>
-                                <p class="title" style="color: black;text-align: center">Password: 12345678</p>
+                                <p class="card-description text-center" style="color: black;">Student Account: 201001A</p>
+                                <p class="card-description text-center" style="color: black;">Teacher Account: S1000000G</p>
+                                <p class="card-description text-center" style="color: black;">Password: 12345678</p>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">

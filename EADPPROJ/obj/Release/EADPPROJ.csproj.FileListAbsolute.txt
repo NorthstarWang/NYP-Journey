@@ -208,5 +208,3 @@ C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\HtmlAgilityPa
 C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\MarkdownSharp.pdb
 C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\bin\MarkdownSharp.xml
 C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\obj\Release\EADPPROJ.csproj.AssemblyReference.cache
-C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\obj\Release\EADPPROJ.Migrations.Initial.resources
-C:\Users\15276\source\repos\NorthstarWang\NYP-Journey\EADPPROJ\obj\Release\EADPPROJ.csproj.GenerateResource.cache

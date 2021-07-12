@@ -56,7 +56,6 @@ namespace EADPPROJ.Models
         public int BestSelected { get; set; }
         public DateTime PostTime { get; set; }
         public int UpVote { get; set; }
-        public int Section { get; set; }
 }
     public class tb_AnswerSection
     {
@@ -77,7 +76,7 @@ namespace EADPPROJ.Models
         [StringLength(100)]public string BGImage { get; set; }
         public int BGDefault { get; set; }
         public int Tip { get; set; }
-        public int Favourite { get; set; }
+        public int Favorite { get; set; }
     }
     public class tb_Comment
     {
@@ -128,7 +127,7 @@ namespace EADPPROJ.Models
     public class tb_Notification
     {
         [Key] public int Id { get; set; }
-        public int Bool { get; set; }
+        public int ViewBool { get; set; }
         [DataType(DataType.DateTime)]public DateTime PostTime { get; set; }
         [StringLength(50)]public string Type { get; set; }
         [StringLength(100)]public string Url { get; set; }

@@ -203,13 +203,13 @@
                                     <Columns>
                                         <asp:TemplateField HeaderText="Blog">
                                             <ItemTemplate>
-
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <h4 class="card-title">
                                                             <%# Eval("Title", "{0}") %>
                                                         </h4>
-                                                        <div style="overflow: hidden; max-height: 200px"><%# Eval("Content", "{0}") %></div>
+                                                        <div style="overflow: hidden; text-overflow: ellipsis;"><%# Eval("Content", "{0}") %></div>
+                                                        <br/>
                                                         <div class="card-stats justify-content-center">
                                                             <a href='../Blog/blogDetail.aspx?id=<%# Eval("Id", "{0}") %>' class="btn btn-white btn-round"><i class="material-icons">subject</i>Read Blog</a>
                                                         </div>

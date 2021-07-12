@@ -12,6 +12,24 @@ namespace EADPPROJ
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            ListView1.DataBind();
+            if (ListView1.Items.Count != 0)
+            {
+                for (int i = 0; i < ListView1.Items.Count; i++)
+                {
+                    Label Default = (Label)ListView1.Items[i].FindControl("Default");
+                    Label id = (Label)ListView1.Items[i].FindControl("BlogId");
+                    HtmlGenericControl BG = (HtmlGenericControl)ListView1.Items[i].FindControl("BlogImg");
+                    if (Convert.ToInt32(Default.Text) == 0)
+                    {
+                        BG.Style["background-image"] = "url(../assets/img/BlogBG/" + blog1.GetBGPath(Convert.ToInt32(id.Text)) + ")";
+                    }
+                    else
+                    {
+                        BG.Style["background-image"] = "url(../assets/img/examples/office2.jpg);";
+                    }
+                }
+            }
 
             if (Session["Success"] != null)
             {
@@ -23,7 +41,10 @@ namespace EADPPROJ
                 cannotFavAgain.Visible = true;
                 Session["Warn"] = null;
             }
-
+            GridView1.DataBind();
+            GridView2.DataBind();
+            GridView3.DataBind();
+            GridView4.DataBind();
             if (GridView1.Rows.Count != 0)
             {
                 for (int i = 0; i < GridView1.Rows.Count; i++)
@@ -43,7 +64,7 @@ namespace EADPPROJ
                     }
                 }
             }
-
+            
             if (GridView2.Rows.Count != 0)
             {
                 for (int i = 0; i < GridView2.Rows.Count; i++)
@@ -103,23 +124,7 @@ namespace EADPPROJ
                 }
             }
 
-            if (ListView1.Items.Count != 0)
-            {
-                for (int i = 0; i < ListView1.Items.Count; i++)
-                {
-                    Label Default = (Label)ListView1.Items[i].FindControl("Default");
-                    Label id = (Label)ListView1.Items[i].FindControl("BlogId");
-                    HtmlGenericControl BG = (HtmlGenericControl)ListView1.Items[i].FindControl("BlogImg");
-                    if (Convert.ToInt32(Default.Text) == 0)
-                    {
-                        BG.Style["background-image"] = "url(../assets/img/BlogBG/" + blog1.GetBGPath(Convert.ToInt32(id.Text)) + ")";
-                    }
-                    else
-                    {
-                        BG.Style["background-image"] = "url(../assets/img/examples/office2.jpg);";
-                    }
-                }
-            }
+            
         }
 
         protected void addFav_Click(object sender, EventArgs e)

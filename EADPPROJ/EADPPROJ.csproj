@@ -150,10 +150,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\EducationDB.mdf" />
-    <Content Include="App_Data\EducationDB_log.ldf">
-      <DependentUpon>EducationDB.mdf</DependentUpon>
-    </Content>
+    <Content Include=".gitignore" />
     <Content Include="assets\css\material-kit.css" />
     <Content Include="assets\css\material-kit.css.map" />
     <Content Include="assets\css\material-kit.min.css" />
@@ -875,6 +872,12 @@
     <Content Include="bin\WebActivatorEx.dll" />
     <Content Include="Blog\blog.aspx" />
     <Content Include="Blog\blogDetail.aspx" />
+    <Content Include="Migrations\Answer.txt" />
+    <Content Include="Migrations\Blog_1.txt" />
+    <Content Include="Migrations\Blog_2.txt" />
+    <Content Include="Migrations\Blog_3.txt" />
+    <Content Include="Migrations\Blog_4.txt" />
+    <Content Include="Migrations\Blog_5.txt" />
     <Content Include="Shop\bookDetail.aspx" />
     <Content Include="Shop\bookShop.aspx" />
     <Content Include="Credit\creditBalance.aspx" />
@@ -1120,9 +1123,9 @@
     <Compile Include="Blog\blogDetail.aspx.designer.cs">
       <DependentUpon>blogDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202107111727571_Initial.cs" />
-    <Compile Include="Migrations\202107111727571_Initial.designer.cs">
-      <DependentUpon>202107111727571_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202107121635560_Initial.cs" />
+    <Compile Include="Migrations\202107121635560_Initial.designer.cs">
+      <DependentUpon>202107121635560_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EducationDB.cs" />
@@ -1850,8 +1853,8 @@
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202107111727571_Initial.resx">
-      <DependentUpon>202107111727571_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202107121635560_Initial.resx">
+      <DependentUpon>202107121635560_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -25,13 +25,13 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="card card-blog">
                             <div class="card-header card-header-image">
-                                <a href="<%# Eval("Id","./blogDetail.aspx?id={0}") %>">
+                                <a href="<%# Eval("Id","../Blog/blogDetail.aspx?id={0}") %>">
                                     <img src="<%# Convert.ToInt32(Eval("BGDefault"))==0?Eval("BGImage","./assets/img/BlogBG/{0}"):"./assets/img/bg.jpg" %>" style="height: 200px" alt="">
                                 </a>
                             </div>
                             <div class="card-body">
                                 <h4 class="card-title" style="height: 100px; overflow: hidden">
-                                    <a href="<%# Eval("Id","./blogDetail.aspx?id={0}") %>"><%# Eval("Title") %></a>
+                                    <a href="<%# Eval("Id","../Blog/blogDetail.aspx?id={0}") %>"><%# Eval("Title") %></a>
                                 </h4>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                             </div>
                             <div class="card-body">
                                 <h4 class="card-title" style="height: 100px; overflow: hidden">
-                                    <a href="<%# Eval("Id","./bookDetail.aspx?id={0}") %>"><%# Eval("Name").ToString() %></a>
+                                    <a href="<%# Eval("Id","../Shop/bookDetail.aspx?id={0}") %>"><%# Eval("Name").ToString() %></a>
                                 </h4>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                         <h5>Blog</h5>
                         <ul class="links-vertical">
                             <li>
-                                <a href="/Blog/blog.aspx">Blog
+                                <a href="./Blog/blog.aspx">Blog
                                 </a>
                             </li>
                         </ul>
@@ -102,7 +102,7 @@
                         <h5>Online Shop</h5>
                         <ul class="links-vertical">
                             <li>
-                                <a href="/Shop/bookShop.aspx">Buy Now
+                                <a href="./Shop/bookShop.aspx">Buy Now
                                 </a>
                             </li>
                         </ul>
@@ -111,15 +111,15 @@
                         <h5>Ranking</h5>
                         <ul class="links-vertical">
                             <li>
-                                <a href="/Rank/rankDetail.aspx?type=Question">Let's Ask ranking
+                                <a href="./Rank/rankDetail.aspx?type=Question">Let's Ask ranking
                                 </a>
                             </li>
                             <li>
-                                <a href="/Rank/rankDetail.aspx?type=User">User ranking
+                                <a href="./Rank/rankDetail.aspx?type=User">User ranking
                                 </a>
                             </li>
                             <li>
-                                <a href="/Rank/rankDetail.aspx?type=Blog">Blog ranking
+                                <a href="./Rank/rankDetail.aspx?type=Blog">Blog ranking
                                 </a>
                             </li>
                         </ul>
