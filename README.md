@@ -1,4 +1,5 @@
-# Education System
+# NYP-Journey
+The preview website has been deployed at http://nyp-journey.azurewebsites.net/index.aspx
 
 ## Index
 
