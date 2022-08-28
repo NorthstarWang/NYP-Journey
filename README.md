@@ -15,7 +15,7 @@ The preview website has been deployed at http://nyp-journey.azurewebsites.net
 
 Due to consistent increment of Polytechnic Students, more requirements will be needed by Campus Community. Many individuals are now not fulfilled by the limited knowledge on paper and are struggled in finding a platform to guide them to study further in their interested aspects as well as find someone that can help you. In order to increase the opportunities of interaction between all teachers and students, make it much convenient, a new Web-based application need to be developed. Therefore, We came up with an web-based platform to solve these inconveniences. NYP Journey eases the users within campus by establishing a communication platform for users to investigate their academic concerns and share their learning experience. This idea is derived from question and answers sites like stack overflow and Quora which users can ask questions in different aspects and professionals can solve their problems. Furthermore, we would like a system that can encourage the users to interact with the platform more actively just like Grab. We hope that the platform can combine the advantages of the pure question & answer site and well-known service site to build a unique platform and bring convenient service to the users.
 
-> The web app has been deployed on azure: https://education-system-nyp.azurewebsites.net/
+> The web app has been deployed on azure: https://eadpproj.azurewebsites.net/
 
 ## Getting Started
 
