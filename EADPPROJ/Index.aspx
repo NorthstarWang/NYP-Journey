@@ -68,7 +68,7 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="card card-blog">
                             <div class="card-header card-header-image">
-                                <a href="<%# Eval("Id","./bookDetail.aspx?id={0}") %>">
+                                <a href="<%# Eval("Id","./Shop/bookDetail.aspx?id={0}") %>">
                                     <img src="<%# Eval("Image","./assets/img/books/{0}") %>" style="height: 400px" alt="">
                                 </a>
                                 &nbsp;&nbsp;&nbsp;

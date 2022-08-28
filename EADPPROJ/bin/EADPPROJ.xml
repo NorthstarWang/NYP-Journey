@@ -40,9 +40,9 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.blog.DataList1">
+        <member name="F:EADPPROJ.blog.ListView1">
             <summary>
-            DataList1 控件。
+            ListView1 控件。
             </summary>
             <remarks>
             自动生成的字段。
@@ -292,15 +292,6 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.bookDetail.profileUrl">
-            <summary>
-            profileUrl 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
         <member name="F:EADPPROJ.bookDetail.profileimg">
             <summary>
             profileimg 控件。
@@ -310,27 +301,18 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
+        <member name="F:EADPPROJ.bookDetail.profileUrl">
+            <summary>
+            profileUrl 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
         <member name="F:EADPPROJ.bookDetail.logout">
             <summary>
             logout 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.bookDetail.login_func">
-            <summary>
-            login_func 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.bookDetail.register_func">
-            <summary>
-            register_func 控件。
             </summary>
             <remarks>
             自动生成的字段。
@@ -409,69 +391,6 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.Contact.tbName">
-            <summary>
-            tbName 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Contact.tbEmail">
-            <summary>
-            tbEmail 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Contact.tbSubject">
-            <summary>
-            tbSubject 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Contact.tbComplaint">
-            <summary>
-            tbComplaint 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Contact.btnSubmit">
-            <summary>
-            btnSubmit 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Contact.btnClear">
-            <summary>
-            btnClear 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Contact.Label1">
-            <summary>
-            Label1 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
         <member name="F:EADPPROJ.creditBalance.creditAmt">
             <summary>
             creditAmt 控件。
@@ -544,18 +463,36 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.FAQ.GridView1">
+        <member name="F:EADPPROJ.invitationCode.appGroup">
             <summary>
-            GridView1 控件。
+            appGroup 控件。
             </summary>
             <remarks>
             自动生成的字段。
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.FAQ.SqlDataSource1">
+        <member name="F:EADPPROJ.invitationCode.profileimg">
             <summary>
-            SqlDataSource1 控件。
+            profileimg 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:EADPPROJ.invitationCode.profileUrl">
+            <summary>
+            profileUrl 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:EADPPROJ.invitationCode.logout">
+            <summary>
+            logout 控件。
             </summary>
             <remarks>
             自动生成的字段。
@@ -661,126 +598,9 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.MasterAcee.managementSide">
-            <summary>
-            managementSide 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterAcee.creditBalance">
-            <summary>
-            creditBalance 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterAcee.notificationDot">
-            <summary>
-            notificationDot 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterAcee.msgNo">
-            <summary>
-            msgNo 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterAcee.GridViewNotification">
-            <summary>
-            GridViewNotification 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterAcee.NotificationData">
-            <summary>
-            NotificationData 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterAcee.userID">
-            <summary>
-            userID 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterAcee.icon">
-            <summary>
-            icon 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterAcee.profileIcon">
-            <summary>
-            profileIcon 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterAcee.profile">
-            <summary>
-            profile 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterAcee.Content">
-            <summary>
-            Content 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterPageShop.form1">
-            <summary>
-            form1 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
         <member name="F:EADPPROJ.MasterPageShop.appGroup">
             <summary>
             appGroup 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterPageShop.profileUrl">
-            <summary>
-            profileUrl 控件。
             </summary>
             <remarks>
             自动生成的字段。
@@ -796,6 +616,15 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
+        <member name="F:EADPPROJ.MasterPageShop.profileUrl">
+            <summary>
+            profileUrl 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
         <member name="F:EADPPROJ.MasterPageShop.logout">
             <summary>
             logout 控件。
@@ -805,18 +634,9 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.MasterPageShop.login_func">
+        <member name="F:EADPPROJ.MasterPageShop.form1">
             <summary>
-            login_func 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterPageShop.register_func">
-            <summary>
-            register_func 控件。
+            form1 控件。
             </summary>
             <remarks>
             自动生成的字段。
@@ -1669,27 +1489,27 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.Index.LatestQuestion">
+        <member name="F:EADPPROJ.Index.SqlDataSource">
             <summary>
-            LatestQuestion 控件。
+            SqlDataSource 控件。
             </summary>
             <remarks>
             自动生成的字段。
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.Index.GridView1">
+        <member name="F:EADPPROJ.Index.ListView2">
             <summary>
-            GridView1 控件。
+            ListView2 控件。
             </summary>
             <remarks>
             自动生成的字段。
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.Index.SqlDataSource1">
+        <member name="F:EADPPROJ.Index.SqlDataSourceBook">
             <summary>
-            SqlDataSource1 控件。
+            SqlDataSourceBook 控件。
             </summary>
             <remarks>
             自动生成的字段。
@@ -1759,27 +1579,9 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.MasterPage.profileUrl">
-            <summary>
-            profileUrl 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
         <member name="F:EADPPROJ.MasterPage.profileimg">
             <summary>
             profileimg 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterPage.logout">
-            <summary>
-            logout 控件。
             </summary>
             <remarks>
             自动生成的字段。
@@ -1798,6 +1600,24 @@
         <member name="F:EADPPROJ.MasterPage.register_func">
             <summary>
             register_func 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:EADPPROJ.MasterPage.profileUrl">
+            <summary>
+            profileUrl 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:EADPPROJ.MasterPage.logout">
+            <summary>
+            logout 控件。
             </summary>
             <remarks>
             自动生成的字段。
@@ -1831,15 +1651,6 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.MasterPageBlog.profileUrl">
-            <summary>
-            profileUrl 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
         <member name="F:EADPPROJ.MasterPageBlog.profileimg">
             <summary>
             profileimg 控件。
@@ -1849,27 +1660,18 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
+        <member name="F:EADPPROJ.MasterPageBlog.profileUrl">
+            <summary>
+            profileUrl 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
         <member name="F:EADPPROJ.MasterPageBlog.logout">
             <summary>
             logout 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterPageBlog.login_func">
-            <summary>
-            login_func 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.MasterPageBlog.register_func">
-            <summary>
-            register_func 控件。
             </summary>
             <remarks>
             自动生成的字段。
@@ -1888,6 +1690,42 @@
         <member name="F:EADPPROJ.MasterPageBlog.blogPost">
             <summary>
             blogPost 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:EADPPROJ.profile.appGroup">
+            <summary>
+            appGroup 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:EADPPROJ.profile.profileimg">
+            <summary>
+            profileimg 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:EADPPROJ.profile.profileUrl">
+            <summary>
+            profileUrl 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:EADPPROJ.profile.logout">
+            <summary>
+            logout 控件。
             </summary>
             <remarks>
             自动生成的字段。
@@ -1921,18 +1759,18 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.MasterPageRanking.profileUrl">
+        <member name="F:EADPPROJ.MasterPageRanking.profileimg">
             <summary>
-            profileUrl 控件。
+            profileimg 控件。
             </summary>
             <remarks>
             自动生成的字段。
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.MasterPageRanking.profileimg">
+        <member name="F:EADPPROJ.MasterPageRanking.profileUrl">
             <summary>
-            profileimg 控件。
+            profileUrl 控件。
             </summary>
             <remarks>
             自动生成的字段。
@@ -2416,159 +2254,6 @@
             若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
             </remarks>
         </member>
-        <member name="F:EADPPROJ.Questionnaire.adminno">
-            <summary>
-            adminno 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.adminnoValid">
-            <summary>
-            adminnoValid 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.school">
-            <summary>
-            school 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.schoolValid">
-            <summary>
-            schoolValid 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.year">
-            <summary>
-            year 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.yearValid">
-            <summary>
-            yearValid 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.qlty">
-            <summary>
-            qlty 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.qltyValid">
-            <summary>
-            qltyValid 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.rcmd">
-            <summary>
-            rcmd 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.rcmdValid">
-            <summary>
-            rcmdValid 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.nav">
-            <summary>
-            nav 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.navValid">
-            <summary>
-            navValid 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.reas">
-            <summary>
-            reas 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.reasValid">
-            <summary>
-            reasValid 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.email">
-            <summary>
-            email 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.emailValid">
-            <summary>
-            emailValid 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Questionnaire.Button1">
-            <summary>
-            Button1 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
         <member name="F:EADPPROJ.Rank.requireSelection">
             <summary>
             requireSelection 控件。
@@ -2581,24 +2266,6 @@
         <member name="F:EADPPROJ.Rank.illegalAccess">
             <summary>
             illegalAccess 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Rank.type">
-            <summary>
-            type 控件。
-            </summary>
-            <remarks>
-            自动生成的字段。
-            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-            </remarks>
-        </member>
-        <member name="F:EADPPROJ.Rank.check">
-            <summary>
-            check 控件。
             </summary>
             <remarks>
             自动生成的字段。

@@ -25,6 +25,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 To be able to run the application, **.Net Framework SDK** is required.(Recommended version: .Net framework SDK V4.7.2)
 
+Before running this application, please seed the database with following command in Package Manager Console to ensure the running of application
+
+```c#
+Update-Database
+```
+
 ## Build using
 
 - C# - Language

@@ -701,7 +701,7 @@ namespace EADPPROJ.Migrations
                         Content = "Always on duty, good work!"
                     }
                 });
-
+            context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT [dbo].[tb_CreditRecord] ON");
             context.SaveChanges();
                 //  You can use the DbSet<T>.AddOrUpdate() helper extension method
                 //  to avoid creating duplicate seed data.

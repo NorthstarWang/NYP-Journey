@@ -26,14 +26,12 @@ namespace EADPPROJ.App_Code
         public void InsertCreditRecord(int RecordId, string username, string act, int creditValue, DateTime OccurTime)
         {
             SqlParameter[] prams = {
-            data.MakeInParam("@Id",  SqlDbType.Int, 4, RecordId),
             data.MakeInParam("@Username",  SqlDbType.VarChar, 50, username),
             data.MakeInParam("@Act",  SqlDbType.VarChar, 50, act),
             data.MakeInParam("@CreditValue",  SqlDbType.Int, 4, creditValue),
             data.MakeInParam("@OccurTime",  SqlDbType.DateTime, 14, OccurTime),
             };
-            data.RunProc("INSERT INTO tb_CreditRecord (Id,Username,Act,CreditValue,OccurTime) VALUES(@Id,@Username,@Act,@CreditValue,@OccurTime)", prams);
-
+            data.RunProc("INSERT INTO tb_CreditRecord (Username,Act,CreditValue,OccurTime) VALUES(@Username,@Act,@CreditValue,@OccurTime)", prams);
         }
     }
 }
