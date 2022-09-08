@@ -1,5 +1,5 @@
 # NYP-Journey
-The preview website has been deployed at http://nyp-journey.azurewebsites.net
+The preview website has been deployed at https://eadpproj.azurewebsites.net/
 
 ## Index
 
